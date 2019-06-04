@@ -1,20 +1,18 @@
 <template>
   <div id="app">
-    <nav class="main">
-
-    </nav>
+    <Sidebar></Sidebar>
     <Intro></Intro>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Sidebar from './components/Sidebar.vue';
 import Intro from './components/Intro.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
+    Sidebar,
     Intro
   }
 }
@@ -23,12 +21,14 @@ export default {
 <style lang="scss">
 @import 'assets/css/vars';
 @import 'assets/css/reboot';
+@import 'assets/css/fonts';
 
 body {
   background: var(--body-bg);
   color: var(--white);
   font-family: var(--main-font);
   font-size: var(--font-size);
+  line-height: 1.5;
 }
 
 #app {
@@ -36,15 +36,26 @@ body {
   padding-left: var(--sidebar-width);
 }
 
-nav.main {
- width: var(--sidebar-width);
- background: var(--black);
- min-height: 100vh;
- box-shadow: 0 15px 30px rgba(0,0,0,0.25);
- position: fixed;
- top: 0;
- left: 0;
- display: flex;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &.heading {
+    text-transform: uppercase;
+  }
+
+  &.sub-heading {
+    font-family: var(--accent-font);
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}
+
+h1.heading {
+  font-size: 6.1vw;
+  margin-bottom: var(--space-2);
 }
 
 </style>
