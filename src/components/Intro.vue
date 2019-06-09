@@ -1,6 +1,6 @@
 <template>
   <section class="intro">
-    <div class="intro--content content">
+    <div class="intro--content">
       <h6 class="sub-heading">Front End Developer | Boston, MA</h6>
       <h1 class="heading">
         Chris <br>
@@ -32,11 +32,12 @@ export default {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding: 4vw;
 }
 
 .intro--content {
   max-width: 40vw;
-  margin-bottom: var(--space-2);
+  margin-bottom: 4vw;
 
   .heading {
     font-size: 6.6vw;

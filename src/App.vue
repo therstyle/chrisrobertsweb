@@ -50,20 +50,19 @@ body {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  &.heading {
-    text-transform: uppercase;
-  }
-}
-
-h1.heading {
+.heading {
   font-size: 6.1vw;
   margin-bottom: var(--space-2);
+  text-transform: uppercase;
+}
+
+header.heading {
+  padding-left: 4vw;
+
+  h1 {
+    font-size: 6.1vw;
+    line-height: 1;
+  }
 }
 
 .sub-heading {
