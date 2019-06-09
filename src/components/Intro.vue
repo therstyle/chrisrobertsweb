@@ -1,6 +1,6 @@
 <template>
   <section class="intro">
-    <div class="intro--content">
+    <div class="intro--content content">
       <h6 class="sub-heading">Front End Developer | Boston, MA</h6>
       <h1 class="heading">
         Chris <br>
@@ -28,8 +28,6 @@ export default {
 
 <style lang="scss">
 .intro {
-  padding: 4.4vw 4.4vw 0; 
-  min-height: 100vh;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -59,6 +57,7 @@ export default {
   font-size: 0.75vw;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   a {
     display: block;

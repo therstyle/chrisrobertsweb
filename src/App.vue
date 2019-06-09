@@ -1,19 +1,29 @@
 <template>
-  <div id="app">
+  <main id="app">
     <Sidebar></Sidebar>
     <Intro></Intro>
-  </div>
+    <Resume></Resume>
+    <div class="bg-video">
+
+    </div>
+  </main>
 </template>
 
 <script>
 import Sidebar from './components/Sidebar.vue';
 import Intro from './components/Intro.vue';
+import Resume from './components/Resume.vue';
+import Porfolio from './components/Portfolio.vue';
+import Contact from './components/Contact.vue';
 
 export default {
   name: 'app',
   components: {
     Sidebar,
-    Intro
+    Intro,
+    Resume,
+    Porfolio,
+    Contact
   }
 }
 </script>
@@ -34,6 +44,10 @@ body {
 #app {
   display: grid;
   padding-left: var(--sidebar-width);
+
+  > section {
+    min-height: 100vh;
+  }
 }
 
 h1,
@@ -66,6 +80,19 @@ p {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.content {
+  padding: 4vw;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 </style>
