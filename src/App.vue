@@ -45,17 +45,27 @@ h6 {
   &.heading {
     text-transform: uppercase;
   }
-
-  &.sub-heading {
-    font-family: var(--accent-font);
-    font-weight: normal;
-    text-transform: uppercase;
-  }
 }
 
 h1.heading {
   font-size: 6.1vw;
   margin-bottom: var(--space-2);
+}
+
+.sub-heading {
+  font-family: var(--accent-font);
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 </style>
