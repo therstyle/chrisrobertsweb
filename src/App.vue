@@ -3,6 +3,8 @@
     <Sidebar></Sidebar>
     <Intro></Intro>
     <Resume></Resume>
+    <Portfolio></Portfolio>
+    <Contact></Contact>
     <div class="bg-video">
 
     </div>
@@ -13,7 +15,7 @@
 import Sidebar from './components/Sidebar.vue';
 import Intro from './components/Intro.vue';
 import Resume from './components/Resume.vue';
-import Porfolio from './components/Portfolio.vue';
+import Portfolio from './components/Portfolio.vue';
 import Contact from './components/Contact.vue';
 
 export default {
@@ -22,7 +24,7 @@ export default {
     Sidebar,
     Intro,
     Resume,
-    Porfolio,
+    Portfolio,
     Contact
   }
 }

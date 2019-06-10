@@ -1,5 +1,6 @@
 <template>
   <section class="contact">
+    <Heading title="Contact"></Heading>
     <div class="contact--content content">
       
     </div>
@@ -7,8 +8,13 @@
 </template>
 
 <script>
+import Heading from './layout/Heading.vue';
+
 export default {
-  name: 'Contact'
+  name: 'Contact',
+  components: {
+    Heading
+  }
 }
 </script>
 

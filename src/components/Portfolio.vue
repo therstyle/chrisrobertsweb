@@ -1,5 +1,6 @@
 <template>
   <section class="portfolio">
+    <Heading title="Portfolio"></Heading>
     <div class="portfolio--content content">
       
     </div>
@@ -7,8 +8,13 @@
 </template>
 
 <script>
+import Heading from './layout/Heading.vue';
+
 export default {
-  name: 'Portfolio'
+  name: 'Portfolio',
+  components: {
+    Heading
+  }
 }
 </script>
 
