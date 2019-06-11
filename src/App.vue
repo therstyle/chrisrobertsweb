@@ -49,6 +49,10 @@ body {
 
   > section {
     min-height: 100vh;
+
+    &:not(.intro) {
+      padding: 8vw 0;
+    }
   }
 }
 

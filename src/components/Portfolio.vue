@@ -19,5 +19,6 @@ export default {
 </script>
 
 <style lang="scss">
-
+  .portfolio {
+  }
 </style>
