@@ -5,6 +5,7 @@
     <div class="resume--content">
       <div class="timeline">
         <Timeline-Entry></Timeline-Entry>
+        <Timeline-Entry></Timeline-Entry>
       </div>
 
       <aside class="skill-tree">
@@ -66,11 +67,26 @@ export default {
       position: absolute;
       display: block;
       border-radius: 100%;
-      //left: abs(calc(4.1vw - 1px) / 2);
+      top: 6.1vw;
+      left: calc(-4.1vw - 24px);
+      margin-left: calc(4.1vw + 12px);
       width: 24px;
       height: 24px;
       border: 5px solid var(--red);
       background: var(--body-bg);
+    }
+
+    &:after {
+      content: attr(data-year);
+      font-weight: 600;
+      color: var(--red);
+      font-size: 4.1vw;
+      writing-mode: vertical-rl;
+      text-orientation: sideways;
+      transform: rotate(180deg);
+      position: absolute;
+      left: -7vw;
+      top: 2.1vw;
     }
 
     header {

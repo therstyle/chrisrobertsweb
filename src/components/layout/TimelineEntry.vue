@@ -1,5 +1,5 @@
 <template>
-  <article class="timeline--entry">
+  <article class="timeline--entry" data-year="2018">
     <header>
       <img src="https://dummyimage.com/42/fff/fff" alt="">
       <div class="company-info">
@@ -23,9 +23,3 @@ export default {
   name: 'Timeline-Entry'
 }
 </script>
-
-<style lang="scss">
-
-</style>
-
-
