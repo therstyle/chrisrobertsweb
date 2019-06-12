@@ -1,0 +1,30 @@
+{
+  "resume": {
+    "photo": "images/me.jpg",
+    "timeline": {
+      "entry": {
+        "job": "name",
+        "title": "job title",
+        "details": [
+          "detail 1",
+          "detail 2",
+          "detail 3",
+          "detail 4"
+        ]
+      },
+      "entry": {
+        "job": "name",
+        "title": "job title",
+        "details": [
+          "detail 1",
+          "detail 2",
+          "detail 3",
+          "detail 4"
+        ]
+      }
+    },
+    "skills": {
+      
+    }
+  }
+}
