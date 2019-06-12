@@ -53,6 +53,20 @@ export default {
 </script>
 
 <style lang="scss">
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 nav.main-nav {
   width: var(--sidebar-width);
   background: var(--black);
@@ -136,11 +150,13 @@ nav.main-nav {
         width: 100%;
         height: 100%;
         z-index: -1;
+        animation: fade-in-out ease-in-out infinite 3s;
       }
 
       a {
         &:before {
          background: var(--red);
+         animation: fade-in-out ease-in-out infinite 3s;
         }
       }
     }
