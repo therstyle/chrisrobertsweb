@@ -26,6 +26,14 @@ export default {
     Resume,
     Portfolio,
     Contact
+  },
+  methods: {
+    activeItem: function() {
+      
+    }
+  },
+  mounted: function() {
+    this.activeItem();
   }
 }
 </script>

@@ -9,7 +9,11 @@
       </div>
 
       <aside class="skill-tree">
-        <img src="https://dummyimage.com/243x243/000/fff" alt="">
+        <img src="https://dummyimage.com/243x243/000/fff" alt="Chris Roberts" class="skill-tree--photo">
+        <h2 class="sig">Chris Roberts</h2>
+
+        <h3>Dev Skills</h3>
+        <h3>Design Skills</h3>
       </aside>
     </div>
   </section>
@@ -142,5 +146,26 @@ export default {
 
   .skill-tree {
     max-width: 40vw;
+
+    .sig {
+      margin-bottom: 7vw;
+    }
+
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.6vw;
+    }
+  }
+
+  .skill-tree--photo {
+    box-shadow: 0 0 40px rgba(0,0,0,0.66);
+    margin-bottom: var(--space-2);
+  }
+
+  .sig {
+    font-family: var(--sig-font);
+    text-align: center;
+    font-weight: normal;
   }
 </style>
