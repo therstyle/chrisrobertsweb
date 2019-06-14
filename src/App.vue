@@ -1,7 +1,10 @@
 <template>
   <main id="app">
     <Sidebar></Sidebar>
-    <Intro></Intro>
+    <Intro 
+      v-bind:introText="introText"
+      v-bind:entries="entries"
+    ></Intro>
     <Resume></Resume>
     <Portfolio></Portfolio>
     <Contact></Contact>
@@ -27,13 +30,26 @@ export default {
     Portfolio,
     Contact
   },
-  methods: {
-    activeItem: function() {
-      
+  data() {
+    return {
+      introText: '',
+      entries: []
     }
   },
-  mounted: function() {
-    this.activeItem();
+  methods: {
+    activeItem: function() {
+    },
+    loadData: function() {
+      fetch('info.json')
+      .then(response => response.json())
+      .then(info => {
+        this.introText = info.intro.text;
+        this.entries = info.resume.entries;
+      })
+    }
+  },
+  created: function() {
+    this.loadData();
   }
 }
 </script>

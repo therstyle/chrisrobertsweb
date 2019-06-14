@@ -7,7 +7,7 @@
         Roberts
       </h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor arcu ipsum, at elementum nisl rutrum nec.</p>
+      <div v-html="introText"></div>
     </div>
 
     <div class="scroll-down">
@@ -22,7 +22,10 @@
 
 <script>
 export default {
-  name: 'Intro'
+  name: 'Intro',
+  props: {
+    introText: String
+  }
 }
 </script>
 

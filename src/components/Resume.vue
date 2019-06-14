@@ -28,6 +28,11 @@ export default {
   components: {
     Heading,
     TimelineEntry
+  },
+  data() {
+    return {
+      entries: Object
+    }
   }
 }
 </script>

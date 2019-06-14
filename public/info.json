@@ -1,0 +1,24 @@
+{
+  "intro": {
+    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor arcu ipsum, at elementum nisl rutrum nec.</p>"
+  },
+  "resume": {
+    "photo": "images/me.jpg",
+    "entries": [
+      {
+        "year": 2018,
+        "job": "829 Studios",
+        "title": "Senior Front End Developer",
+        "details": [
+          "Develop and maintain custom WordPress themes for clients utilizing PHP, JavaScript, SASS/CSS",
+          "Use REST APIs to develop SPAs with Vue.JS and React",
+          "Work closely with design team to maintain design and web development standards",
+          "Mentor, assist, and provide code reviews for junior web developers"
+        ]
+      }
+    ],
+    "skills": {
+      
+    }
+  }
+}
