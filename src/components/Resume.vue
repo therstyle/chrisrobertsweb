@@ -4,8 +4,11 @@
 
     <div class="resume--content">
       <div class="timeline">
-        <Timeline-Entry></Timeline-Entry>
-        <Timeline-Entry></Timeline-Entry>
+        <Timeline-Entry 
+          v-for="entry in entries"
+          v-bind:year="entry.year" 
+          v-bind:key="entry.id"
+        ></Timeline-Entry>
       </div>
 
       <aside class="skill-tree">
@@ -29,10 +32,8 @@ export default {
     Heading,
     TimelineEntry
   },
-  data() {
-    return {
-      entries: Object
-    }
+  props: {
+    entries: Array
   }
 }
 </script>

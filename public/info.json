@@ -6,8 +6,9 @@
     "photo": "images/me.jpg",
     "entries": [
       {
+        "id": 1,
         "year": 2018,
-        "job": "829 Studios",
+        "company": "829 Studios",
         "title": "Senior Front End Developer",
         "details": [
           "Develop and maintain custom WordPress themes for clients utilizing PHP, JavaScript, SASS/CSS",

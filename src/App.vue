@@ -3,9 +3,10 @@
     <Sidebar></Sidebar>
     <Intro 
       v-bind:introText="introText"
-      v-bind:entries="entries"
     ></Intro>
-    <Resume></Resume>
+    <Resume 
+      v-bind:entries="entries"
+    ></Resume>
     <Portfolio></Portfolio>
     <Contact></Contact>
     <div class="bg-video">
@@ -45,6 +46,8 @@ export default {
       .then(info => {
         this.introText = info.intro.text;
         this.entries = info.resume.entries;
+        //this.entries.push(info.resume.entries);
+        console.log(this.entries);
       })
     }
   },
