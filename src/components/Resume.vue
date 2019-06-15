@@ -7,6 +7,8 @@
         <Timeline-Entry 
           v-for="entry in entries"
           v-bind:year="entry.year" 
+          v-bind:company="entry.company"
+          v-bind:title="entry.title"
           v-bind:key="entry.id"
         ></Timeline-Entry>
       </div>

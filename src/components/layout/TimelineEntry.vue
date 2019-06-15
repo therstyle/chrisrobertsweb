@@ -1,10 +1,10 @@
 <template>
-  <article class="timeline--entry" data-year="2018">
+  <article class="timeline--entry" :data-year="year">
     <header>
       <img src="https://dummyimage.com/42/fff/fff" alt="">
       <div class="company-info">
-        <h3>829 Studios</h3>
-        <small>Senior Front End Developer</small>
+        <h3>{{ company }}</h3>
+        <small>{{ title }}</small>
       </div>
     </header>
 
@@ -20,6 +20,12 @@ development standards</li>
 
 <script>
 export default {
-  name: 'Timeline-Entry'
+  name: 'Timeline-Entry',
+  props: {
+    year: Number,
+    company: String,
+    title: String,
+    details: Array
+  }
 }
 </script>
