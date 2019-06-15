@@ -6,11 +6,11 @@
       <div class="timeline">
         <Timeline-Entry 
           v-for="entry in entries"
-          v-bind:year="entry.year" 
-          v-bind:company="entry.company"
-          v-bind:title="entry.title"
-          v-bind:details="entry.details"
-          v-bind:key="entry.id"
+          :year="entry.year" 
+          :company="entry.company"
+          :title="entry.title"
+          :details="entry.details"
+          :key="entry.id"
         ></Timeline-Entry>
       </div>
 
