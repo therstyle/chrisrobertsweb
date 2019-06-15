@@ -9,6 +9,7 @@
           v-bind:year="entry.year" 
           v-bind:company="entry.company"
           v-bind:title="entry.title"
+          v-bind:details="entry.details"
           v-bind:key="entry.id"
         ></Timeline-Entry>
       </div>
