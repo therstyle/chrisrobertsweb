@@ -1,19 +1,32 @@
 <template>
   <section class="portfolio">
     <Heading title="Portfolio"></Heading>
+
     <div class="portfolio--content content">
-      
+      <PorfolioItem v-for="portfolioItem in portfolioItems" 
+        :key="portfolioItem.name"
+        :image="portfolioItem.image"
+        :video="portfolioItem.video"
+        :name="portfolioItem.name"
+        :description="portfolioItem.description"
+        :type="portfolioItem.type"
+      ></PorfolioItem>
     </div>
   </section>
 </template>
 
 <script>
 import Heading from './layout/Heading.vue';
+import PorfolioItem from './layout/PortfolioItem.vue';
 
 export default {
   name: 'Portfolio',
   components: {
-    Heading
+    Heading,
+    PorfolioItem
+  },
+  props: {
+    portfolioItems: Array
   }
 }
 </script>

@@ -10,7 +10,7 @@
       :devSkills="devSkills"
       :designSkills="designSkills"
     ></Resume>
-    <Portfolio></Portfolio>
+    <Portfolio :portfolioItems="portfolioItems"></Portfolio>
     <Contact></Contact>
     <div class="bg-video">
 
@@ -40,7 +40,8 @@ export default {
       entries: [],
       photo: '',
       devSkills: [],
-      designSkills: []
+      designSkills: [],
+      portfolioItems: []
     }
   },
   methods: {
@@ -55,6 +56,7 @@ export default {
         this.photo = info.resume.photo;
         this.devSkills = info.resume.skills.dev;
         this.designSkills = info.resume.skills.design;
+        this.portfolioItems = info.portfolio;
       })
     }
   },
