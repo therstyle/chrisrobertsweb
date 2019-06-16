@@ -1,6 +1,10 @@
 <template>
   <li>
-
+    <div>
+      <img :src="logo" :alt="name">
+      <h6>{{ name }}</h6>
+      <small>{{ years }} Years</small>
+    </div>
   </li>
 </template>
 

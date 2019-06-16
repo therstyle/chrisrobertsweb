@@ -59,66 +59,66 @@
     "skills": {
       "dev": [
         {
-          "logo": "https://dummyimage.com/44/FFF/fff",
-          "name": "name",
+          "logo": "/images/icon-html.svg",
+          "name": "HTML",
+          "years": 15
+        },
+        {
+          "logo": "/images/icon-css.svg",
+          "name": "CSS/SASS",
+          "years": 15
+        },
+        {
+          "logo": "/images/icon-php.svg",
+          "name": "PHP",
+          "years": 13
+        },
+        {
+          "logo": "/images/icon-javascript.svg",
+          "name": "JavaScript",
+          "years": 6
+        },
+        {
+          "logo": "/images/icon-wordpress.svg",
+          "name": "WordPress",
+          "years": 10
+        },
+        {
+          "logo": "/images/icon-git.svg",
+          "name": "Git",
+          "years": 5
+        },
+        {
+          "logo": "/images/icon-vuejs.svg",
+          "name": "Vue JS",
           "years": 2
         },
         {
-          "logo": "https://dummyimage.com/44/FFF/fff",
-          "name": "name",
-          "years": 2
-        },
-        {
-          "logo": "https://dummyimage.com/44/FFF/fff",
-          "name": "name",
-          "years": 2
-        },
-        {
-          "logo": "https://dummyimage.com/44/FFF/fff",
-          "name": "name",
-          "years": 2
-        },
-        {
-          "logo": "https://dummyimage.com/44/FFF/fff",
-          "name": "name",
-          "years": 2
-        },
-        {
-          "logo": "https://dummyimage.com/44/FFF/fff",
-          "name": "name",
-          "years": 2
-        },
-        {
-          "logo": "https://dummyimage.com/44/FFF/fff",
-          "name": "name",
-          "years": 2
-        },
-        {
-          "logo": "https://dummyimage.com/44/FFF/fff",
-          "name": "name",
+          "logo": "/images/icon-react.svg",
+          "name": "React JS",
           "years": 2
         }
       ],
       "design": [
         {
-          "logo": "https://dummyimage.com/44/FFF/fff",
-          "name": "name",
-          "years": 2
+          "logo": "/images/icon-photoshop.svg",
+          "name": "Photoshop",
+          "years": 14
         },
         {
-          "logo": "https://dummyimage.com/44/FFF/fff",
-          "name": "name",
-          "years": 2
+          "logo": "/images/icon-illustrator.svg",
+          "name": "Illustrator",
+          "years": 14
         },
         {
-          "logo": "https://dummyimage.com/44/FFF/fff",
-          "name": "name",
-          "years": 2
+          "logo": "/images/icon-figma.svg",
+          "name": "Figma",
+          "years": 3
         },
         {
-          "logo": "https://dummyimage.com/44/FFF/fff",
-          "name": "name",
-          "years": 2
+          "logo": "/images/icon-sketch.svg",
+          "name": "Sketch",
+          "years": 3
         }
       ]
     }

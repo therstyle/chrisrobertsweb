@@ -80,6 +80,10 @@ export default {
       padding-top: 0;
     }
 
+    article:last-child {
+      border-color: transparent;
+    }
+
     &:before {
       content: '';
       position: absolute;
@@ -200,9 +204,53 @@ export default {
 
   .skills {
     margin-bottom: var(--space-4);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    max-width: 244px;
+    margin-left: auto;
+    margin-right: auto;
 
     > li {
       list-style: none;
+      width: 50%;
+      border: 0.5px solid var(--light-gray);
+      max-width: 122px;
+      height: 122px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > div {
+        text-align: center;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto 10px;
+      }
+
+      h6 {
+        font-size: 14px;
+        line-height: 1.2;
+        margin: 0;
+      }
+
+      small {
+        font-size: 11px;
+        display: block;
+      }
+
+      &:first-child,
+      &:nth-child(2) {
+        border-top: 1px solid var(--light-gray);
+      }
+
+      &:last-child,
+      &:nth-last-child(2) {
+        border-bottom: 1px solid var(--light-gray);
+      }
     }
   }
 </style>
