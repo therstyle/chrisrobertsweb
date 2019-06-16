@@ -19,6 +19,7 @@ export default {
   name: 'Timeline-Entry',
   props: {
     year: Number,
+    logo: String,
     company: String,
     title: String,
     details: Array

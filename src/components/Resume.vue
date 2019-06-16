@@ -6,7 +6,8 @@
       <div class="timeline">
         <Timeline-Entry 
           v-for="entry in entries"
-          :year="entry.year" 
+          :year="entry.year"
+          :logo="entry.logo" 
           :company="entry.company"
           :title="entry.title"
           :details="entry.details"
@@ -15,11 +16,28 @@
       </div>
 
       <aside class="skill-tree">
-        <img src="https://dummyimage.com/243x243/000/fff" alt="Chris Roberts" class="skill-tree--photo">
+        <img :src="photo" alt="Chris Roberts" class="skill-tree--photo">
         <h2 class="sig">Chris Roberts</h2>
 
         <h3>Dev Skills</h3>
+        <ul class="skills">
+          <Skill v-for="devSkill in devSkills" 
+            :key="devSkill.name"
+            :logo="devSkill.logo"
+            :name="devSkill.name"
+            :years="devSkill.years"
+          ></Skill>
+        </ul>
+
         <h3>Design Skills</h3>
+        <ul class="skills">
+          <Skill v-for="designSkill in designSkills" 
+            :key="designSkill.name"
+            :logo="designSkill.logo"
+            :name="designSkill.name"
+            :years="designSkill.years"
+          ></Skill>
+        </ul>
       </aside>
     </div>
   </section>
@@ -28,24 +46,26 @@
 <script>
 import Heading from './layout/Heading.vue';
 import TimelineEntry from './layout/TimelineEntry.vue';
+import Skill from './layout/Skill.vue';
 
 export default {
   name: 'Resume',
   components: {
     Heading,
-    TimelineEntry
+    TimelineEntry,
+    Skill
   },
   props: {
-    entries: Array
+    entries: Array,
+    photo: String,
+    devSkills: Array,
+    designSkills: Array
   }
 }
 </script>
 
 
 <style lang="scss">
-  .resume {
-  }
-
   .resume--content {
     padding: 0 4vw;
     display: flex;
@@ -176,5 +196,13 @@ export default {
     font-family: var(--sig-font);
     text-align: center;
     font-weight: normal;
+  }
+
+  .skills {
+    margin-bottom: var(--space-4);
+
+    > li {
+      list-style: none;
+    }
   }
 </style>

@@ -6,6 +6,9 @@
     ></Intro>
     <Resume 
       :entries="entries"
+      :photo="photo"
+      :devSkills="devSkills"
+      :designSkills="designSkills"
     ></Resume>
     <Portfolio></Portfolio>
     <Contact></Contact>
@@ -34,7 +37,10 @@ export default {
   data() {
     return {
       introText: '',
-      entries: []
+      entries: [],
+      photo: '',
+      devSkills: [],
+      designSkills: []
     }
   },
   methods: {
@@ -46,6 +52,9 @@ export default {
       .then(info => {
         this.introText = info.intro.text;
         this.entries = info.resume.entries;
+        this.photo = info.resume.photo;
+        this.devSkills = info.resume.skills.dev;
+        this.designSkills = info.resume.skills.design;
       })
     }
   },

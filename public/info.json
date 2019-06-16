@@ -3,11 +3,12 @@
     "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor arcu ipsum, at elementum nisl rutrum nec.</p>"
   },
   "resume": {
-    "photo": "images/me.jpg",
+    "photo": "/images/me.jpg",
     "entries": [
       {
         "id": 1,
         "year": 2018,
+        "logo": "https://dummyimage.com/42/fff/fff",
         "company": "829 Studios",
         "title": "Senior Front End Developer",
         "details": [
@@ -16,10 +17,110 @@
           "Work closely with design team to maintain design and web development standards",
           "Mentor, assist, and provide code reviews for junior web developers"
         ]
+      },
+      {
+        "id": 2,
+        "year": 2015,
+        "logo": "https://dummyimage.com/42/fff/fff",
+        "company": "Firefield",
+        "title": "Front End Developer",
+        "details": [
+          "Collaborated with back end developers to oversee design of web applications and create style guides for our team",
+          "Worked on front end development of applications utilizing HTML, Ruby, Sass, Bootstrap, React, and Git",
+          "Designed and contributed to development of in-house web applications for internal team use"
+        ]
+      },
+      {
+        "id": 3,
+        "year": 2013,
+        "logo": "https://dummyimage.com/42/fff/fff",
+        "company": "Brick Marketing",
+        "title": "Web Designer & Developer",
+        "details": [
+          "Created branding, marketing materials, landing pages, and digital & print advertisements",
+          "Designed, built, and customized client websites based on the client’s unique needs using WordPress, custom post types, and Advanced Custom Fields (ACF)",
+          "Implemented search engine optimization techniques on client websites"
+        ]
+      },
+      {
+        "id": 4,
+        "year": 2007,
+        "logo": "https://dummyimage.com/42/fff/fff",
+        "company": "Onpoint Media",
+        "title": "Web Designer",
+        "details": [
+          "Collaborated with design team, and managed design process from concept to code",
+          "Developed and maintained code for in-house and client projects using WordPress, HTML, CSS, PHP, and JavaScript / jQuery",
+          "Designed web and print materials for internal and external promotional events",
+          "Provided direction for team members and interns"
+        ]
       }
     ],
     "skills": {
-      
+      "dev": [
+        {
+          "logo": "https://dummyimage.com/44/FFF/fff",
+          "name": "name",
+          "years": 2
+        },
+        {
+          "logo": "https://dummyimage.com/44/FFF/fff",
+          "name": "name",
+          "years": 2
+        },
+        {
+          "logo": "https://dummyimage.com/44/FFF/fff",
+          "name": "name",
+          "years": 2
+        },
+        {
+          "logo": "https://dummyimage.com/44/FFF/fff",
+          "name": "name",
+          "years": 2
+        },
+        {
+          "logo": "https://dummyimage.com/44/FFF/fff",
+          "name": "name",
+          "years": 2
+        },
+        {
+          "logo": "https://dummyimage.com/44/FFF/fff",
+          "name": "name",
+          "years": 2
+        },
+        {
+          "logo": "https://dummyimage.com/44/FFF/fff",
+          "name": "name",
+          "years": 2
+        },
+        {
+          "logo": "https://dummyimage.com/44/FFF/fff",
+          "name": "name",
+          "years": 2
+        }
+      ],
+      "design": [
+        {
+          "logo": "https://dummyimage.com/44/FFF/fff",
+          "name": "name",
+          "years": 2
+        },
+        {
+          "logo": "https://dummyimage.com/44/FFF/fff",
+          "name": "name",
+          "years": 2
+        },
+        {
+          "logo": "https://dummyimage.com/44/FFF/fff",
+          "name": "name",
+          "years": 2
+        },
+        {
+          "logo": "https://dummyimage.com/44/FFF/fff",
+          "name": "name",
+          "years": 2
+        }
+      ]
     }
   }
 }
