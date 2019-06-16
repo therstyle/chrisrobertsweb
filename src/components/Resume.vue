@@ -213,6 +213,7 @@ export default {
 
     > li {
       list-style: none;
+      background: var(--dark-gray);
       width: 50%;
       border: 0.5px solid var(--light-gray);
       max-width: 122px;
@@ -221,6 +222,12 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: 0.3s all;
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 40px rgba(0,0,0,0.33);
+      }
 
       > div {
         text-align: center;
