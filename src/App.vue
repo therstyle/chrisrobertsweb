@@ -92,6 +92,10 @@ body {
   }
 }
 
+img {
+  max-width: 100%;
+}
+
 .heading {
   font-size: 6.1vw;
   margin-bottom: var(--space-2);

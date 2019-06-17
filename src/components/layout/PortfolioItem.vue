@@ -1,7 +1,7 @@
 <template>
-  <article>
+  <article class="portfolio--content-entry">
     <header>
-
+      <img :src="image">
     </header>
 
     <div class="description">
@@ -28,9 +28,22 @@ export default {
 .portfolio--content {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+}
 
-  > article {
-    width: 33%;
+.portfolio--content-entry {
+  width: calc(33% - (4vw / 3));
+  margin-bottom: 4vw;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+
+  header {
+    background: #000;
+  }
+
+  .description {
+    font-size: 14px;
+    padding: 2vw;
+    background: var(--med-gray);
   }
 }
 </style>
