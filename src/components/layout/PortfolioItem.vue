@@ -35,6 +35,12 @@ export default {
   width: calc(33% - (4vw / 3));
   margin-bottom: 4vw;
   box-shadow: 0 0 30px rgba(0,0,0,0.1);
+  transition: 0.3s transform, 0.3s box-shadow;
+
+  &:hover {
+    transform: translateY(-0.3vw);
+    box-shadow: 0 0 30px rgba(0,0,0,0.33);
+  }
 
   header {
     background: #000;

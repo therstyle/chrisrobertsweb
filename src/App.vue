@@ -92,6 +92,10 @@ body {
   }
 }
 
+h3 {
+  font-size: 1.6vw;
+}
+
 img {
   max-width: 100%;
 }

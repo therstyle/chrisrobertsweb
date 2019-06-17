@@ -17,7 +17,7 @@
 
       <aside class="skill-tree">
         <img :src="photo" alt="Chris Roberts" class="skill-tree--photo">
-        <h2 class="sig">Chris Roberts</h2>
+        <h3 class="sig">Chris Roberts</h3>
 
         <h3>Dev Skills</h3>
         <ul class="skills">
@@ -182,6 +182,7 @@ export default {
 
     .sig {
       margin-bottom: 7vw;
+      text-transform: none;
     }
 
     h3 {
