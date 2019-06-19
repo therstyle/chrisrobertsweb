@@ -1,12 +1,13 @@
 <template>
   <article class="portfolio--content-entry">
     <header>
-      <img :src="image">
+      <img :src="image" :alt="name">
     </header>
 
     <div class="description">
       <h3>{{ name }}</h3>
       <p>{{ description }}</p>
+      <div class="project-type"><img :src="typeImage" :alt="type"></div>
     </div>
   </article>
 </template>
@@ -19,7 +20,8 @@ export default {
     video: String,
     name: String,
     description: String,
-    type: String
+    type: String,
+    typeImage: String
   }
 }
 </script>
@@ -50,6 +52,18 @@ export default {
     font-size: 14px;
     padding: 2vw;
     background: var(--med-gray);
+
+    > h3 {
+      margin-bottom: var(--space);
+    }
+
+    > p {
+      margin-bottom: var(--space-2);
+    }
+  }
+
+  .project-type {
+    text-align: right;
   }
 }
 </style>

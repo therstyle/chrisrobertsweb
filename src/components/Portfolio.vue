@@ -10,6 +10,7 @@
         :name="portfolioItem.name"
         :description="portfolioItem.description"
         :type="portfolioItem.type"
+        :typeImage="portfolioItem.typeImage"
       ></PorfolioItem>
     </div>
   </section>

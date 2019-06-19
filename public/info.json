@@ -128,42 +128,48 @@
       "image": "https://dummyimage.com/380x260/000/fff",
       "name": "Flowetik",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "type": "/images/project-type/icon-wordpress.svg"
+      "type": "WordPress",
+      "typeImage": "/images/project-type/icon-wordpress.svg"
 
     },
     {
       "image": "https://dummyimage.com/380x260/000/fff",
       "name": "Latin Rogue Cleaning",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "type": ""
+      "type": "WordPress",
+      "typeImage": "/images/project-type/icon-wordpress.svg"
 
     },
     {
       "image": "https://dummyimage.com/380x260/000/fff",
       "name": "Jeopardy",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "type": ""
+      "type": "Vue.js",
+      "typeImage": "/images/project-type/icon-vuejs.svg"
 
     },
     {
       "image": "https://dummyimage.com/380x260/000/fff",
       "name": "Kettlebell Kickboxing",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "type": ""
+      "type": "WordPress",
+      "typeImage": "/images/project-type/icon-wordpress.svg"
 
     },
     {
       "image": "https://dummyimage.com/380x260/000/fff",
       "name": "Stanley Black & Decker",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "type": ""
+      "type": "Drupal",
+      "typeImage": "/images/project-type/icon-drupal.svg"
 
     },
     {
       "image": "https://dummyimage.com/380x260/000/fff",
       "name": "Praesent Lacinia",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "type": ""
+      "type": "WordPress",
+      "typeImage": "/images/project-type/icon-wordpress.svg"
 
     }
   ]

@@ -47,21 +47,21 @@ export default {
   methods: {
     activeItem: function() {
     },
-    loadData: function() {
-      fetch('info.json')
-      .then(response => response.json())
-      .then(info => {
-        this.introText = info.intro.text;
-        this.entries = info.resume.entries;
-        this.photo = info.resume.photo;
-        this.devSkills = info.resume.skills.dev;
-        this.designSkills = info.resume.skills.design;
-        this.portfolioItems = info.portfolio;
-      })
+    loadData: async function() {
+      const response = await fetch('info.json');
+      const info = await response.json();
+      return info;
     }
   },
   created: function() {
-    this.loadData();
+    this.loadData().then(info => {
+      this.introText = info.intro.text;
+      this.entries = info.resume.entries;
+      this.photo = info.resume.photo;
+      this.devSkills = info.resume.skills.dev;
+      this.designSkills = info.resume.skills.design;
+      this.portfolioItems = info.portfolio;
+    });
   }
 }
 </script>
@@ -90,10 +90,6 @@ body {
       padding: 8vw 0;
     }
   }
-}
-
-h3 {
-  font-size: 1.6vw;
 }
 
 img {
