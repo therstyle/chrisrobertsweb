@@ -1,6 +1,9 @@
 <template>
   <main id="app">
-    <Sidebar></Sidebar>
+    <Sidebar 
+      :github="github"
+      :linkedin="linkedin"
+    ></Sidebar>
     <Intro 
       :introText="introText"
     ></Intro>
@@ -36,6 +39,8 @@ export default {
   },
   data() {
     return {
+      github: '',
+      linkedin: '',
       introText: '',
       entries: [],
       photo: '',
@@ -55,6 +60,8 @@ export default {
   },
   created: function() {
     this.loadData().then(info => {
+      this.github = info.nav.github;
+      this.linkedin = info.nav.linkedin;
       this.introText = info.intro.text;
       this.entries = info.resume.entries;
       this.photo = info.resume.photo;

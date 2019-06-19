@@ -1,4 +1,8 @@
 {
+  "nav": {
+    "github": "https://github.com/therstyle",
+    "linkedin": "https://www.linkedin.com/in/xchrisroberts/"
+  },
   "intro": {
     "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor arcu ipsum, at elementum nisl rutrum nec.</p>"
   },
