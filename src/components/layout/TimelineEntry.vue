@@ -1,7 +1,7 @@
 <template>
   <article class="timeline--entry" :data-year="year">
     <header>
-      <img src="https://dummyimage.com/42/fff/fff" alt="">
+      <img :src="logo" :alt="company">
       <div class="company-info">
         <h3>{{ company }}</h3>
         <small>{{ title }}</small>

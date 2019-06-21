@@ -17,7 +17,7 @@
       {
         "id": 1,
         "year": 2018,
-        "logo": "https://dummyimage.com/42/fff/fff",
+        "logo": "/images/jobs/829.svg",
         "company": "829 Studios",
         "title": "Senior Front End Developer",
         "details": [
@@ -30,7 +30,7 @@
       {
         "id": 2,
         "year": 2015,
-        "logo": "https://dummyimage.com/42/fff/fff",
+        "logo": "/images/jobs/firefield.svg",
         "company": "Firefield",
         "title": "Front End Developer",
         "details": [
@@ -42,7 +42,7 @@
       {
         "id": 3,
         "year": 2013,
-        "logo": "https://dummyimage.com/42/fff/fff",
+        "logo": "/images/jobs/brick-marketing.svg",
         "company": "Brick Marketing",
         "title": "Web Designer & Developer",
         "details": [
@@ -54,7 +54,7 @@
       {
         "id": 4,
         "year": 2007,
-        "logo": "https://dummyimage.com/42/fff/fff",
+        "logo": "/images/jobs/onpoint.png",
         "company": "Onpoint Media",
         "title": "Web Designer",
         "details": [
