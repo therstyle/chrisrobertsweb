@@ -17,7 +17,7 @@
 
       <aside class="skill-tree">
         <img :src="photo" alt="Chris Roberts" class="skill-tree--photo">
-        <h3 class="sig">Chris Roberts</h3>
+        <h3 class="sig">{{ sigText }}</h3>
 
         <h3>Dev Skills</h3>
         <ul class="skills">
@@ -59,7 +59,8 @@ export default {
     entries: Array,
     photo: String,
     devSkills: Array,
-    designSkills: Array
+    designSkills: Array,
+    sigText: String
   }
 }
 </script>

@@ -15,6 +15,7 @@
       :photo="photo"
       :devSkills="devSkills"
       :designSkills="designSkills"
+      :sigText="sigText"
     ></Resume>
     <Portfolio :portfolioItems="portfolioItems"></Portfolio>
     <Contact></Contact>
