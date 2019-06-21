@@ -66,9 +66,13 @@ export default {
     this.loadData().then(info => {
       this.github = info.nav.github;
       this.linkedin = info.nav.linkedin;
+      this.introHeadline = info.intro.headline;
       this.introText = info.intro.introText;
+      this.scrollText = info.intro.scrollText;
+      this.video = info.intro.video;
       this.resumeEntries = info.resume.entries;
       this.photo = info.resume.photo;
+      this.sigText = info.resume.sigText;
       this.devSkills = info.resume.skills.dev;
       this.designSkills = info.resume.skills.design;
       this.portfolioItems = info.portfolio.entries;
