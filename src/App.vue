@@ -4,8 +4,11 @@
       :github="github"
       :linkedin="linkedin"
     ></Sidebar>
-    <Intro 
+    <Intro
+      :introHeadline="introHeadline" 
       :introText="introText"
+      :scrollText="scrollText"
+      :video="video"
     ></Intro>
     <Resume 
       :entries="resumeEntries"
