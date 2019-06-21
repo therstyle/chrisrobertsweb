@@ -4,10 +4,14 @@
     "linkedin": "https://www.linkedin.com/in/xchrisroberts/"
   },
   "intro": {
-    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor arcu ipsum, at elementum nisl rutrum nec.</p>"
+    "headline": "Chris<br>Roberts",
+    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor arcu ipsum, at elementum nisl rutrum nec.</p>",
+    "scrollText": "Scroll"
   },
   "resume": {
+    "headline": "Resume",
     "photo": "/images/me.jpg",
+    "sigText": "Chris Roberts",
     "entries": [
       {
         "id": 1,
@@ -127,54 +131,57 @@
       ]
     }
   },
-  "portfolio": [
-    {
-      "image": "https://dummyimage.com/380x260/000/fff",
-      "name": "Flowetik",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "type": "WordPress",
-      "typeImage": "/images/project-type/icon-wordpress.svg"
-
-    },
-    {
-      "image": "https://dummyimage.com/380x260/000/fff",
-      "name": "Latin Rogue Cleaning",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "type": "WordPress",
-      "typeImage": "/images/project-type/icon-wordpress.svg"
-
-    },
-    {
-      "image": "https://dummyimage.com/380x260/000/fff",
-      "name": "Jeopardy",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "type": "Vue.js",
-      "typeImage": "/images/project-type/icon-vuejs.svg"
-
-    },
-    {
-      "image": "https://dummyimage.com/380x260/000/fff",
-      "name": "Kettlebell Kickboxing",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "type": "WordPress",
-      "typeImage": "/images/project-type/icon-wordpress.svg"
-
-    },
-    {
-      "image": "https://dummyimage.com/380x260/000/fff",
-      "name": "Stanley Black & Decker",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "type": "Drupal",
-      "typeImage": "/images/project-type/icon-drupal.svg"
-
-    },
-    {
-      "image": "https://dummyimage.com/380x260/000/fff",
-      "name": "Praesent Lacinia",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "type": "WordPress",
-      "typeImage": "/images/project-type/icon-wordpress.svg"
-
-    }
-  ]
+  "portfolio": {
+    "headline": "Portfolio",
+    "entries": [
+      {
+        "image": "https://dummyimage.com/380x260/000/fff",
+        "name": "Flowetik",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "type": "WordPress",
+        "typeImage": "/images/project-type/icon-wordpress.svg"
+  
+      },
+      {
+        "image": "https://dummyimage.com/380x260/000/fff",
+        "name": "Latin Rogue Cleaning",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "type": "WordPress",
+        "typeImage": "/images/project-type/icon-wordpress.svg"
+  
+      },
+      {
+        "image": "https://dummyimage.com/380x260/000/fff",
+        "name": "Jeopardy",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "type": "Vue.js",
+        "typeImage": "/images/project-type/icon-vuejs.svg"
+  
+      },
+      {
+        "image": "https://dummyimage.com/380x260/000/fff",
+        "name": "Kettlebell Kickboxing",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "type": "WordPress",
+        "typeImage": "/images/project-type/icon-wordpress.svg"
+  
+      },
+      {
+        "image": "https://dummyimage.com/380x260/000/fff",
+        "name": "Stanley Black & Decker",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "type": "Drupal",
+        "typeImage": "/images/project-type/icon-drupal.svg"
+  
+      },
+      {
+        "image": "https://dummyimage.com/380x260/000/fff",
+        "name": "Praesent Lacinia",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "type": "WordPress",
+        "typeImage": "/images/project-type/icon-wordpress.svg"
+  
+      }
+    ]
+  }
 }

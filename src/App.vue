@@ -67,7 +67,7 @@ export default {
       this.photo = info.resume.photo;
       this.devSkills = info.resume.skills.dev;
       this.designSkills = info.resume.skills.design;
-      this.portfolioItems = info.portfolio;
+      this.portfolioItems = info.portfolio.entries;
     });
   }
 }
