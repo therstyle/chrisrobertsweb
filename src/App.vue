@@ -8,7 +8,7 @@
       :introText="introText"
     ></Intro>
     <Resume 
-      :entries="entries"
+      :entries="resumeEntries"
       :photo="photo"
       :devSkills="devSkills"
       :designSkills="designSkills"
@@ -41,9 +41,13 @@ export default {
     return {
       github: '',
       linkedin: '',
+      introHeadline: '',
       introText: '',
-      entries: [],
+      scrollText: '',
+      video: '',
+      resumeEntries: [],
       photo: '',
+      sigText: '',
       devSkills: [],
       designSkills: [],
       portfolioItems: []
@@ -62,8 +66,8 @@ export default {
     this.loadData().then(info => {
       this.github = info.nav.github;
       this.linkedin = info.nav.linkedin;
-      this.introText = info.intro.text;
-      this.entries = info.resume.entries;
+      this.introText = info.intro.introText;
+      this.resumeEntries = info.resume.entries;
       this.photo = info.resume.photo;
       this.devSkills = info.resume.skills.dev;
       this.designSkills = info.resume.skills.design;

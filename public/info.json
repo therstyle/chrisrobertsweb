@@ -5,8 +5,9 @@
   },
   "intro": {
     "headline": "Chris<br>Roberts",
-    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor arcu ipsum, at elementum nisl rutrum nec.</p>",
-    "scrollText": "Scroll"
+    "introText": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor arcu ipsum, at elementum nisl rutrum nec.</p>",
+    "scrollText": "Scroll",
+    "video": "/video/helloworld.mp4"
   },
   "resume": {
     "headline": "Resume",
