@@ -3,7 +3,14 @@
     <Heading :title="headline"></Heading>
     <div class="contact--content content">
       <div class="contact-form">
-        <picture>
+        <form>
+          <input id="name" type="text" placeholder="NAME">
+          <input id="email" type="email" placeholder="EMAIL ADDRESS">
+          <textarea name="" id="message" placeholder="MESSAGE"></textarea>
+          <button>{{ buttonText }}</button>
+        </form>
+        
+        <picture class="contact-photo">
           <img :src="photo" alt="">
         </picture>
       </div>
@@ -22,6 +29,7 @@ export default {
   props: {
     headline: String,
     photo: String,
+    buttonText: String
   }
 }
 </script>
@@ -29,7 +37,74 @@ export default {
 <style lang="scss">
   .contact-form {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: var(--white);
+      opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #FFF;
+    }
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      color: var(--white);
+    }
+
+    form {
+      display: block;
+      padding: 2vw;
+      background: var(--med-gray-alpha-alt);
+      position: absolute;
+      left: 0;
+      width: 50%;
+
+      > textarea,
+      input {
+        margin-bottom: 2vw;
+        display: block;
+        width: 100%;
+        background: transparent;
+        border: 1px solid var(--light-gray);
+        padding: 1vw;
+        font-size: 16px;
+        color: var(--white);
+      }
+
+      button {
+        text-transform: uppercase;
+        border: none;
+        background: var(--white);
+        font-weight: 900;
+        min-width: 160px;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        margin: auto;
+        display: block;
+        font-size: 16px;
+      }
+    }
   }
 
+  .contact-photo {
+    width: 100%;
+    max-width: 60%;
 
+    &:before {
+
+    }
+
+    &:after {
+      
+    }
+
+    img {
+      max-width: none;
+      width: 100%;
+    }
+  }
 </style>

@@ -24,6 +24,7 @@
     <Contact
       :headline="contactHeadline"
       :photo="contactPhoto"
+      :buttonText="contactButtonText"
     ></Contact>
 
     <div class="bg-video">
@@ -66,7 +67,8 @@ export default {
       designSkills: [],
       portfolioItems: [],
       contactHeadline: '',
-      contactPhoto: ''
+      contactPhoto: '',
+      contactButtonText: ''
     }
   },
   methods: {
@@ -95,6 +97,7 @@ export default {
       this.portfolioItems = info.portfolio.entries;
       this.contactHeadline = info.contact.headline;
       this.contactPhoto = info.contact.photo;
+      this.contactButtonText = info.contact.buttonText;
     });
   }
 }

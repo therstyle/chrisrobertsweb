@@ -188,6 +188,7 @@
   },
   "contact": {
     "headline": "Contact",
-    "photo": "/images/zakim.jpg"
+    "photo": "/images/zakim.jpg",
+    "buttonText": "Submit"
   }
 }
