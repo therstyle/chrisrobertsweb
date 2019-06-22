@@ -218,7 +218,7 @@ export default {
 
     > li {
       list-style: none;
-      background: var(--dark-gray);
+      background: var(--dark-gray-alpha);
       width: 50%;
       border: 0.5px solid var(--light-gray);
       max-width: 122px;
@@ -231,6 +231,7 @@ export default {
 
       &:hover {
         transform: scale(1.1);
+        background: var(--dark-gray);
         box-shadow: 0 0 40px rgba(0,0,0,0.33);
       }
 

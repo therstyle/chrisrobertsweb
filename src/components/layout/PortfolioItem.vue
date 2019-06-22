@@ -51,7 +51,7 @@ export default {
   .description {
     font-size: 14px;
     padding: 2vw;
-    background: var(--med-gray);
+    background: var(--med-gray-alpha);
 
     > h3 {
       margin-bottom: var(--space);
