@@ -1,5 +1,6 @@
 <template>
   <section class="resume">
+    <Observer></Observer>
     <Heading title="Resume"></Heading>
 
     <div class="resume--content">
@@ -47,13 +48,15 @@
 import Heading from './layout/Heading.vue';
 import TimelineEntry from './layout/TimelineEntry.vue';
 import Skill from './layout/Skill.vue';
+import Observer from './helpers/Observer.vue';
 
 export default {
   name: 'Resume',
   components: {
     Heading,
     TimelineEntry,
-    Skill
+    Skill,
+    Observer
   },
   props: {
     entries: Array,
