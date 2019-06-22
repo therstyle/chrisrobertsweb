@@ -12,11 +12,11 @@ export default {
     }
   },
   mounted() {
-    this.observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
+    this.observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
         if(entry.isIntersecting) {
           console.log('this thing is visible');
-          //this.$emit('intersect');
+          this.$emit('intersect');
         }
       });
     });
