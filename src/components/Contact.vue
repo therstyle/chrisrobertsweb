@@ -1,8 +1,12 @@
 <template>
   <section class="contact">
-    <Heading title="Contact"></Heading>
+    <Heading :title="headline"></Heading>
     <div class="contact--content content">
-      
+      <div class="contact-form">
+        <picture>
+          <img :src="photo" alt="">
+        </picture>
+      </div>
     </div>
   </section>
 </template>
@@ -14,11 +18,18 @@ export default {
   name: 'Contact',
   components: {
     Heading
+  },
+  props: {
+    headline: String,
+    photo: String,
   }
 }
 </script>
 
 <style lang="scss">
-  .contact {
+  .contact-form {
+    position: relative;
   }
+
+
 </style>

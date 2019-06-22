@@ -6,7 +6,7 @@
 
     <div class="description">
       <h3>{{ name }}</h3>
-      <p>{{ description }}</p>
+      <p v-html="description"></p>
       <div class="project-type"><img :src="typeImage" :alt="type"></div>
     </div>
   </article>

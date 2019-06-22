@@ -4,12 +4,13 @@
       :github="github"
       :linkedin="linkedin"
     ></Sidebar>
+
     <Intro
       :introHeadline="introHeadline" 
       :introText="introText"
       :scrollText="scrollText"
-      :video="video"
     ></Intro>
+
     <Resume 
       :entries="resumeEntries"
       :photo="photo"
@@ -17,8 +18,14 @@
       :designSkills="designSkills"
       :sigText="sigText"
     ></Resume>
+
     <Portfolio :portfolioItems="portfolioItems"></Portfolio>
-    <Contact></Contact>
+
+    <Contact
+      :headline="contactHeadline"
+      :photo="contactPhoto"
+    ></Contact>
+
     <div class="bg-video">
       <video autoplay="" muted="" loop="" class="full-height"> 
         <source src="/video/intro-web.mp4" type="video/mp4"> 
@@ -57,7 +64,9 @@ export default {
       sigText: '',
       devSkills: [],
       designSkills: [],
-      portfolioItems: []
+      portfolioItems: [],
+      contactHeadline: '',
+      contactPhoto: ''
     }
   },
   methods: {
@@ -84,6 +93,8 @@ export default {
       this.devSkills = info.resume.skills.dev;
       this.designSkills = info.resume.skills.design;
       this.portfolioItems = info.portfolio.entries;
+      this.contactHeadline = info.contact.headline;
+      this.contactPhoto = info.contact.photo;
     });
   }
 }

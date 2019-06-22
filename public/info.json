@@ -185,5 +185,9 @@
   
       }
     ]
+  },
+  "contact": {
+    "headline": "Contact",
+    "photo": "/images/zakim.jpg"
   }
 }
