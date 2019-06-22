@@ -20,7 +20,9 @@
     <Portfolio :portfolioItems="portfolioItems"></Portfolio>
     <Contact></Contact>
     <div class="bg-video">
-
+      <video autoplay="" muted="" loop="" class="full-height"> 
+        <source src="/video/intro-web.mp4" type="video/mp4"> 
+      </video>
     </div>
   </main>
 </template>
@@ -48,7 +50,8 @@ export default {
       introHeadline: '',
       introText: '',
       scrollText: '',
-      video: '',
+      video_mp4: '',
+      video_ogv: '',
       resumeEntries: [],
       photo: '',
       sigText: '',
@@ -73,7 +76,8 @@ export default {
       this.introHeadline = info.intro.headline;
       this.introText = info.intro.introText;
       this.scrollText = info.intro.scrollText;
-      this.video = info.intro.video;
+      this.video_mp4 = info.intro.video_mp4;
+      this.video_ogv = info.intro.video_ogv;
       this.resumeEntries = info.resume.entries;
       this.photo = info.resume.photo;
       this.sigText = info.resume.sigText;
@@ -101,6 +105,7 @@ body {
 #app {
   display: grid;
   padding-left: var(--sidebar-width);
+  position: relative;
 
   > section {
     min-height: 100vh;
@@ -151,12 +156,20 @@ p {
 }
 
 .bg-video {
-  position: absolute;
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: -1;
+
+  video {
+    width: 100%;
+    min-height: 100vh;
+    object-fit: fill;
+  }
 }
 
 </style>
