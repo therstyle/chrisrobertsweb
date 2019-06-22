@@ -10,7 +10,7 @@
           <button>{{ buttonText }}</button>
         </form>
         
-        <picture class="contact-photo">
+        <picture class="contact-photo" data-pixels="4957">
           <img :src="photo" alt="">
         </picture>
       </div>
@@ -95,11 +95,24 @@ export default {
     max-width: 60%;
 
     &:before {
-
+      content: attr(data-pixels);
+      display: block;
+      font-size: 4vw;
+      font-weight: 600;
+      position: absolute;
+      right: 4vw;
+      top: -2.5vw;
     }
 
     &:after {
-      
+      content: 'Pixels Made With Style';
+      font-family: var(--accent-font);
+      font-size: 1vw;
+      text-transform: uppercase;
+      position: absolute;
+      top: -2.5vw;
+      margin-top: 4.9vw;
+      right: 3.2vw;
     }
 
     img {
