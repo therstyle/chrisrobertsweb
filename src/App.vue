@@ -78,7 +78,10 @@ export default {
     }
   },
   methods: {
-    activeItem: function() {
+    activeItem: function(currentSection) {
+      // Object.keys(this.active).forEach(function(section) {
+      //   console.log(this.active[section]);
+      // });
     },
     loadData: async function() {
       const response = await fetch('info.json');
@@ -123,6 +126,7 @@ body {
 }
 
 #app {
+  opacity: 0; //debug
   display: grid;
   padding-left: var(--sidebar-width);
   position: relative;

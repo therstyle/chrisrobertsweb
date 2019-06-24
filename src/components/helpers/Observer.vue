@@ -16,7 +16,8 @@ export default {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
           console.log('this thing is visible');
-          this.$emit('intersect');
+          //this.activeItem();
+          //this.$emit('intersect');
         }
       });
     });
