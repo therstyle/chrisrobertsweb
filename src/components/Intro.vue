@@ -66,6 +66,10 @@ export default {
   a {
     display: block;
     color: var(--white);
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   svg {

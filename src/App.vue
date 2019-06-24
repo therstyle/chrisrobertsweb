@@ -68,7 +68,13 @@ export default {
       portfolioItems: [],
       contactHeadline: '',
       contactPhoto: '',
-      contactButtonText: ''
+      contactButtonText: '',
+      active: {
+        "intro": false,
+        "portfolio": false,
+        "resume": false,
+        "contact": false
+      }
     }
   },
   methods: {
