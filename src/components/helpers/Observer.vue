@@ -14,8 +14,8 @@ export default {
     active: Object
   },
   methods: {
-    intersected() {
-      this.$emit('intersect', 'resume');
+    intersected(currentSection) {
+      this.$emit('intersected', currentSection);
       console.log('this thing is visible');
     }
   },
@@ -23,7 +23,7 @@ export default {
     this.observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
-          this.intersected();
+          this.intersected('resume');
         }
       });
     });

@@ -18,6 +18,7 @@
       :designSkills="designSkills"
       :sigText="sigText"
       :active="active"
+      v-on:intersected="activeItem"
     ></Resume>
 
     <Portfolio :portfolioItems="portfolioItems"></Portfolio>
@@ -80,9 +81,15 @@ export default {
   },
   methods: {
     activeItem: function(currentSection) {
-      // Object.keys(this.active).forEach(function(section) {
-      //   console.log(this.active[section]);
-      // });
+      console.log('received at the top level!');
+      Object.keys(this.active).forEach(item => {
+        if (item === currentSection) {
+          this.active[item] = true;
+        }
+        else {
+          this.active[item] = false;
+        }
+      });
     },
     loadData: async function() {
       const response = await fetch('info.json');
