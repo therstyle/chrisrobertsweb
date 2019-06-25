@@ -11,13 +11,16 @@ export default {
       observer: null
     }
   },
+  props: {
+    active: Object
+  },
   mounted() {
+    //console.log(this.active);
     this.observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
           console.log('this thing is visible');
-          //this.activeItem();
-          //this.$emit('intersect');
+          this.$emit('intersect', true);
         }
       });
     });

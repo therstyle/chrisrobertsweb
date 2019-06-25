@@ -1,6 +1,6 @@
 <template>
   <section class="resume">
-    <Observer></Observer>
+    <Observer :active="active"></Observer>
     <Heading title="Resume"></Heading>
 
     <div class="resume--content">
@@ -63,7 +63,8 @@ export default {
     photo: String,
     devSkills: Array,
     designSkills: Array,
-    sigText: String
+    sigText: String,
+    active: Object
   }
 }
 </script>

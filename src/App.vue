@@ -17,6 +17,7 @@
       :devSkills="devSkills"
       :designSkills="designSkills"
       :sigText="sigText"
+      :active="active"
     ></Resume>
 
     <Portfolio :portfolioItems="portfolioItems"></Portfolio>
