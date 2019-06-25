@@ -1,5 +1,5 @@
 <template>
-  <section class="resume">
+  <section id="resume" class="resume">
     <Observer :active="active" v-on:intersected="intersected"></Observer>
     <Heading title="Resume"></Heading>
 
@@ -69,7 +69,6 @@ export default {
   methods: {
     intersected(currentSection) {
       this.$emit('intersected', currentSection);
-      console.log('passing up one more level!');
     }
   }
 }

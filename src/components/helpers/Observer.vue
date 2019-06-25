@@ -7,7 +7,8 @@ export default {
   name: 'Observer',
   data: function() {
     return{
-      observer: null
+      observer: null,
+      parentName: ''
     }
   },
   props: {
@@ -16,14 +17,17 @@ export default {
   methods: {
     intersected(currentSection) {
       this.$emit('intersected', currentSection);
-      console.log('this thing is visible');
     }
   },
   mounted() {
     this.observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
-          this.intersected('resume');
+          if (this.$parent.$vnode.elm.id) {
+            this.parentName = this.$parent.$vnode.elm.id;
+            //console.log(this.parentName);
+            this.intersected(this.parentName);
+          }
         }
       });
     });

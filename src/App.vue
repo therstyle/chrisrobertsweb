@@ -3,6 +3,7 @@
     <Sidebar 
       :github="github"
       :linkedin="linkedin"
+      :active="active"
     ></Sidebar>
 
     <Intro
@@ -81,7 +82,7 @@ export default {
   },
   methods: {
     activeItem: function(currentSection) {
-      console.log('received at the top level!');
+      //iterate thru active's keys, set one as active
       Object.keys(this.active).forEach(item => {
         if (item === currentSection) {
           this.active[item] = true;

@@ -1,5 +1,5 @@
 <template>
-  <section class="contact">
+  <section id="contact" class="contact">
     <Heading :title="headline"></Heading>
     <div class="contact--content content">
       <div class="contact-form">

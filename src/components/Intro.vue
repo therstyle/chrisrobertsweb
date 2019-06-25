@@ -1,5 +1,5 @@
 <template>
-  <section class="intro">
+  <section id="intro" class="intro">
     <div class="intro--content">
       <h6 class="sub-heading">Front End Developer | Boston, MA</h6>
       <h1 class="heading" v-html="introHeadline"></h1>
