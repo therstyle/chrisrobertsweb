@@ -5,7 +5,6 @@
 <script>
 export default {
   name: 'Observer',
-  event: 'intersect',
   data: function() {
     return{
       observer: null
@@ -14,13 +13,17 @@ export default {
   props: {
     active: Object
   },
+  methods: {
+    intersected() {
+      this.$emit('intersect', 'resume');
+      console.log('this thing is visible');
+    }
+  },
   mounted() {
-    //console.log(this.active);
     this.observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
-          console.log('this thing is visible');
-          this.$emit('intersect', true);
+          this.intersected();
         }
       });
     });
