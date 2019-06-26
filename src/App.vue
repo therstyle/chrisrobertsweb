@@ -4,7 +4,7 @@
       :github="github"
       :linkedin="linkedin"
       :active="active"
-      v-on:scrollRequest="scroll"
+      v-on:scrollRequest="scrollHere"
     ></Sidebar>
 
     <Intro
@@ -15,7 +15,8 @@
       v-on:intersected="activeItem"
     ></Intro>
 
-    <Resume 
+    <Resume
+      ref="resume"  
       :entries="resumeEntries"
       :photo="photo"
       :devSkills="devSkills"
@@ -25,12 +26,14 @@
       v-on:intersected="activeItem"
     ></Resume>
 
-    <Portfolio 
+    <Portfolio
+      ref="portfolio" 
       :portfolioItems="portfolioItems"
       v-on:intersected="activeItem"
     ></Portfolio>
 
     <Contact
+      ref="contact" 
       :headline="contactHeadline"
       :photo="contactPhoto"
       :buttonText="contactButtonText"
@@ -99,12 +102,17 @@ export default {
         }
       });
     },
-    scroll: function(section) {
+    scrollHere: function(section) {
       //iterate thru refs, look for a match
       Object.keys(this.$refs).forEach(item => {
         if (section === item) {
           let clickedSection = this.$refs[item];
-          console.log(clickedSection);
+          
+          window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: clickedSection.$vnode.elm.offsetTop
+          })
         }
       });
     },
