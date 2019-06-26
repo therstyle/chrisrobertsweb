@@ -4,9 +4,11 @@
       :github="github"
       :linkedin="linkedin"
       :active="active"
+      v-on:scrollRequest="scroll"
     ></Sidebar>
 
     <Intro
+      ref="intro" 
       :introHeadline="introHeadline" 
       :introText="introText"
       :scrollText="scrollText"
@@ -94,6 +96,15 @@ export default {
         }
         else {
           this.active[item] = false;
+        }
+      });
+    },
+    scroll: function(section) {
+      //iterate thru refs, look for a match
+      Object.keys(this.$refs).forEach(item => {
+        if (section === item) {
+          let clickedSection = this.$refs[item];
+          console.log(clickedSection);
         }
       });
     },
