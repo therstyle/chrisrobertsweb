@@ -1,5 +1,6 @@
 <template>
   <section id="intro" class="intro">
+    <Observer v-on:intersected="intersected"></Observer>
     <div class="intro--content">
       <h6 class="sub-heading">Front End Developer | Boston, MA</h6>
       <h1 class="heading" v-html="introHeadline"></h1>
@@ -18,13 +19,23 @@
 </template>
 
 <script>
+import Observer from './helpers/Observer.vue';
+
 export default {
   name: 'Intro',
+  components: {
+    Observer
+  },
   props: {
     introHeadline: String,
     introText: String,
     scrollText: String,
     video: String
+  },
+  methods: {
+    intersected(currentSection) {
+      this.$emit('intersected', currentSection);
+    }
   }
 }
 </script>

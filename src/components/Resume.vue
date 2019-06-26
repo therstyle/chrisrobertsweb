@@ -1,6 +1,6 @@
 <template>
   <section id="resume" class="resume">
-    <Observer :active="active" v-on:intersected="intersected"></Observer>
+    <Observer v-on:intersected="intersected"></Observer>
     <Heading title="Resume"></Heading>
 
     <div class="resume--content">

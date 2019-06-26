@@ -11,9 +11,6 @@ export default {
       parentName: ''
     }
   },
-  props: {
-    active: Object
-  },
   methods: {
     intersected(currentSection) {
       this.$emit('intersected', currentSection);

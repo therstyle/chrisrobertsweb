@@ -1,5 +1,6 @@
 <template>
   <section id="portfolio" class="portfolio">
+    <Observer v-on:intersected="intersected"></Observer>
     <Heading title="Portfolio"></Heading>
 
     <div class="portfolio--content content">
@@ -19,15 +20,22 @@
 <script>
 import Heading from './layout/Heading.vue';
 import PorfolioItem from './layout/PortfolioItem.vue';
+import Observer from './helpers/Observer.vue';
 
 export default {
   name: 'Portfolio',
   components: {
     Heading,
-    PorfolioItem
+    PorfolioItem,
+    Observer
   },
   props: {
     portfolioItems: Array
+  },
+  methods: {
+    intersected(currentSection) {
+      this.$emit('intersected', currentSection);
+    }
   }
 }
 </script>

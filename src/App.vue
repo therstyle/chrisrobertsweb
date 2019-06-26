@@ -10,6 +10,7 @@
       :introHeadline="introHeadline" 
       :introText="introText"
       :scrollText="scrollText"
+      v-on:intersected="activeItem"
     ></Intro>
 
     <Resume 
@@ -22,12 +23,16 @@
       v-on:intersected="activeItem"
     ></Resume>
 
-    <Portfolio :portfolioItems="portfolioItems"></Portfolio>
+    <Portfolio 
+      :portfolioItems="portfolioItems"
+      v-on:intersected="activeItem"
+    ></Portfolio>
 
     <Contact
       :headline="contactHeadline"
       :photo="contactPhoto"
       :buttonText="contactButtonText"
+      v-on:intersected="activeItem"
     ></Contact>
 
     <div class="bg-video">

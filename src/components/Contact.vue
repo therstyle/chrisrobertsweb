@@ -1,5 +1,6 @@
 <template>
   <section id="contact" class="contact">
+    <Observer v-on:intersected="intersected"></Observer>
     <Heading :title="headline"></Heading>
     <div class="contact--content content">
       <div class="contact-form">
@@ -20,16 +21,23 @@
 
 <script>
 import Heading from './layout/Heading.vue';
+import Observer from './helpers/Observer.vue';
 
 export default {
   name: 'Contact',
   components: {
-    Heading
+    Heading,
+    Observer
   },
   props: {
     headline: String,
     photo: String,
     buttonText: String
+  },
+  methods: {
+    intersected(currentSection) {
+      this.$emit('intersected', currentSection);
+    }
   }
 }
 </script>

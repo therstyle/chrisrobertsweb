@@ -142,14 +142,18 @@ nav.main-nav {
     flex: 1;
     align-items: center;
     background: #000;
+    transition: 0.3s all;
 
     &.active {
       position: relative;
 
       svg {
+        transition: 0.3s all;
+
         path {
           fill: var(--red);
           fill-opacity: 1;
+          transition: 0.3s all;
         }
       }
 
