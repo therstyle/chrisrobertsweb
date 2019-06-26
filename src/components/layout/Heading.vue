@@ -12,6 +12,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.heading {
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+}
 
+.viewed {
+  .heading {
+    opacity: 1;
+  }
+}
 </style>
 
