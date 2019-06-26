@@ -135,7 +135,7 @@ body {
 }
 
 #app {
-  opacity: 0; //debug
+  //opacity: 0; //debug
   display: grid;
   padding-left: var(--sidebar-width);
   position: relative;
