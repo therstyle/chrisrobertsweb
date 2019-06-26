@@ -1,5 +1,5 @@
 <template>
-  <section id="portfolio" class="portfolio">
+  <section id="portfolio" class="portfolio" :class="{ viewed : viewed }">
     <Observer v-on:intersected="intersected"></Observer>
     <Heading title="Portfolio"></Heading>
 
@@ -24,6 +24,11 @@ import Observer from './helpers/Observer.vue';
 
 export default {
   name: 'Portfolio',
+  data() {
+    return {
+      viewed: false
+    }
+  },
   components: {
     Heading,
     PorfolioItem,
@@ -35,6 +40,7 @@ export default {
   methods: {
     intersected(currentSection) {
       this.$emit('intersected', currentSection);
+      this.viewed = true;
     }
   }
 }

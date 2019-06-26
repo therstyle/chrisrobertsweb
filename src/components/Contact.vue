@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="contact">
+  <section id="contact" class="contact" :class="{ viewed : viewed }">
     <Observer v-on:intersected="intersected"></Observer>
     <Heading :title="headline"></Heading>
     <div class="contact--content content">
@@ -25,6 +25,11 @@ import Observer from './helpers/Observer.vue';
 
 export default {
   name: 'Contact',
+  data() {
+    return {
+      viewed: false
+    }
+  },
   components: {
     Heading,
     Observer
@@ -37,6 +42,7 @@ export default {
   methods: {
     intersected(currentSection) {
       this.$emit('intersected', currentSection);
+      this.viewed = true;
     }
   }
 }

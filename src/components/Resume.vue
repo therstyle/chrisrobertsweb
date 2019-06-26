@@ -1,5 +1,5 @@
 <template>
-  <section id="resume" class="resume">
+  <section id="resume" class="resume" :class="{ viewed : viewed }">
     <Observer v-on:intersected="intersected"></Observer>
     <Heading title="Resume"></Heading>
 
@@ -52,6 +52,11 @@ import Observer from './helpers/Observer.vue';
 
 export default {
   name: 'Resume',
+  data() {
+    return {
+      viewed: false
+    }
+  },
   components: {
     Heading,
     TimelineEntry,
@@ -69,6 +74,7 @@ export default {
   methods: {
     intersected(currentSection) {
       this.$emit('intersected', currentSection);
+      this.viewed = true;
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <section id="intro" class="intro">
+  <section id="intro" class="intro" :class="{ viewed : viewed }">
     <Observer v-on:intersected="intersected"></Observer>
     <div class="intro--content">
       <h6 class="sub-heading">Front End Developer | Boston, MA</h6>
@@ -23,6 +23,11 @@ import Observer from './helpers/Observer.vue';
 
 export default {
   name: 'Intro',
+  data() {
+    return {
+      viewed: false
+    }
+  },
   components: {
     Observer
   },
@@ -35,6 +40,7 @@ export default {
   methods: {
     intersected(currentSection) {
       this.$emit('intersected', currentSection);
+      this.viewed = true;
     }
   }
 }
