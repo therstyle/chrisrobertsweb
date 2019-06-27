@@ -153,9 +153,12 @@ nav.main-nav {
       position: relative;
 
       svg {
+        fill: var(--red);
+        fill-opacity: 1;
         transition: 0.3s all;
 
-        path {
+        path,
+        g {
           fill: var(--red);
           fill-opacity: 1;
           transition: 0.3s all;
