@@ -41,6 +41,7 @@
         </ul>
       </aside>
     </div>
+    <!-- <Observer v-on:intersected="intersected"></Observer> -->
   </section>
 </template>
 
