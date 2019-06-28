@@ -11,7 +11,7 @@
           <button>{{ buttonText }}</button>
         </form>
         
-        <picture class="contact-photo" data-pixels="4957">
+        <picture class="contact-photo" :data-pixels="amountScrolled">
           <img :src="photo" alt="">
         </picture>
       </div>
@@ -27,7 +27,8 @@ export default {
   name: 'Contact',
   data() {
     return {
-      viewed: false
+      viewed: false,
+      amountScrolled: 0
     }
   },
   components: {
@@ -43,7 +44,15 @@ export default {
     intersected(currentSection) {
       this.$emit('intersected', currentSection);
       this.viewed = true;
+    },
+    getCurrentPosition() {
+      window.addEventListener('scroll', function() {
+        this.amountScrolled = window.scrollY;
+      });
     }
+  },
+  mounted() {
+    this.getCurrentPosition();
   }
 }
 </script>
