@@ -13,6 +13,7 @@
       :introText="introText"
       :scrollText="scrollText"
       v-on:intersected="activeItem"
+      v-on:scrollRequest="scrollHere"
     ></Intro>
 
     <Resume

@@ -47,7 +47,7 @@ export default {
     },
     getCurrentPosition() {
       this.amountScrolled = window.scrollY;
-      console.log(this.amountScrolled);
+      this.amountScrolled = Math.round(this.amountScrolled);
     }
   },
   mounted() {
