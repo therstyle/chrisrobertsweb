@@ -84,7 +84,7 @@ export default {
 
 <style lang="scss">
   .resume--content {
-    padding: 0 4vw;
+    padding: 4vw 4vw 0 4vw;
     display: flex;
   }
 

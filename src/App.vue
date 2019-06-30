@@ -184,15 +184,6 @@ img {
   text-transform: uppercase;
 }
 
-header.heading {
-  padding-left: 4vw;
-
-  h1 {
-    font-size: 6.1vw;
-    line-height: 1;
-  }
-}
-
 .sub-heading {
   font-family: var(--accent-font);
   font-weight: normal;

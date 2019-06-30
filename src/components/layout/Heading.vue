@@ -23,6 +23,39 @@
       <span></span>
       <span></span>
       <span></span>
+
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </header>
 </template>
@@ -34,15 +67,44 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.heading {
+<style lang="scss">
+header.heading {
+  padding: 20px 0 20px 4vw;
   opacity: 0;
   transition: 0.3s all ease-in-out;
+  position: relative;
+  overflow: hidden;
+
+  h1 {
+    font-size: 6.1vw;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  .line-grid {
+    display: flex;
+    position: absolute;
+    top: -20px;
+    left: -4vw;
+
+    span {
+      min-height: 150px;
+      width: 4px;
+      margin-right: 8px;
+      display: block;
+      background: rgba(255,255,255,0.10);
+      transform: rotate(135deg);
+    }
+  }
 }
 
 .viewed {
   .heading {
     opacity: 1;
+
+    .line-grid {
+      
+    }
   }
 }
 </style>
