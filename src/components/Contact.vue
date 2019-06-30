@@ -46,13 +46,12 @@ export default {
       this.viewed = true;
     },
     getCurrentPosition() {
-      window.addEventListener('scroll', function() {
-        this.amountScrolled = window.scrollY;
-      });
+      this.amountScrolled = window.scrollY;
+      console.log(this.amountScrolled);
     }
   },
   mounted() {
-    this.getCurrentPosition();
+    window.addEventListener('scroll', this.getCurrentPosition);
   }
 }
 </script>
