@@ -70,7 +70,7 @@ export default {
 <style lang="scss">
 header.heading {
   padding: 20px 0 20px 4vw;
-  opacity: 0;
+  //opacity: 0;
   transition: 0.3s all ease-in-out;
   position: relative;
   overflow: hidden;
@@ -94,17 +94,40 @@ header.heading {
       display: block;
       background: rgba(255,255,255,0.10);
       transform: rotate(135deg);
+      transition: 0.25s all;
+      opacity: 0;
     }
   }
 }
 
 .viewed {
-  .heading {
-    opacity: 1;
+  header.heading {
+    //opacity: 1;
 
     .line-grid {
-      
+      span {
+        animation: .10s ease-in-out span-line;
+        animation-fill-mode: both;
+
+        @for $i from 1 through 50 {
+          &:nth-child(#{$i}) {
+            animation-delay: 0.02s * $i;
+          }
+        }
+      }
     }
+  }
+}
+
+@keyframes span-line {
+  0% {
+    opacity: 0;
+    transform: rotate(135deg), translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(135deg), translateX(0);
   }
 }
 </style>
