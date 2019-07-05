@@ -16,7 +16,7 @@ export default {
           if(entry.isIntersecting) {
             if (this.$vnode.elm.id) {
               this.parentName = this.$vnode.elm.id;
-              console.log(this.parentName + 'waypoint');
+              console.log(this.parentName + ' MIXIN TEST');
               this.intersected(this.parentName);
             }
           }

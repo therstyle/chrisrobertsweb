@@ -47,6 +47,7 @@
 import Heading from './layout/Heading.vue';
 import TimelineEntry from './layout/TimelineEntry.vue';
 import Skill from './layout/Skill.vue';
+import observer from './helpers/observer.js';
 
 export default {
   name: 'Resume',
@@ -57,6 +58,7 @@ export default {
       parentName: ''
     }
   },
+  mixins: [observer],
   components: {
     Heading,
     TimelineEntry,
@@ -69,27 +71,6 @@ export default {
     designSkills: Array,
     sigText: String,
     active: Object
-  },
-  methods: {
-    intersected(currentSection) {
-      this.$emit('intersected', currentSection);
-      this.viewed = true;
-    },
-    wayPoint() {
-      this.observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting) {
-            if (this.$vnode.elm.id) {
-              this.parentName = this.$vnode.elm.id;
-              console.log(this.parentName + 'waypoint');
-              this.intersected(this.parentName);
-            }
-          }
-        });
-      });
-
-      this.observer.observe(this.$el);
-    }
   },
   mounted() {
     this.wayPoint();
