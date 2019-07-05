@@ -19,17 +19,14 @@
 </template>
 
 <script>
-import Observer from './helpers/Observer.vue';
-
 export default {
   name: 'Intro',
   data() {
     return {
-      viewed: false
+      viewed: false,
+      observer: null,
+      parentName: ''
     }
-  },
-  components: {
-    Observer
   },
   props: {
     introHeadline: String,
@@ -45,6 +42,21 @@ export default {
     scrollRequest(section) {
       this.$emit('scrollRequest', section);
     }
+  },
+  mounted() {
+    this.observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          if (this.$vnode.elm.id) {
+            this.parentName = this.$vnode.elm.id;
+            console.log(this.parentName);
+            this.intersected(this.parentName);
+          }
+        }
+      });
+    });
+
+    this.observer.observe(this.$el);
   }
 }
 </script>

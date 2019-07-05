@@ -21,19 +21,19 @@
 
 <script>
 import Heading from './layout/Heading.vue';
-import Observer from './helpers/Observer.vue';
 
 export default {
   name: 'Contact',
   data() {
     return {
       viewed: false,
-      amountScrolled: 0
+      amountScrolled: 0,
+      observer: null,
+      parentName: ''
     }
   },
   components: {
-    Heading,
-    Observer
+    Heading
   },
   props: {
     headline: String,
@@ -51,6 +51,20 @@ export default {
     }
   },
   mounted() {
+    this.observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          if (this.$vnode.elm.id) {
+            this.parentName = this.$vnode.elm.id;
+            console.log(this.parentName);
+            this.intersected(this.parentName);
+          }
+        }
+      });
+    });
+
+    this.observer.observe(this.$el);
+
     window.addEventListener('scroll', this.getCurrentPosition);
   }
 }

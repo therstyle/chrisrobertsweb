@@ -1,6 +1,6 @@
 <template>
   <section id="resume" class="resume" :class="{ viewed : viewed }">
-    <Observer v-on:intersected="intersected"></Observer>
+    <!-- <Observer v-on:intersected="intersected"></Observer> -->
     <Heading title="Resume"></Heading>
 
     <div class="resume--content">
@@ -49,20 +49,20 @@
 import Heading from './layout/Heading.vue';
 import TimelineEntry from './layout/TimelineEntry.vue';
 import Skill from './layout/Skill.vue';
-import Observer from './helpers/Observer.vue';
 
 export default {
   name: 'Resume',
   data() {
     return {
-      viewed: false
+      viewed: false,
+      observer: null,
+      parentName: ''
     }
   },
   components: {
     Heading,
     TimelineEntry,
-    Skill,
-    Observer
+    Skill
   },
   props: {
     entries: Array,
@@ -77,6 +77,21 @@ export default {
       this.$emit('intersected', currentSection);
       this.viewed = true;
     }
+  },
+  mounted() {
+    this.observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          if (this.$vnode.elm.id) {
+            this.parentName = this.$vnode.elm.id;
+            console.log(this.parentName);
+            this.intersected(this.parentName);
+          }
+        }
+      });
+    });
+
+    this.observer.observe(this.$el);
   }
 }
 </script>

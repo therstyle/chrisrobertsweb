@@ -1,6 +1,5 @@
 <template>
   <section id="portfolio" class="portfolio" :class="{ viewed : viewed }">
-    <Observer v-on:intersected="intersected"></Observer>
     <Heading title="Portfolio"></Heading>
 
     <div class="portfolio--content content">
@@ -20,19 +19,19 @@
 <script>
 import Heading from './layout/Heading.vue';
 import PorfolioItem from './layout/PortfolioItem.vue';
-import Observer from './helpers/Observer.vue';
 
 export default {
   name: 'Portfolio',
   data() {
     return {
-      viewed: false
+      viewed: false,
+      observer: null,
+      parentName: ''
     }
   },
   components: {
     Heading,
-    PorfolioItem,
-    Observer
+    PorfolioItem
   },
   props: {
     portfolioItems: Array
@@ -42,6 +41,21 @@ export default {
       this.$emit('intersected', currentSection);
       this.viewed = true;
     }
+  },
+  mounted() {
+    this.observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          if (this.$vnode.elm.id) {
+            this.parentName = this.$vnode.elm.id;
+            console.log(this.parentName);
+            this.intersected(this.parentName);
+          }
+        }
+      });
+    });
+
+    this.observer.observe(this.$el);
   }
 }
 </script>
