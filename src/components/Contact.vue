@@ -1,6 +1,5 @@
 <template>
   <section id="contact" class="contact" :class="{ viewed : viewed }">
-    <Observer v-on:intersected="intersected"></Observer>
     <Heading :title="headline"></Heading>
     <div class="contact--content content">
       <div class="contact-form">
@@ -48,23 +47,25 @@ export default {
     getCurrentPosition() {
       this.amountScrolled = window.scrollY;
       this.amountScrolled = Math.round(this.amountScrolled);
+    },
+    wayPoint() {
+      this.observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            if (this.$vnode.elm.id) {
+              this.parentName = this.$vnode.elm.id;
+              console.log(this.parentName + 'waypoint');
+              this.intersected(this.parentName);
+            }
+          }
+        });
+      });
+
+      this.observer.observe(this.$el);
     }
   },
   mounted() {
-    this.observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          if (this.$vnode.elm.id) {
-            this.parentName = this.$vnode.elm.id;
-            console.log(this.parentName);
-            this.intersected(this.parentName);
-          }
-        }
-      });
-    });
-
-    this.observer.observe(this.$el);
-
+    this.wayPoint();
     window.addEventListener('scroll', this.getCurrentPosition);
   }
 }

@@ -1,6 +1,5 @@
 <template>
   <section id="intro" class="intro" :class="{ viewed : viewed }">
-    <Observer v-on:intersected="intersected"></Observer>
     <div class="intro--content">
       <h6 class="sub-heading">Front End Developer | Boston, MA</h6>
       <h1 class="heading" v-html="introHeadline"></h1>
@@ -41,22 +40,25 @@ export default {
     },
     scrollRequest(section) {
       this.$emit('scrollRequest', section);
+    },
+    wayPoint() {
+      this.observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            if (this.$vnode.elm.id) {
+              this.parentName = this.$vnode.elm.id;
+              console.log(this.parentName + 'waypoint');
+              this.intersected(this.parentName);
+            }
+          }
+        });
+      });
+
+      this.observer.observe(this.$el);
     }
   },
   mounted() {
-    this.observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          if (this.$vnode.elm.id) {
-            this.parentName = this.$vnode.elm.id;
-            console.log(this.parentName);
-            this.intersected(this.parentName);
-          }
-        }
-      });
-    });
-
-    this.observer.observe(this.$el);
+    this.wayPoint();
   }
 }
 </script>
