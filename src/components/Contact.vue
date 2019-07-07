@@ -20,6 +20,7 @@
 
 <script>
 import Heading from './layout/Heading.vue';
+import observer from './helpers/observer.js';
 
 export default {
   name: 'Contact',
@@ -27,10 +28,9 @@ export default {
     return {
       viewed: false,
       amountScrolled: 0,
-      observer: null,
-      parentName: ''
     }
   },
+  mixins: [observer],
   components: {
     Heading
   },
@@ -40,28 +40,9 @@ export default {
     buttonText: String
   },
   methods: {
-    intersected(currentSection) {
-      this.$emit('intersected', currentSection);
-      this.viewed = true;
-    },
     getCurrentPosition() {
       this.amountScrolled = window.scrollY;
       this.amountScrolled = Math.round(this.amountScrolled);
-    },
-    wayPoint() {
-      this.observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting) {
-            if (this.$vnode.elm.id) {
-              this.parentName = this.$vnode.elm.id;
-              console.log(this.parentName + 'waypoint');
-              this.intersected(this.parentName);
-            }
-          }
-        });
-      });
-
-      this.observer.observe(this.$el);
     }
   },
   mounted() {

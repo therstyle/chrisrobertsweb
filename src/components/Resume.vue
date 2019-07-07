@@ -53,9 +53,7 @@ export default {
   name: 'Resume',
   data() {
     return {
-      viewed: false,
-      observer: null,
-      parentName: ''
+      viewed: false
     }
   },
   mixins: [observer],

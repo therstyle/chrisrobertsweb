@@ -19,43 +19,22 @@
 <script>
 import Heading from './layout/Heading.vue';
 import PorfolioItem from './layout/PortfolioItem.vue';
+import observer from './helpers/observer.js';
 
 export default {
   name: 'Portfolio',
   data() {
     return {
-      viewed: false,
-      observer: null,
-      parentName: ''
+      viewed: false
     }
   },
+  mixins: [observer],
   components: {
     Heading,
     PorfolioItem
   },
   props: {
     portfolioItems: Array
-  },
-  methods: {
-    intersected(currentSection) {
-      this.$emit('intersected', currentSection);
-      this.viewed = true;
-    },
-    wayPoint() {
-      this.observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting) {
-            if (this.$vnode.elm.id) {
-              this.parentName = this.$vnode.elm.id;
-              console.log(this.parentName + 'waypoint');
-              this.intersected(this.parentName);
-            }
-          }
-        });
-      });
-
-      this.observer.observe(this.$el);
-    }
   },
   mounted() {
     this.wayPoint();

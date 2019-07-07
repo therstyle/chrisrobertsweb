@@ -18,15 +18,16 @@
 </template>
 
 <script>
+import observer from './helpers/observer.js';
+
 export default {
   name: 'Intro',
   data() {
     return {
-      viewed: false,
-      observer: null,
-      parentName: ''
+      viewed: false
     }
   },
+  mixins: [observer],
   props: {
     introHeadline: String,
     introText: String,
@@ -34,27 +35,8 @@ export default {
     video: String
   },
   methods: {
-    intersected(currentSection) {
-      this.$emit('intersected', currentSection);
-      this.viewed = true;
-    },
     scrollRequest(section) {
       this.$emit('scrollRequest', section);
-    },
-    wayPoint() {
-      this.observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting) {
-            if (this.$vnode.elm.id) {
-              this.parentName = this.$vnode.elm.id;
-              console.log(this.parentName + 'waypoint');
-              this.intersected(this.parentName);
-            }
-          }
-        });
-      });
-
-      this.observer.observe(this.$el);
     }
   },
   mounted() {
