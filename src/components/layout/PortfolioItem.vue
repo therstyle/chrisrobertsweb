@@ -1,14 +1,16 @@
 <template>
   <article class="portfolio--content-entry">
-    <header>
-      <img :src="image" :alt="name">
-    </header>
+    <a :href="url" target="_blank">
+      <header>
+        <img :src="image" :alt="name">
+      </header>
 
-    <div class="description">
-      <h3>{{ name }}</h3>
-      <p v-html="description"></p>
-      <div class="project-type"><img :src="typeImage" :alt="type"></div>
-    </div>
+      <div class="description">
+        <h3>{{ name }}</h3>
+        <p v-html="description"></p>
+        <div class="project-type"><img :src="typeImage" :alt="type"></div>
+      </div>
+    </a>
   </article>
 </template>
 
@@ -16,6 +18,7 @@
 export default {
   name: "PortfolioItem",
   props: {
+    url: String,
     image: String,
     video: String,
     name: String,
@@ -42,6 +45,10 @@ export default {
   &:hover {
     transform: translateY(-0.3vw);
     box-shadow: 0 0 30px rgba(0,0,0,0.33);
+  }
+
+  > a {
+    color: var(--white);
   }
 
   header {

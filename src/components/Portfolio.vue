@@ -5,6 +5,7 @@
     <div class="portfolio--content content">
       <PorfolioItem v-for="portfolioItem in portfolioItems" 
         :key="portfolioItem.name"
+        :url="portfolioItem.url"
         :image="portfolioItem.image"
         :video="portfolioItem.video"
         :name="portfolioItem.name"
