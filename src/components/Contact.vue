@@ -1,6 +1,5 @@
 <template>
   <section id="contact" class="contact" :class="{ viewed : viewed }">
-    <Observer v-on:intersected="intersected"></Observer>
     <Heading :title="headline"></Heading>
     <div class="contact--content content">
       <div class="contact-form">
@@ -21,19 +20,19 @@
 
 <script>
 import Heading from './layout/Heading.vue';
-import Observer from './helpers/Observer.vue';
+import observer from './helpers/observer.js';
 
 export default {
   name: 'Contact',
   data() {
     return {
       viewed: false,
-      amountScrolled: 0
+      amountScrolled: 0,
     }
   },
+  mixins: [observer],
   components: {
-    Heading,
-    Observer
+    Heading
   },
   props: {
     headline: String,
@@ -41,16 +40,13 @@ export default {
     buttonText: String
   },
   methods: {
-    intersected(currentSection) {
-      this.$emit('intersected', currentSection);
-      this.viewed = true;
-    },
     getCurrentPosition() {
       this.amountScrolled = window.scrollY;
       this.amountScrolled = Math.round(this.amountScrolled);
     }
   },
   mounted() {
+    this.wayPoint();
     window.addEventListener('scroll', this.getCurrentPosition);
   }
 }

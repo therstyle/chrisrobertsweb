@@ -137,6 +137,7 @@
     "headline": "Portfolio",
     "entries": [
       {
+        "url": "http://flowetik.com/",
         "image": "https://dummyimage.com/380x260/000/fff",
         "name": "Flowetik",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -145,6 +146,7 @@
   
       },
       {
+        "url": "https://latinroguecleaning.com/",
         "image": "https://dummyimage.com/380x260/000/fff",
         "name": "Latin Rogue Cleaning",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -153,14 +155,16 @@
   
       },
       {
+        "url": "https://github.com/therstyle/Vue.js-Jeopardy",
         "image": "https://dummyimage.com/380x260/000/fff",
-        "name": "Jeopardy",
+        "name": "Vue.js Jeopardy",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "type": "Vue.js",
         "typeImage": "/images/project-type/icon-vuejs.svg"
   
       },
       {
+        "url": "http://kettlebellkickboxing.com/",
         "image": "https://dummyimage.com/380x260/000/fff",
         "name": "Kettlebell Kickboxing",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -169,6 +173,7 @@
   
       },
       {
+        "url": "https://www.stanleyhealthcare.com/",
         "image": "https://dummyimage.com/380x260/000/fff",
         "name": "Stanley Black & Decker",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -177,6 +182,7 @@
   
       },
       {
+        "url": "https://google.com",
         "image": "https://dummyimage.com/380x260/000/fff",
         "name": "Praesent Lacinia",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",

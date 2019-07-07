@@ -1,11 +1,11 @@
 <template>
   <section id="portfolio" class="portfolio" :class="{ viewed : viewed }">
-    <Observer v-on:intersected="intersected"></Observer>
     <Heading title="Portfolio"></Heading>
 
     <div class="portfolio--content content">
       <PorfolioItem v-for="portfolioItem in portfolioItems" 
         :key="portfolioItem.name"
+        :url="portfolioItem.url"
         :image="portfolioItem.image"
         :video="portfolioItem.video"
         :name="portfolioItem.name"
@@ -20,7 +20,7 @@
 <script>
 import Heading from './layout/Heading.vue';
 import PorfolioItem from './layout/PortfolioItem.vue';
-import Observer from './helpers/Observer.vue';
+import observer from './helpers/observer.js';
 
 export default {
   name: 'Portfolio',
@@ -29,19 +29,16 @@ export default {
       viewed: false
     }
   },
+  mixins: [observer],
   components: {
     Heading,
-    PorfolioItem,
-    Observer
+    PorfolioItem
   },
   props: {
     portfolioItems: Array
   },
-  methods: {
-    intersected(currentSection) {
-      this.$emit('intersected', currentSection);
-      this.viewed = true;
-    }
+  mounted() {
+    this.wayPoint();
   }
 }
 </script>

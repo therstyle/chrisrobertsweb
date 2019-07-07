@@ -1,6 +1,5 @@
 <template>
   <section id="resume" class="resume" :class="{ viewed : viewed }">
-    <Observer v-on:intersected="intersected"></Observer>
     <Heading title="Resume"></Heading>
 
     <div class="resume--content">
@@ -41,7 +40,6 @@
         </ul>
       </aside>
     </div>
-    <!-- <Observer v-on:intersected="intersected"></Observer> -->
   </section>
 </template>
 
@@ -49,7 +47,7 @@
 import Heading from './layout/Heading.vue';
 import TimelineEntry from './layout/TimelineEntry.vue';
 import Skill from './layout/Skill.vue';
-import Observer from './helpers/Observer.vue';
+import observer from './helpers/observer.js';
 
 export default {
   name: 'Resume',
@@ -58,11 +56,11 @@ export default {
       viewed: false
     }
   },
+  mixins: [observer],
   components: {
     Heading,
     TimelineEntry,
-    Skill,
-    Observer
+    Skill
   },
   props: {
     entries: Array,
@@ -72,11 +70,8 @@ export default {
     sigText: String,
     active: Object
   },
-  methods: {
-    intersected(currentSection) {
-      this.$emit('intersected', currentSection);
-      this.viewed = true;
-    }
+  mounted() {
+    this.wayPoint();
   }
 }
 </script>

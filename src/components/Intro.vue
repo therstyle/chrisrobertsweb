@@ -1,6 +1,5 @@
 <template>
   <section id="intro" class="intro" :class="{ viewed : viewed }">
-    <Observer v-on:intersected="intersected"></Observer>
     <div class="intro--content">
       <h6 class="sub-heading">Front End Developer | Boston, MA</h6>
       <h1 class="heading" v-html="introHeadline"></h1>
@@ -19,7 +18,7 @@
 </template>
 
 <script>
-import Observer from './helpers/Observer.vue';
+import observer from './helpers/observer.js';
 
 export default {
   name: 'Intro',
@@ -28,9 +27,7 @@ export default {
       viewed: false
     }
   },
-  components: {
-    Observer
-  },
+  mixins: [observer],
   props: {
     introHeadline: String,
     introText: String,
@@ -38,13 +35,12 @@ export default {
     video: String
   },
   methods: {
-    intersected(currentSection) {
-      this.$emit('intersected', currentSection);
-      this.viewed = true;
-    },
     scrollRequest(section) {
       this.$emit('scrollRequest', section);
     }
+  },
+  mounted() {
+    this.wayPoint();
   }
 }
 </script>
