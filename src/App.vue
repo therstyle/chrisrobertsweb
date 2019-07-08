@@ -43,7 +43,7 @@
     ></Contact>
 
     <div class="bg-video">
-      <video autoplay="" muted="" loop="" class="full-height"> 
+      <video autoplay muted loop class="full-height"> 
         <source src="/video/intro-web.mp4" type="video/mp4"> 
       </video>
     </div>
