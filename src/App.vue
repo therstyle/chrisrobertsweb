@@ -43,8 +43,8 @@
     ></Contact>
 
     <div class="bg-video">
-      <video autoplay muted loop class="full-height"> 
-        <source src="/video/intro-web.mp4" type="video/mp4"> 
+      <video ref="bgVideo" autoplay muted loop class="full-height"> 
+        <source :src="video_mp4" type="video/mp4"> 
       </video>
     </div>
   </main>
@@ -123,6 +123,10 @@ export default {
       const response = await fetch('info.json');
       const info = await response.json();
       return info;
+    },
+    loadVideo () {
+      this.$refs.bgVideo.load();
+      console.log('loaded vid');
     }
   },
   created: function() {
@@ -145,6 +149,9 @@ export default {
       this.contactPhoto = info.contact.photo;
       this.contactButtonText = info.contact.buttonText;
     });
+  },
+  mounted: function() {
+    this.loadVideo();
   }
 }
 </script>
