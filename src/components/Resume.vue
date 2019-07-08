@@ -147,7 +147,8 @@ export default {
           margin-right: 1.3vw;
           max-width: 42px;
           padding: 7px;
-          border: 1px solid var(--light-gray);
+          //border: 1px solid var(--light-gray);
+          background: var(--white);
       }
 
       .company-info {
