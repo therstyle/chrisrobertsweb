@@ -20,6 +20,7 @@
       ref="resume"  
       :entries="resumeEntries"
       :photo="photo"
+      :photo_2x="photo_2x"
       :devSkills="devSkills"
       :designSkills="designSkills"
       :sigText="sigText"
@@ -76,6 +77,7 @@ export default {
       video_ogv: '',
       resumeEntries: [],
       photo: '',
+      photo_2x: '',
       sigText: '',
       devSkills: [],
       designSkills: [],
@@ -134,6 +136,7 @@ export default {
       this.video_ogv = info.intro.video_ogv;
       this.resumeEntries = info.resume.entries;
       this.photo = info.resume.photo;
+      this.photo_2x = info.resume.photo_2x;
       this.sigText = info.resume.sigText;
       this.devSkills = info.resume.skills.dev;
       this.designSkills = info.resume.skills.design;

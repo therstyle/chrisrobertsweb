@@ -13,6 +13,7 @@
   "resume": {
     "headline": "Resume",
     "photo": "/images/me.jpg",
+    "photo_2x": "/images/me_2x.jpg",
     "sigText": "Chris Roberts",
     "entries": [
       {
