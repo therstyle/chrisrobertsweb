@@ -119,14 +119,14 @@ export default {
         }
       });
     },
+    loadVideo: function () {
+      this.$refs.bgVideo.load();
+    },
     loadData: async function() {
       const response = await fetch('info.json');
       const info = await response.json();
+      await this.loadVideo();
       return info;
-    },
-    loadVideo () {
-      this.$refs.bgVideo.load();
-      console.log('loaded vid');
     }
   },
   created: function() {
@@ -148,10 +148,11 @@ export default {
       this.contactHeadline = info.contact.headline;
       this.contactPhoto = info.contact.photo;
       this.contactButtonText = info.contact.buttonText;
+      //this.loadVideo();
     });
   },
   mounted: function() {
-    this.loadVideo();
+    
   }
 }
 </script>
@@ -170,7 +171,7 @@ body {
 }
 
 #app {
-  opacity: 0; //debug
+  //opacity: 0; //debug
   display: grid;
   padding-left: var(--sidebar-width);
   position: relative;

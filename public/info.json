@@ -169,7 +169,7 @@
       {
         "url": "http://kettlebellkickboxing.com/",
         "image": "/images/portfolio/kb.jpg",
-        "image_2x": "/images/portfolio/kb.jpg",
+        "image_2x": "/images/portfolio/kb_2x.jpg",
         "name": "Kettlebell Kickboxing",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "type": "WordPress",
