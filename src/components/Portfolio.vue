@@ -7,6 +7,7 @@
         :key="portfolioItem.name"
         :url="portfolioItem.url"
         :image="portfolioItem.image"
+        :image_2x="portfolioItem.image_2x"
         :video="portfolioItem.video"
         :name="portfolioItem.name"
         :description="portfolioItem.description"

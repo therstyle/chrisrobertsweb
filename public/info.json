@@ -139,6 +139,7 @@
       {
         "url": "http://flowetik.com/",
         "image": "/images/portfolio/flowetik.jpg",
+        "image_2x": "/images/portfolio/flowetik_2x.jpg",
         "name": "Flowetik",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "type": "WordPress",
@@ -148,6 +149,7 @@
       {
         "url": "https://latinroguecleaning.com/",
         "image": "/images/portfolio/lrc.jpg",
+        "image_2x": "/images/portfolio/lrc_2x.jpg",
         "name": "Latin Rogue Cleaning",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "type": "WordPress",
@@ -166,6 +168,7 @@
       {
         "url": "http://kettlebellkickboxing.com/",
         "image": "/images/portfolio/kb.jpg",
+        "image_2x": "/images/portfolio/kb.jpg",
         "name": "Kettlebell Kickboxing",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "type": "WordPress",
