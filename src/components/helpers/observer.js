@@ -2,7 +2,7 @@ export default {
   data() {
     return {
       observer: null,
-      parentName: '',
+      sectionName: '',
       config: {
         threshold: 0.25
       }
@@ -18,9 +18,8 @@ export default {
         entries.forEach(entry => {
           if(entry.isIntersecting) {
             if (this.$vnode.elm.id) {
-              this.parentName = this.$vnode.elm.id;
-              console.log(this.parentName);
-              this.intersected(this.parentName);
+              this.sectionName = this.$vnode.elm.id;
+              this.intersected(this.sectionName);
             }
           }
         });
