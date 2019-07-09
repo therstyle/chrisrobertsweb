@@ -178,7 +178,8 @@
       },
       {
         "url": "https://www.stanleyhealthcare.com/",
-        "image": "https://dummyimage.com/380x260/000/fff",
+        "image": "/images/portfolio/stanley.jpg",
+        "image_2x": "/images/portfolio/stanley_2x.jpg",
         "name": "Stanley Black & Decker",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "type": "Drupal",
