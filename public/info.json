@@ -148,7 +148,7 @@
           "image_2x": "/images/portfolio/flowetik_2x.jpg"
         },
         "name": "Flowetik",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "type": "WordPress",
         "typeImage": "/images/project-type/icon-wordpress.svg"
   
@@ -160,7 +160,7 @@
           "image_2x": "/images/portfolio/lrc_2x.jpg"
         },
         "name": "Latin Rogue Cleaning",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "type": "WordPress",
         "typeImage": "/images/project-type/icon-wordpress.svg"
   
@@ -172,7 +172,7 @@
           "image_2x": "https://dummyimage.com/760x497/000/fff"
         },
         "name": "Vue.js Jeopardy",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "description": "A party version of Jeopardy built with Vue.js",
         "type": "Vue.js",
         "typeImage": "/images/project-type/icon-vuejs.svg"
   
@@ -184,7 +184,7 @@
           "image_2x": "/images/portfolio/kb_2x.jpg"
         },
         "name": "Kettlebell Kickboxing",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "type": "WordPress",
         "typeImage": "/images/project-type/icon-wordpress.svg"
   
@@ -196,7 +196,7 @@
           "image_2x": "/images/portfolio/stanley_2x.jpg"
         },
         "name": "Stanley Black & Decker",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "description": "Online portal for Stanley Healthcare's products, powered by Drupal <small><a href=\"#\">Credit 829 Studios</a></small>",
         "type": "Drupal",
         "typeImage": "/images/project-type/icon-drupal.svg"
   
@@ -207,8 +207,8 @@
           "image_1x": "https://dummyimage.com/380x249/000/fff",
           "image_2x": "https://dummyimage.com/760x497/000/fff"
         },
-        "name": "Praesent Lacinia",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "name": "Lorem Ipsum",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "type": "WordPress",
         "typeImage": "/images/project-type/icon-wordpress.svg"
   
