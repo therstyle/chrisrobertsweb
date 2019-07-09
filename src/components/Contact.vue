@@ -11,8 +11,8 @@
         </form>
         
         <picture class="contact-photo" :data-pixels="amountScrolled">
-          <img v-if="{ photo_2x }" :src="photo" :srcset="`${photo} 1x, ${photo_2x} 2x`" alt="">
-          <img v-else :src="photo" alt="">
+          <img v-if="image.image_1x" :src="image.image_1x" :srcset="`${image.image_1x} 1x, ${image.image_2x} 2x`" alt="">
+          <img v-else :src="image.image_1x" alt="">
         </picture>
       </div>
     </div>
@@ -37,8 +37,7 @@ export default {
   },
   props: {
     headline: String,
-    photo: String,
-    photo_2x: String,
+    image: Object,
     buttonText: String
   },
   methods: {

@@ -2,8 +2,8 @@
   <article class="portfolio--content-entry">
     <a :href="url" target="_blank">
       <header>
-        <img v-if="{ image_2x }" :src="image" :srcset="`${image} 1x, ${image_2x} 2x`" :alt="name">
-        <img v-else :src="image" :alt="name">
+        <img v-if="image.image_2x" :src="image.image_1x" :srcset="`${image.image_1x} 1x, ${image.image_2x} 2x`" :alt="name">
+        <img v-else :src="image.image_1x" :alt="name">
       </header>
 
       <div class="description">
@@ -20,8 +20,7 @@ export default {
   name: "PortfolioItem",
   props: {
     url: String,
-    image: String,
-    image_2x: String,
+    image: Object,
     video: String,
     name: String,
     description: String,

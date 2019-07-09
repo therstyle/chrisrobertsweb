@@ -16,8 +16,8 @@
       </div>
 
       <aside class="skill-tree">
-        <img v-if="{ photo_2x }" :src="photo" :srcset="`${photo} 1x, ${photo_2x} 2x`" alt="Chris Roberts" class="skill-tree--photo">
-        <img v-else :src="photo" alt="Chris Roberts" class="skill-tree--photo">
+        <img v-if="image.image_2x" :src="image.image_1x" :srcset="`${image.image_1x} 1x, ${image.image_2x} 2x`" alt="Chris Roberts" class="skill-tree--photo">
+        <img v-else :src="image.image_1x" alt="Chris Roberts" class="skill-tree--photo">
         <h3 class="sig">{{ sigText }}</h3>
 
         <h3>Dev Skills</h3>
@@ -65,8 +65,7 @@ export default {
   },
   props: {
     entries: Array,
-    photo: String,
-    photo_2x: String,
+    image: Object,
     devSkills: Array,
     designSkills: Array,
     sigText: String,

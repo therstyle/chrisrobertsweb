@@ -19,8 +19,7 @@
     <Resume
       ref="resume"  
       :entries="resumeEntries"
-      :photo="photo"
-      :photo_2x="photo_2x"
+      :image="resumePhoto"
       :devSkills="devSkills"
       :designSkills="designSkills"
       :sigText="sigText"
@@ -37,15 +36,14 @@
     <Contact
       ref="contact" 
       :headline="contactHeadline"
-      :photo="contactPhoto"
-      :photo_2x="contactPhoto_2x"
+      :image="contactPhoto"
       :buttonText="contactButtonText"
       v-on:intersected="activeItem"
     ></Contact>
 
     <div class="bg-video">
       <video ref="bgVideo" autoplay muted loop class="full-height"> 
-        <source :src="video_mp4" type="video/mp4"> 
+        <source :src="introVideo.video_mp4" type="video/mp4"> 
       </video>
     </div>
   </main>
@@ -74,18 +72,15 @@ export default {
       introHeadline: '',
       introText: '',
       scrollText: '',
-      video_mp4: '',
-      video_ogv: '',
+      introVideo: {},
       resumeEntries: [],
-      photo: '',
-      photo_2x: '',
+      resumePhoto: {},
       sigText: '',
       devSkills: [],
       designSkills: [],
       portfolioItems: [],
       contactHeadline: '',
-      contactPhoto: '',
-      contactPhoto_2x: '',
+      contactPhoto: {},
       contactButtonText: '',
       active: {
         "intro": false,
@@ -138,18 +133,15 @@ export default {
       this.introHeadline = info.intro.headline;
       this.introText = info.intro.introText;
       this.scrollText = info.intro.scrollText;
-      this.video_mp4 = info.intro.video_mp4;
-      this.video_ogv = info.intro.video_ogv;
+      this.introVideo = info.intro.video;
       this.resumeEntries = info.resume.entries;
-      this.photo = info.resume.photo;
-      this.photo_2x = info.resume.photo_2x;
+      this.resumePhoto = info.resume.image;
       this.sigText = info.resume.sigText;
       this.devSkills = info.resume.skills.dev;
       this.designSkills = info.resume.skills.design;
       this.portfolioItems = info.portfolio.entries;
       this.contactHeadline = info.contact.headline;
-      this.contactPhoto = info.contact.photo;
-      this.contactPhoto_2x = info.contact.photo_2x;
+      this.contactPhoto = info.contact.image;
       this.contactButtonText = info.contact.buttonText;
       //this.loadVideo();
     });
@@ -174,7 +166,7 @@ body {
 }
 
 #app {
-  //opacity: 0; //debug
+  opacity: 0; //debug
   display: grid;
   padding-left: var(--sidebar-width);
   position: relative;
