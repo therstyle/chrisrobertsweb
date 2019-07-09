@@ -38,6 +38,7 @@
       ref="contact" 
       :headline="contactHeadline"
       :photo="contactPhoto"
+      :photo_2x="contactPhoto_2x"
       :buttonText="contactButtonText"
       v-on:intersected="activeItem"
     ></Contact>
@@ -84,6 +85,7 @@ export default {
       portfolioItems: [],
       contactHeadline: '',
       contactPhoto: '',
+      contactPhoto_2x: '',
       contactButtonText: '',
       active: {
         "intro": false,
@@ -147,6 +149,7 @@ export default {
       this.portfolioItems = info.portfolio.entries;
       this.contactHeadline = info.contact.headline;
       this.contactPhoto = info.contact.photo;
+      this.contactPhoto_2x = info.contact.photo_2x;
       this.contactButtonText = info.contact.buttonText;
       //this.loadVideo();
     });
