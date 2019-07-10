@@ -2,16 +2,19 @@
   <article class="portfolio--content-entry">
     <a :href="url" target="_blank">
       <header>
-        <img v-if="image.image_2x" :src="image.image_1x" :srcset="`${image.image_1x} 1x, ${image.image_2x} 2x`" :alt="name">
-        <img v-else :src="image.image_1x" :alt="name">
+        <video ref="video" v-if="video" :poster="image.image_1x" v-on:mouseover="startVideo" v-on:mouseout="endVideo">
+          <source :src="video" type="video/mp4">
+        </video>
+        <!-- <img v-if="image.image_2x" :src="image.image_1x" :srcset="`${image.image_1x} 1x, ${image.image_2x} 2x`" :alt="name">
+        <img v-else :src="image.image_1x" :alt="name"> -->
       </header>
-
-      <div class="description">
-        <h3>{{ name }}</h3>
-        <p v-html="description"></p>
-        <div class="project-type"><img :src="typeImage" :alt="type"></div>
-      </div>
     </a>
+
+    <div class="description">
+      <h3>{{ name }}</h3>
+      <p v-html="description"></p>
+      <div class="project-type"><img :src="typeImage" :alt="type"></div>
+    </div>
   </article>
 </template>
 
@@ -26,6 +29,16 @@ export default {
     description: String,
     type: String,
     typeImage: String
+  },
+  methods: {
+    startVideo() {
+      this.$refs.video.play();
+      console.log('start video');
+    },
+    endVideo() {
+      this.$refs.video.pause();
+      console.log('end video');
+    }
   }
 }
 </script>
@@ -54,6 +67,12 @@ export default {
 
   header {
     background: #000;
+    filter: grayscale(1);
+    transition: 1s filter ease-in-out;
+
+    &:hover {
+      filter: grayscale(0);
+    }
   }
 
   .description {

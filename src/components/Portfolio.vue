@@ -7,7 +7,6 @@
         :key="portfolioItem.name"
         :url="portfolioItem.url"
         :image="portfolioItem.image"
-        :image_1x="portfolioItem.image.image_1x"
         :video="portfolioItem.video"
         :name="portfolioItem.name"
         :description="portfolioItem.description"
@@ -43,8 +42,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-  .portfolio {
-  }
-</style>
