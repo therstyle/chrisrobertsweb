@@ -7,13 +7,17 @@
     "headline": "Chris<br>Roberts",
     "introText": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor arcu ipsum, at elementum nisl rutrum nec.</p>",
     "scrollText": "Scroll",
-    "video_mp4": "/video/intro-web.mp4",
-    "video_ogv": "/video/intro-web.ogv"
+    "video": {
+      "video_mp4": "/video/intro-web.mp4",
+      "video_ogv": "/video/intro-web.ogv"
+    }
   },
   "resume": {
     "headline": "Resume",
-    "photo": "/images/me.jpg",
-    "photo_2x": "/images/me_2x.jpg",
+    "image": {
+      "image_1x": "/images/me.jpg",
+      "image_2x": "/images/me_2x.jpg"
+    },
     "sigText": "Chris Roberts",
     "entries": [
       {
@@ -139,58 +143,72 @@
     "entries": [
       {
         "url": "http://flowetik.com/",
-        "image": "/images/portfolio/flowetik.jpg",
-        "image_2x": "/images/portfolio/flowetik_2x.jpg",
+        "image": {
+          "image_1x": "/images/portfolio/flowetik.jpg",
+          "image_2x": "/images/portfolio/flowetik_2x.jpg"
+        },
         "name": "Flowetik",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "type": "WordPress",
         "typeImage": "/images/project-type/icon-wordpress.svg"
   
       },
       {
         "url": "https://latinroguecleaning.com/",
-        "image": "/images/portfolio/lrc.jpg",
-        "image_2x": "/images/portfolio/lrc_2x.jpg",
+        "image": {
+          "image_1x": "/images/portfolio/lrc.jpg",
+          "image_2x": "/images/portfolio/lrc_2x.jpg"
+        },
         "name": "Latin Rogue Cleaning",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "type": "WordPress",
         "typeImage": "/images/project-type/icon-wordpress.svg"
   
       },
       {
         "url": "https://github.com/therstyle/Vue.js-Jeopardy",
-        "image": "https://dummyimage.com/380x260/000/fff",
+        "image": {
+          "image_1x": "https://dummyimage.com/380x249/000/fff",
+          "image_2x": "https://dummyimage.com/760x497/000/fff"
+        },
         "name": "Vue.js Jeopardy",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "description": "A party version of Jeopardy built with Vue.js",
         "type": "Vue.js",
         "typeImage": "/images/project-type/icon-vuejs.svg"
   
       },
       {
         "url": "http://kettlebellkickboxing.com/",
-        "image": "/images/portfolio/kb.jpg",
-        "image_2x": "/images/portfolio/kb_2x.jpg",
+        "image": {
+          "image_1x": "/images/portfolio/kb.jpg",
+          "image_2x": "/images/portfolio/kb_2x.jpg"
+        },
         "name": "Kettlebell Kickboxing",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "type": "WordPress",
         "typeImage": "/images/project-type/icon-wordpress.svg"
   
       },
       {
         "url": "https://www.stanleyhealthcare.com/",
-        "image": "/images/portfolio/stanley.jpg",
-        "image_2x": "/images/portfolio/stanley_2x.jpg",
+        "image": {
+          "image_1x": "/images/portfolio/stanley.jpg",
+          "image_2x": "/images/portfolio/stanley_2x.jpg"
+        },
         "name": "Stanley Black & Decker",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "description": "Online portal for Stanley Healthcare's products, powered by Drupal <small><a href=\"#\">Credit 829 Studios</a></small>",
         "type": "Drupal",
         "typeImage": "/images/project-type/icon-drupal.svg"
   
       },
       {
         "url": "https://google.com",
-        "image": "https://dummyimage.com/380x260/000/fff",
-        "name": "Praesent Lacinia",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": {
+          "image_1x": "https://dummyimage.com/380x249/000/fff",
+          "image_2x": "https://dummyimage.com/760x497/000/fff"
+        },
+        "name": "Lorem Ipsum",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "type": "WordPress",
         "typeImage": "/images/project-type/icon-wordpress.svg"
   
@@ -199,8 +217,10 @@
   },
   "contact": {
     "headline": "Contact",
-    "photo": "/images/zakim.jpg",
-    "photo_2x": "/images/zakim_2x.jpg",
+    "image": {
+      "image_1x": "/images/zakim.jpg",
+      "image_2x": "/images/zakim_2x.jpg" 
+    },
     "buttonText": "Submit"
   }
 }
