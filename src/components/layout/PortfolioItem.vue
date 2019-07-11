@@ -31,14 +31,18 @@ export default {
     typeImage: String
   },
   methods: {
+    loadVides() {
+      this.$refs.video.load();
+    },
     startVideo() {
       this.$refs.video.play();
-      console.log('start video');
     },
     endVideo() {
       this.$refs.video.pause();
-      console.log('end video');
     }
+  },
+  mounted() {
+    this.loadVideos();
   }
 }
 </script>
@@ -70,6 +74,11 @@ export default {
     filter: grayscale(1);
     transition: 1s filter ease-in-out;
 
+    video {
+      width: 100%;
+      height: auto;
+    }
+
     &:hover {
       filter: grayscale(0);
     }
@@ -86,6 +95,12 @@ export default {
 
     > p {
       margin-bottom: var(--space-2);
+    }
+
+    a {
+      color: var(--light-red);
+      display: block;
+      margin-top: 8px;
     }
   }
 

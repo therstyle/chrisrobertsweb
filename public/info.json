@@ -147,7 +147,7 @@
           "image_1x": "/images/portfolio/flowetik.jpg",
           "image_2x": "/images/portfolio/flowetik_2x.jpg"
         },
-        "video": "/video/portfolio/placeholder.mp4",
+        "video": "/video/portfolio/flowetik.mp4",
         "name": "Flowetik",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "type": "WordPress",
@@ -160,7 +160,7 @@
           "image_1x": "/images/portfolio/stanley.jpg",
           "image_2x": "/images/portfolio/stanley_2x.jpg"
         },
-        "video": "/video/portfolio/placeholder.mp4",
+        "video": "/video/portfolio/stanley.mp4",
         "name": "Stanley Black & Decker",
         "description": "Online portal for Stanley Healthcare's products, powered by Drupal <small><a href=\"#\">Credit 829 Studios</a></small>",
         "type": "Drupal",
@@ -173,7 +173,7 @@
           "image_1x": "https://dummyimage.com/380x249/000/fff",
           "image_2x": "https://dummyimage.com/760x497/000/fff"
         },
-        "video": "/video/portfolio/placeholder.mp4",
+        "video": "/video/portfolio/jeopardy.mp4",
         "name": "Vue.js Jeopardy",
         "description": "A party version of Jeopardy built with Vue.js",
         "type": "Vue.js",
@@ -186,7 +186,7 @@
           "image_1x": "/images/portfolio/lrc.jpg",
           "image_2x": "/images/portfolio/lrc_2x.jpg"
         },
-        "video": "/video/portfolio/placeholder.mp4",
+        "video": "/video/portfolio/lrc.mp4",
         "name": "Latin Rogue Cleaning",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "type": "WordPress",
@@ -199,7 +199,7 @@
           "image_1x": "/images/portfolio/kb.jpg",
           "image_2x": "/images/portfolio/kb_2x.jpg"
         },
-        "video": "/video/portfolio/placeholder.mp4",
+        "video": "/video/portfolio/kb.mp4",
         "name": "Kettlebell Kickboxing",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "type": "WordPress",

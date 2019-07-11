@@ -79,6 +79,7 @@ export default {
 
 nav.main-nav {
   width: var(--sidebar-width);
+  max-height: 460px;
   background: var(--black);
   min-height: 100vh;
   padding: 2vw 0;
