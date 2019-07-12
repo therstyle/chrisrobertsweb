@@ -56,7 +56,7 @@ export default {
 <style lang="scss">
 .portfolio--content {
   display: grid;
-  grid-template-columns: repeat(3, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 1.3vw;
   //flex-wrap: wrap;
   //justify-content: space-around;
