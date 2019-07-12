@@ -31,14 +31,19 @@ export default {
     typeImage: String
   },
   methods: {
-    loadVides() {
+    loadVideos() {
       this.$refs.video.load();
+      this.$refs.video.pause();
+      console.log('load video');
     },
     startVideo() {
       this.$refs.video.play();
+      console.log('play video');
+
     },
     endVideo() {
       this.$refs.video.pause();
+      console.log('end video');
     }
   },
   mounted() {
@@ -70,13 +75,13 @@ export default {
   }
 
   header {
-    background: #000;
     filter: grayscale(1);
     transition: 1s filter ease-in-out;
 
     video {
       width: 100%;
       height: auto;
+      display: block;
     }
 
     &:hover {
