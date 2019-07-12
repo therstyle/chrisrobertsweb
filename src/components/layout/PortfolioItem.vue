@@ -1,8 +1,8 @@
 <template>
-  <article class="portfolio--content-entry">
+  <article class="portfolio--content-entry" v-on:mouseover="startVideo" v-on:mouseout="endVideo">
     <a :href="url" target="_blank">
       <header>
-        <video ref="video" muted autoplay v-if="video" :poster="image.image_1x" v-on:mouseover="startVideo" v-on:mouseout="endVideo">
+        <video ref="video" muted autoplay v-if="video" :poster="image.image_2x">
           <source :src="video" type="video/mp4">
         </video>
         <!-- <img v-if="image.image_2x" :src="image.image_1x" :srcset="`${image.image_1x} 1x, ${image.image_2x} 2x`" :alt="name">
@@ -68,6 +68,10 @@ export default {
   &:hover {
     transform: translateY(-0.3vw);
     box-shadow: 0 0 30px rgba(0,0,0,0.33);
+
+    header {
+      filter: grayscale(0);
+    }
   }
 
   > a {
@@ -82,10 +86,6 @@ export default {
       width: 100%;
       height: auto;
       display: block;
-    }
-
-    &:hover {
-      filter: grayscale(0);
     }
   }
 

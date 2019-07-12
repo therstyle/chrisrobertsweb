@@ -170,8 +170,8 @@
       {
         "url": "https://github.com/therstyle/Vue.js-Jeopardy",
         "image": {
-          "image_1x": "https://dummyimage.com/380x249/000/fff",
-          "image_2x": "https://dummyimage.com/760x497/000/fff"
+          "image_1x": "/images/portfolio/jeopardy.jpg",
+          "image_2x": "/images/portfolio/jeopardy_2x.jpg"
         },
         "video": "/video/portfolio/jeopardy.mp4",
         "name": "Vue.js Jeopardy",
