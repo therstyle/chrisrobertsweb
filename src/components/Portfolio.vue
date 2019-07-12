@@ -3,8 +3,9 @@
     <Heading title="Portfolio"></Heading>
 
     <div class="portfolio--content content">
-      <PorfolioItem v-for="portfolioItem in portfolioItems" 
-        :key="portfolioItem.name"
+      <PorfolioItem v-for="(portfolioItem, index) in portfolioItems" 
+        :count="index + 1"
+        :key="index"
         :url="portfolioItem.url"
         :image="portfolioItem.image"
         :video="portfolioItem.video"
@@ -26,7 +27,8 @@ export default {
   name: 'Portfolio',
   data() {
     return {
-      viewed: false
+      viewed: false,
+      i: 0
     }
   },
   mixins: [observer],
