@@ -2,7 +2,7 @@
   <article class="portfolio--content-entry" v-on:mouseover="startVideo" v-on:mouseout="endVideo">
     <a :href="url" target="_blank">
       <header>
-        <video ref="video" muted autoplay v-if="video" :poster="image.image_2x">
+        <video ref="video" muted autoplay loop v-if="video" :poster="image.image_2x">
           <source :src="video" type="video/mp4">
         </video>
         <!-- <img v-if="image.image_2x" :src="image.image_1x" :srcset="`${image.image_1x} 1x, ${image.image_2x} 2x`" :alt="name">
