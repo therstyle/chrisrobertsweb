@@ -2,7 +2,7 @@
   <article class="portfolio--content-entry" v-on:mouseover="startVideo" v-on:mouseout="endVideo">
     <a :href="url" target="_blank">
       <header>
-        <video ref="video" muted autoplay v-if="video" :poster="image.image_2x">
+        <video ref="video" muted autoplay loop v-if="video" :poster="image.image_2x">
           <source :src="video" type="video/mp4">
         </video>
         <!-- <img v-if="image.image_2x" :src="image.image_1x" :srcset="`${image.image_1x} 1x, ${image.image_2x} 2x`" :alt="name">
@@ -28,7 +28,8 @@ export default {
     name: String,
     description: String,
     type: String,
-    typeImage: String
+    typeImage: String,
+    count: Number
   },
   methods: {
     loadVideos() {
@@ -54,16 +55,20 @@ export default {
 
 <style lang="scss">
 .portfolio--content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 1.3vw;
+  //flex-wrap: wrap;
+  //justify-content: space-around;
 }
 
 .portfolio--content-entry {
-  width: calc(33% - (4vw / 3));
-  margin-bottom: 4vw;
+  //width: calc(33% - (4vw / 3));
+  //margin-bottom: 4vw;
   box-shadow: 0 0 30px rgba(0,0,0,0.1);
   transition: 0.3s transform, 0.3s box-shadow;
+  display: flex;
+  flex-direction: column;
 
   &:hover {
     transform: translateY(-0.3vw);
@@ -93,6 +98,7 @@ export default {
     font-size: 14px;
     padding: 2vw;
     background: var(--med-gray-alpha);
+    flex: 1;
 
     > h3 {
       margin-bottom: var(--space);
