@@ -70,7 +70,6 @@ export default {
 <style lang="scss">
 header.heading {
   padding: 20px 0 20px 4vw;
-  //opacity: 0;
   transition: 0.3s all ease-in-out;
   position: relative;
   overflow: hidden;
@@ -79,6 +78,8 @@ header.heading {
     font-size: 6.1vw;
     line-height: 1;
     margin-bottom: 0;
+    opacity: 0;
+    transform: translateX(-7vw);
   }
 
   .line-grid {
@@ -102,16 +103,20 @@ header.heading {
 
 .viewed {
   header.heading {
-    //opacity: 1;
+    h1 {
+      animation: headline-slide .30s ease-in-out;
+      animation-fill-mode: both;
+      animation-delay: .10s;
+    }
 
     .line-grid {
       span {
-        animation: .10s ease-in-out span-line;
+        animation: span-line .10s ease-in-out;
         animation-fill-mode: both;
 
         @for $i from 1 through 50 {
           &:nth-child(#{$i}) {
-            animation-delay: 0.02s * $i;
+            animation-delay: 0.01s * $i;
           }
         }
       }
@@ -128,6 +133,18 @@ header.heading {
   100% {
     opacity: 1;
     transform: rotate(135deg), translateX(0);
+  }
+}
+
+@keyframes headline-slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-7vw);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 </style>
