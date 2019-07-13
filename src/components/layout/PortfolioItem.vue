@@ -67,6 +67,8 @@ export default {
   //margin-bottom: 4vw;
   box-shadow: 0 0 30px rgba(0,0,0,0.1);
   transition: 0.3s transform, 0.3s box-shadow;
+  display: flex;
+  flex-direction: column;
 
   &:hover {
     transform: translateY(-0.3vw);
@@ -96,6 +98,7 @@ export default {
     font-size: 14px;
     padding: 2vw;
     background: var(--med-gray-alpha);
+    flex: 1;
 
     > h3 {
       margin-bottom: var(--space);
