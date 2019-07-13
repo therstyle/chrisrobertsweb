@@ -34,7 +34,7 @@
   --tablet-breakpoint: 768px;
   --sidebar-width: 100px;
 
-  @media screen and (max-width: var(--tablet-breakpoint)) {
+  @media screen and (max-width: 768px) {
     --font-size: 14px;
     --sidebar-width: 60px;
   }
