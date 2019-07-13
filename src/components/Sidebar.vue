@@ -80,6 +80,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/css/vars';
+
 @keyframes fade-in-out {
   0% {
     opacity: 0;
@@ -258,7 +260,7 @@ nav.main-nav {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: $tablet-breakpoint) {
   nav.main-nav {
     padding: 1.8vw 0;
   }

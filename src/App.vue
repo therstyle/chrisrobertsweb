@@ -162,7 +162,7 @@ body {
   color: var(--white);
   font-family: var(--main-font);
   font-size: var(--font-size);
-  line-height: 1.5;
+  line-height: var(--line-height);
 }
 
 #app {
@@ -246,6 +246,4 @@ p {
     margin-left: 15vw;
   }
 }
-
-
 </style>
