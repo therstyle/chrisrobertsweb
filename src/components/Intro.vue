@@ -102,7 +102,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: $tablet-breakpoint) {
+@media only screen and (max-width: $md-tablet-breakpoint) {
   .intro--content {
     max-width: none;
 
@@ -114,5 +114,8 @@ export default {
       font-size: 14px;
     }
   }
+}
+
+@media only screen and (max-width: $tablet-breakpoint) {
 }
 </style>

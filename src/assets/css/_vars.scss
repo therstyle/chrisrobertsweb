@@ -3,7 +3,7 @@ $desktop-breakpoint: 1200px;
 $lg-tablet-breakpoint: 1024px;
 $md-tablet-breakpoint: 992px;
 $tablet-breakpoint: 768px;
-$mobile-breakpoint: 560px;
+$phone-breakpoint: 600px;
 
 :root {
   //colors
@@ -40,6 +40,10 @@ $mobile-breakpoint: 560px;
   --sidebar-width: 100px;
 
   @media screen and (max-width: $tablet-breakpoint) {
+    
+  }
+
+  @media only screen and (max-width: $phone-breakpoint) {
     --font-size: 14px;
     --sidebar-width: 60px;
     --line-height: 1.3;
