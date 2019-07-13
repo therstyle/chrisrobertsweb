@@ -58,13 +58,9 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 1.3vw;
-  //flex-wrap: wrap;
-  //justify-content: space-around;
 }
 
 .portfolio--content-entry {
-  //width: calc(33% - (4vw / 3));
-  //margin-bottom: 4vw;
   box-shadow: 0 0 30px rgba(0,0,0,0.1);
   transition: 0.3s transform, 0.3s box-shadow;
   display: flex;

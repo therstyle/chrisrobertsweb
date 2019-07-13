@@ -233,9 +233,9 @@ p {
   }
 
   &:after {
-    background: -moz-linear-gradient(top,  rgba(51,51,51,0) 0%, rgba(51,51,51,0.99) 99%, rgba(51,51,51,1) 100%);
-    background: -webkit-linear-gradient(top,  rgba(51,51,51,0) 0%,rgba(51,51,51,0.99) 99%,rgba(51,51,51,1) 100%);
-    background: linear-gradient(to bottom,  rgba(51,51,51,0) 0%,rgba(51,51,51,0.99) 99%,rgba(51,51,51,1) 100%);
+    background: -moz-linear-gradient(top,  rgba(51,51,51,0) 75%, rgba(51,51,51,0.99) 99%, rgba(51,51,51,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(51,51,51,0) 75%,rgba(51,51,51,0.99) 99%,rgba(51,51,51,1) 100%);
+    background: linear-gradient(to bottom,  rgba(51,51,51,0) 75%,rgba(51,51,51,0.99) 99%,rgba(51,51,51,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00333333', endColorstr='#333333',GradientType=0 );
   }
 
