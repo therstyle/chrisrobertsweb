@@ -104,7 +104,7 @@ header.heading {
 .viewed {
   header.heading {
     h1 {
-      animation: headline-slide .30s ease-in-out;
+      animation: headline-slide 1.0s cubic-bezier(.28,.89,.76,.94);
       animation-fill-mode: both;
       animation-delay: .10s;
     }
@@ -139,7 +139,7 @@ header.heading {
 @keyframes headline-slide {
   0% {
     opacity: 0;
-    transform: translateX(-7vw);
+    transform: translateX(-14vw);
   }
 
   100% {
