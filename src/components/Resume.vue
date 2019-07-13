@@ -79,6 +79,8 @@ export default {
 
 
 <style lang="scss">
+@import '../assets/css/vars';
+
   .resume--content {
     padding: 4vw 4vw 0 4vw;
     display: flex;
@@ -142,7 +144,7 @@ export default {
     header {
       display: flex;
       align-items: center;
-      margin-bottom: 1.3vw;
+      margin-bottom: 4.1vw;
 
       img {
           margin-right: 1.3vw;
@@ -278,4 +280,29 @@ export default {
       }
     }
   }
+
+@media only screen and (max-width: $md-tablet-breakpoint) {
+  .resume--content {
+    flex-wrap: wrap;
+  }
+
+  .timeline {
+    max-width: none;
+    margin-right: calc(4.1vw / 2);
+    margin-bottom: var(--space-8);
+  }
+
+  .timeline--entry {
+    padding-right: 0;
+  }
+
+  .skill-tree {
+    margin-left: auto;
+    margin-right: auto;
+
+    h3 {
+      font-size: 3vw;
+    }
+  }
+}
 </style>

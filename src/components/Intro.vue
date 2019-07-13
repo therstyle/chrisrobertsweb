@@ -94,7 +94,7 @@ export default {
     max-width: 32px;
     max-height: 32px;
     display: block;
-    margin-bottom: 0.75vw;
+    margin-bottom: 12px;
   }
 
   span {
