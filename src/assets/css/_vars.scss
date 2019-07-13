@@ -1,3 +1,9 @@
+//Breakpoints (SASS)
+$desktop-breakpoint: 1200px;
+$lg-tablet-breakpoint: 1024px;
+$tablet-breakpoint: 768px;
+$mobile-breakpoint: 560px;
+
 :root {
   //colors
   --black: #000;
@@ -29,13 +35,12 @@
   --space-7: calc(var(--space) * 7);
   --space-8: calc(var(--space) * 8);
   --font-size: 18px;
-  --desktop-breakpoint: 1200px;
-  --lg-tablet-breakpoint: 1024px;
-  --tablet-breakpoint: 768px;
+  --line-height: 1.5;
   --sidebar-width: 100px;
 
-  @media screen and (max-width: var(--tablet-breakpoint)) {
+  @media screen and (max-width: $tablet-breakpoint) {
     --font-size: 14px;
     --sidebar-width: 60px;
+    --line-height: 1.3;
   }
 }

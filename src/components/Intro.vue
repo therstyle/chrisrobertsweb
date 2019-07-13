@@ -46,6 +46,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/css/vars';
+
 .intro {
   position: relative;
   overflow: hidden;
@@ -65,7 +67,7 @@ export default {
 
   .sub-heading {
     color: var(--red);
-    font-size: 1.1vw;
+    font-size: 16px;
   }
 }
 
@@ -74,7 +76,7 @@ export default {
   flex: 1;
   width: 100%;
   color: var(--white);
-  font-size: 0.75vw;
+  font-size: 10px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -97,6 +99,20 @@ export default {
 
   span {
     display: block;
+  }
+}
+
+@media only screen and (max-width: $tablet-breakpoint) {
+  .intro--content {
+    max-width: none;
+
+    .heading {
+      font-size: 10vw;
+    }
+
+    .sub-heading {
+      font-size: 14px;
+    }
   }
 }
 </style>
