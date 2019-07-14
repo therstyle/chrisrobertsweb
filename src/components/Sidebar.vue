@@ -263,7 +263,7 @@ nav.main-nav {
 
 @media only screen and (max-width: $phone-breakpoint) {
   nav.main-nav {
-    padding: 1.8vw 0;
+    padding: 6vw 0;
   }
 
   .main-nav--internal {

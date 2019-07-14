@@ -152,6 +152,8 @@ header.heading {
 
 @media only screen and (max-width: $tablet-breakpoint) {
  header.heading {
+   margin-bottom: 6vw;
+   
    .line-grid {
      left: -35vw;
    }

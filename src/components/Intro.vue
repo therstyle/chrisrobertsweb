@@ -107,7 +107,7 @@ export default {
     max-width: none;
 
     .heading {
-      font-size: 10vw;
+      font-size: 8.5vw;
     }
 
     .sub-heading {
@@ -116,8 +116,13 @@ export default {
   }
 }
 
-@media only screen and (max-width: $tablet-breakpoint) {
-}
+// @media only screen and (max-width: $tablet-breakpoint) {
+//   .intro--content {
+//     .heading {
+//       font-size: 10vw;
+//     }
+//   }
+// }
 
 @media only screen and (max-width: $phone-breakpoint) {
   .intro {
