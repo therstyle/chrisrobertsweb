@@ -151,7 +151,7 @@ export default {
 
     .contact-form {
       flex-direction: column;
-      margin-top: 100px;
+      //margin-top: 100px;
 
       form {
         display: none;
@@ -169,11 +169,29 @@ export default {
     }
 
     .contact-photo {
-      width: calc(100% - var(--sidebar-width));
+      width: calc(100vw - var(--sidebar-width));
       max-width: none;
       height: 500px;
       overflow: hidden;
       z-index: 1;
+
+      &:before {
+        top: auto;
+        bottom: -7.5vw;
+        left: 0;
+        right: 0;
+        font-size: 10vw;
+        text-align: center;
+      }
+      
+      &:after {
+        top: auto;
+        bottom: -8vw;
+        left: 0;
+        right: 0;
+        font-size: 2vw;
+        text-align: center;
+      }
 
       img {
         width: auto;
