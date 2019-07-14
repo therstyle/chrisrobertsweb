@@ -54,6 +54,8 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '../assets/css/vars';
+
   .contact-form {
     position: relative;
     display: flex;
@@ -138,6 +140,41 @@ export default {
     img {
       max-width: none;
       width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: $md-tablet-breakpoint) {
+    .contact-form {
+      flex-direction: column;
+      margin-top: 100px;
+
+      form {
+        z-index: 10;
+        top: -100px;
+        padding: 3vw;
+
+        > textarea,
+        input {
+            margin-bottom: 3vw;
+        }
+      }
+    }
+
+    .contact-photo {
+      max-width: none;
+      height: 500px;
+      overflow: hidden;
+      z-index: 1;
+
+      img {
+        width: auto;
+      }
+    }
+
+    .contact-form form,
+    .contact-photo {
+      width: 100%;
+      flex: 1 100%;
     }
   }
 </style>
