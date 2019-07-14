@@ -5,13 +5,13 @@
     <div class="resume--content">
       <div class="timeline">
         <Timeline-Entry 
-          v-for="entry in entries"
+          v-for="(entry, index) in entries"
+          :key="index"
           :year="entry.year"
           :logo="entry.logo" 
           :company="entry.company"
           :title="entry.title"
           :details="entry.details"
-          :key="entry.id"
         ></Timeline-Entry>
       </div>
 
@@ -22,8 +22,8 @@
 
         <h3>Dev Skills</h3>
         <ul class="skills">
-          <Skill v-for="devSkill in devSkills" 
-            :key="devSkill.name"
+          <Skill v-for="(devSkill, index) in devSkills" 
+            :key="index"
             :logo="devSkill.logo"
             :name="devSkill.name"
             :years="devSkill.years"
@@ -32,8 +32,8 @@
 
         <h3>Design Skills</h3>
         <ul class="skills">
-          <Skill v-for="designSkill in designSkills" 
-            :key="designSkill.name"
+          <Skill v-for="(designSkill, index) in designSkills" 
+            :key="index"
             :logo="designSkill.logo"
             :name="designSkill.name"
             :years="designSkill.years"

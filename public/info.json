@@ -21,7 +21,6 @@
     "sigText": "Chris Roberts",
     "entries": [
       {
-        "id": 1,
         "year": 2018,
         "logo": "/images/jobs/829.svg",
         "company": "829 Studios",
@@ -34,7 +33,6 @@
         ]
       },
       {
-        "id": 2,
         "year": 2015,
         "logo": "/images/jobs/firefield.svg",
         "company": "Firefield",
@@ -46,7 +44,6 @@
         ]
       },
       {
-        "id": 3,
         "year": 2013,
         "logo": "/images/jobs/brick-marketing.svg",
         "company": "Brick Marketing",
@@ -58,7 +55,6 @@
         ]
       },
       {
-        "id": 4,
         "year": 2007,
         "logo": "/images/jobs/onpoint.png",
         "company": "Onpoint Media",

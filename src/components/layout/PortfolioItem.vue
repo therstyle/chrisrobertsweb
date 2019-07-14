@@ -35,16 +35,12 @@ export default {
     loadVideos() {
       this.$refs.video.load();
       this.$refs.video.pause();
-      console.log('load video');
     },
     startVideo() {
       this.$refs.video.play();
-      console.log('play video');
-
     },
     endVideo() {
       this.$refs.video.pause();
-      console.log('end video');
     }
   },
   mounted() {
