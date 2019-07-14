@@ -108,6 +108,7 @@ export default {
         margin: auto;
         display: block;
         font-size: 16px;
+        min-height: 46px;
       }
     }
   }
@@ -143,7 +144,7 @@ export default {
     }
   }
 
-  @media only screen and (max-width: $md-tablet-breakpoint) {
+  @media only screen and (max-width: $lg-tablet-breakpoint) {
     .contact--content.content {
       padding-left: 0;
       padding-right: 0;
@@ -151,19 +152,22 @@ export default {
 
     .contact-form {
       flex-direction: column;
-      //margin-top: 100px;
+      margin-top: 75px;
 
       form {
-        display: none;
         z-index: 10;
         width: calc(100% - 8vw);
-        top: -100px;
-        padding: 3vw;
+        top: -75px;
+        padding: 4vw;
         margin: 0 4vw;
+
+        textarea {
+          min-height: 120px;
+        }
 
         > textarea,
         input {
-            margin-bottom: 3vw;
+            margin-bottom: 4vw;
         }
       }
     }
@@ -177,30 +181,70 @@ export default {
 
       &:before {
         top: auto;
-        bottom: -7.5vw;
+        bottom: -5.5vw;
         left: 0;
         right: 0;
-        font-size: 10vw;
+        font-size: 7.5vw;
         text-align: center;
       }
       
       &:after {
         top: auto;
-        bottom: -8vw;
+        bottom: -6vw;
         left: 0;
         right: 0;
-        font-size: 2vw;
+        font-size: 1.5vw;
         text-align: center;
       }
 
       img {
-        width: auto;
+        width: 100%;
       }
     }
 
     .contact-form form,
     .contact-photo {
       flex: 1 100%;
+    }
+  }
+
+  @media only screen and (max-width: $tablet-breakpoint) {
+    .contact-form {
+      form {
+        > input,
+        textarea {
+          padding: 1.5vw;
+        }
+      }
+    }
+
+    .contact-photo {
+      &:before {
+        bottom: -7.5vw;
+        font-size: 10vw;
+      }
+      
+      &:after {
+        bottom: -8vw;
+        font-size: 2vw;
+      }
+
+      img {
+        width: auto;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $phone-breakpoint) {
+    .contact-form {
+      form {
+        padding: 5vw;
+
+      > textarea,
+      input {
+          margin-bottom: 5vw;
+        }
+      }
     }
   }
 </style>
