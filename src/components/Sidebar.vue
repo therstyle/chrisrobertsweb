@@ -245,6 +245,7 @@ nav.main-nav {
 
     &:first-child {
       flex: 1;
+      margin-bottom: 20px;
     }
 
     a {
@@ -260,7 +261,7 @@ nav.main-nav {
   }
 }
 
-@media only screen and (max-width: $tablet-breakpoint) {
+@media only screen and (max-width: $phone-breakpoint) {
   nav.main-nav {
     padding: 1.8vw 0;
   }
