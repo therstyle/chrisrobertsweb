@@ -305,4 +305,70 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: $tablet-breakpoint) {
+  .timeline--entry {
+    &:before {
+      left: calc(-4.1vw - 18px);
+      margin-left: calc(4.1vw + 9px);
+      width: 18px;
+      height: 18px;
+      border: 4px solid var(--red);
+      background: var(--body-bg);
+    }
+  }
+}
+
+@media only screen and (max-width: $phone-breakpoint) {
+  .timeline {
+    margin-left: 10vw;
+    margin-right: calc(5vw / 2);
+  }
+
+  .timeline--entry {
+    padding: 5vw;
+
+    &:after {
+      font-size: 5vw;
+      left: -10vw;
+      top: 2.1vw;
+    }
+
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+
+      img {
+        margin-bottom: 4vw;
+        max-width: 30px;
+        max-height: 30px;
+      }
+    }
+  }
+
+  .details {
+    > li {
+      margin-left: 20px;
+
+      &:before {
+        width: 8px;
+        height: 8px;
+        left: -20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $sm-phone-breakpoint) {
+  .timeline--entry {
+    &:before {
+      left: calc(-4.1vw - 14px);
+      margin-left: calc(4.1vw + 7px);
+      width: 14px;
+      height: 14px;
+      border: 3px solid var(--red);
+      background: var(--body-bg);
+    }
+  }
+}
 </style>

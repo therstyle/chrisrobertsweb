@@ -144,14 +144,22 @@ export default {
   }
 
   @media only screen and (max-width: $md-tablet-breakpoint) {
+    .contact--content.content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     .contact-form {
       flex-direction: column;
       margin-top: 100px;
 
       form {
+        display: none;
         z-index: 10;
+        width: calc(100% - 8vw);
         top: -100px;
         padding: 3vw;
+        margin: 0 4vw;
 
         > textarea,
         input {
@@ -161,6 +169,7 @@ export default {
     }
 
     .contact-photo {
+      width: calc(100% - var(--sidebar-width));
       max-width: none;
       height: 500px;
       overflow: hidden;
@@ -173,7 +182,6 @@ export default {
 
     .contact-form form,
     .contact-photo {
-      width: 100%;
       flex: 1 100%;
     }
   }

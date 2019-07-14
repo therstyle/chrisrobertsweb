@@ -165,6 +165,10 @@ body {
   line-height: var(--line-height);
 }
 
+#portfolio, #contact {
+  display: none;
+}
+
 #app {
   //opacity: 0.02; //debug
   display: grid;

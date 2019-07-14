@@ -118,4 +118,12 @@ export default {
 
 @media only screen and (max-width: $tablet-breakpoint) {
 }
+
+@media only screen and (max-width: $phone-breakpoint) {
+  .intro {
+    padding-top: 6vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+}
 </style>
