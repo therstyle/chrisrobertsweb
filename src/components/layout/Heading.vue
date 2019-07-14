@@ -68,6 +68,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../assets/css/vars';
+
 header.heading {
   padding: 20px 0 20px 4vw;
   transition: 0.3s all ease-in-out;
@@ -146,6 +148,30 @@ header.heading {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+@media only screen and (max-width: $tablet-breakpoint) {
+ header.heading {
+   .line-grid {
+     left: -35vw;
+   }
+ } 
+}
+
+@media only screen and (max-width: $phone-breakpoint) {
+ header.heading {
+   .line-grid {
+     left: -50vw;
+   }
+ } 
+}
+
+@media only screen and (max-width: $md-phone-breakpoint) {
+ header.heading {
+   .line-grid {
+     left: -75vw;
+   }
+ } 
 }
 </style>
 
