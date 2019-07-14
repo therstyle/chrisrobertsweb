@@ -54,9 +54,11 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../assets/css/vars';
+
 .portfolio--content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.3vw;
 }
 
@@ -113,6 +115,32 @@ export default {
 
   .project-type {
     text-align: right;
+  }
+}
+
+@media only screen and (max-width: $lg-tablet-breakpoint) {
+  .portfolio--content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2vw;
+  }
+
+  .portfolio--content-entry {
+    .description {
+      padding: 3vw;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-breakpoint) {
+  .portfolio--content {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 4vw;
+  }
+
+  .portfolio--content-entry {
+    .description {
+      padding: 4vw;
+    }
   }
 }
 </style>
