@@ -31,11 +31,13 @@ export default {
     detectMobile() {
       if (window.matchMedia(this.isMobile).matches) {
         this.config.threshold = 0;
-        console.log('mobile');
+      }
+      else {
+        this.config.threshold = 0.25;
       }
     }
   },
   mounted() {
-    //this.detectMobile();
+    window.matchMedia(this.isMobile).addListener(this.detectMobile);
   }
 }
