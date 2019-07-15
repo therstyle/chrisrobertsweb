@@ -2,6 +2,7 @@ export default {
   data() {
     return {
       observer: null,
+      isMobile: '(max-width: 992px)',
       sectionName: '',
       config: {
         threshold: 0.25
@@ -26,6 +27,15 @@ export default {
       }, this.config);
 
       this.observer.observe(this.$el);
+    },
+    detectMobile() {
+      if (window.matchMedia(this.isMobile).matches) {
+        this.config.threshold = 0;
+        console.log('mobile');
+      }
     }
+  },
+  mounted() {
+    //this.detectMobile();
   }
 }
