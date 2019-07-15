@@ -1,7 +1,7 @@
 <template>
   <section id="intro" class="intro" :class="{ viewed : viewed }">
     <div class="intro--content">
-      <h6 class="sub-heading">Front End Developer | Boston, MA</h6>
+      <h6 class="sub-heading">{{ introSubHeadline }}</h6>
       <h1 class="heading" v-html="introHeadline"></h1>
 
       <div v-html="introText"></div>
@@ -30,6 +30,7 @@ export default {
   mixins: [observer],
   props: {
     introHeadline: String,
+    introSubHeadline: String,
     introText: String,
     scrollText: String,
     video: String

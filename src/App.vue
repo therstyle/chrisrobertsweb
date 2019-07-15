@@ -10,6 +10,7 @@
     <Intro
       ref="intro" 
       :introHeadline="introHeadline" 
+      :introSubHeadline="introSubHeadline" 
       :introText="introText"
       :scrollText="scrollText"
       v-on:intersected="activeItem"
@@ -70,6 +71,7 @@ export default {
       github: '',
       linkedin: '',
       introHeadline: '',
+      introSubHeadline: '',
       introText: '',
       scrollText: '',
       introVideo: {},
@@ -131,6 +133,7 @@ export default {
       this.github = info.nav.github;
       this.linkedin = info.nav.linkedin;
       this.introHeadline = info.intro.headline;
+      this.introSubHeadline = info.intro.subHeadline;
       this.introText = info.intro.introText;
       this.scrollText = info.intro.scrollText;
       this.introVideo = info.intro.video;
@@ -166,7 +169,7 @@ body {
 }
 
 #app {
-  //opacity: 0.02; //debug
+  opacity: 0.02; //debug
   display: grid;
   padding-left: var(--sidebar-width);
   position: relative;

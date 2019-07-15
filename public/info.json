@@ -5,6 +5,7 @@
   },
   "intro": {
     "headline": "Chris<br>Roberts",
+    "subHeadline": "Front End Developer | Boston, MA",
     "introText": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor arcu ipsum, at elementum nisl rutrum nec.</p>",
     "scrollText": "Scroll",
     "video": {
@@ -145,7 +146,7 @@
         },
         "video": "/video/portfolio/flowetik.mp4",
         "name": "Flowetik",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "description": "Startup Boston marketing agency Flowetik's custom WordPress website",
         "type": "WordPress",
         "typeImage": "/images/project-type/icon-wordpress.svg"
   
@@ -174,45 +175,6 @@
         "description": "A party version of Jeopardy built with Vue.js",
         "type": "Vue.js",
         "typeImage": "/images/project-type/icon-vuejs.svg"
-  
-      },
-      {
-        "url": "https://latinroguecleaning.com/",
-        "image": {
-          "image_1x": "/images/portfolio/lrc.jpg",
-          "image_2x": "/images/portfolio/lrc_2x.jpg"
-        },
-        "video": "/video/portfolio/lrc.mp4",
-        "name": "Latin Rogue Cleaning",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "type": "WordPress",
-        "typeImage": "/images/project-type/icon-wordpress.svg"
-  
-      },
-      {
-        "url": "http://kettlebellkickboxing.com/",
-        "image": {
-          "image_1x": "/images/portfolio/kb.jpg",
-          "image_2x": "/images/portfolio/kb_2x.jpg"
-        },
-        "video": "/video/portfolio/kb.mp4",
-        "name": "Kettlebell Kickboxing",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "type": "WordPress",
-        "typeImage": "/images/project-type/icon-wordpress.svg"
-  
-      },
-      {
-        "url": "https://google.com",
-        "image": {
-          "image_1x": "https://dummyimage.com/380x249/000/fff",
-          "image_2x": "https://dummyimage.com/760x497/000/fff"
-        },
-        "video": "/video/portfolio/placeholder.mp4",
-        "name": "Lorem Ipsum",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "type": "WordPress",
-        "typeImage": "/images/project-type/icon-wordpress.svg"
   
       }
     ]
