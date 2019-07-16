@@ -3,10 +3,10 @@
     <Heading :title="headline"></Heading>
     <div class="contact--content content">
       <div class="contact-form">
-        <form>
-          <input id="name" type="text" placeholder="NAME">
-          <input id="email" type="email" placeholder="EMAIL ADDRESS">
-          <textarea name="" id="message" placeholder="MESSAGE"></textarea>
+        <form v-on:submit.prevent="formSubmit">
+          <input id="name" type="text" placeholder="NAME" v-model="formName">
+          <input id="email" type="email" placeholder="EMAIL ADDRESS" v-model="formEmail">
+          <textarea name="" id="message" placeholder="MESSAGE" v-model="formMessage"></textarea>
           <button>{{ buttonText }}</button>
         </form>
         
@@ -29,6 +29,9 @@ export default {
     return {
       viewed: false,
       amountScrolled: 0,
+      formName: '',
+      formEmail: '',
+      formMessage: ''
     }
   },
   mixins: [observer],
@@ -44,6 +47,52 @@ export default {
     getCurrentPosition() {
       this.amountScrolled = window.scrollY;
       this.amountScrolled = Math.round(this.amountScrolled);
+    },
+    formSubmit() {
+      console.log('form submit');
+
+      // if (errors.length === 0) {
+      //   const to = document.getElementById('email-address').value;
+      //   const name = document.getElementById('full-name').value;
+      //   const message = document.getElementById('message').value;
+      //   let loading = false;
+
+      //   fetch('mail.php', {
+      //       headers: {
+      //         "content-type":"application/x-www-form-urlencoded"
+      //       },
+      //       method: 'POST',
+      //       mode: "same-origin",
+      //       credentials: "same-origin",
+      //       body: `to=${to}&name=${name}&message=${message}`
+      //   })
+      //   .then (
+      //     response => {
+      //       loading = true;
+      //       document.getElementById('submit').classList.add('disabled');
+      //       document.querySelector('.loading').classList.add('active');
+      //       //console.log(response);
+      //       return response.text();
+      //   })
+      //   .then (
+      //     body => {
+      //       //console.log(body);
+      //       loading = false;
+      //       document.querySelector('.loading').classList.remove('active');
+      //       document.querySelector('.status').innerHTML = body;
+      //       document.querySelector('.status').classList.add('active');
+      //       document.getElementById('submit').classList.remove('disabled');
+      //       //console.log('sent form data');
+      //     }
+      //   )
+      //   .catch(
+      //     error => {
+      //       console.log(error);
+      //       document.querySelector('.status').classList.add('active');
+      //       document.querySelector('.status').innerHTML = '<span class="error">An error has occurred. You may be offline.</span>';
+      //     }
+      //   )
+      // }
     }
   },
   mounted() {
@@ -109,6 +158,10 @@ export default {
         display: block;
         font-size: 16px;
         min-height: 46px;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }
