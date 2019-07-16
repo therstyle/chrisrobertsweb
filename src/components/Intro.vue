@@ -117,13 +117,13 @@ export default {
   }
 }
 
-// @media only screen and (max-width: $tablet-breakpoint) {
-//   .intro--content {
-//     .heading {
-//       font-size: 10vw;
-//     }
-//   }
-// }
+@media only screen and (max-width: $tablet-breakpoint) {
+  .intro--content {
+    .heading {
+      font-size: 11vw;
+    }
+  }
+}
 
 @media only screen and (max-width: $phone-breakpoint) {
   .intro {
