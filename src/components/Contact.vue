@@ -49,7 +49,37 @@ export default {
       this.amountScrolled = Math.round(this.amountScrolled);
     },
     formSubmit() {
-      console.log('form submit');
+      if (this.formName != '' && this.formEmail != '' && this.formMessage != '') {
+        console.log('form submit');
+
+        fetch('http://rstyledesign.com/mail.php', {
+          headers: {
+            "content-type":"application/x-www-form-urlencoded"
+          },
+          method: 'POST',
+          mode: "cors",
+          //credentials: "same-origin",
+          body: `to=${this.formEmail}&name=${this.formName}&message=${this.formMessage}`
+        })
+        .then (
+          response => {
+            console.log(response);
+            return response.text();
+        })
+        .then (
+          body => {
+            console.log(body);
+            console.log('sent form data');
+          }
+        )
+        .catch(
+          error => {
+            console.log(error);
+            console.log('An error has occured');
+          }
+        )
+      }
+
 
       // if (errors.length === 0) {
       //   const to = document.getElementById('email-address').value;
