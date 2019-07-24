@@ -5,8 +5,14 @@
       <div class="contact-form">
         <form v-on:submit.prevent="formSubmit">
           <input id="name" type="text" placeholder="NAME" v-model="formName">
+          <span v-if="formAction && formName === ''" class="error">Please fill in this field to continue</span>
+
           <input id="email" type="email" placeholder="EMAIL ADDRESS" v-model="formEmail">
+          <span v-if="formAction && formEmail === ''" class="error">Please fill in this field to continue</span>
+
           <textarea name="" id="message" placeholder="MESSAGE" v-model="formMessage"></textarea>
+          <span v-if="formAction && formMessage === ''" class="error">Please fill in this field to continue</span>
+
           <button>{{ buttonText }}</button>
         </form>
         
@@ -30,8 +36,12 @@ export default {
       viewed: false,
       amountScrolled: 0,
       formName: '',
+      formNameError: false,
       formEmail: '',
-      formMessage: ''
+      formEmailError: false,
+      formMessage: '',
+      formMessageError: false,
+      formAction: false
     }
   },
   mixins: [observer],
@@ -63,6 +73,10 @@ export default {
         const data = await fetch(apiURL, args)
         .then (response => {
           console.log(response);
+          this.formAction = true;
+          this.formNameError = false;
+          this.formEmailError = false;
+          this.formMessageError = false;
           return response.text();
         })
         .then (
