@@ -59,37 +59,55 @@ export default {
       this.amountScrolled = Math.round(this.amountScrolled);
     },
     async formSubmit() {
-      try {
-        const apiURL = 'http://rstyledesign.com/mail.php';
-        const args = {
-          headers: {
-            "content-type":"application/x-www-form-urlencoded"
-          },
-          method: 'POST',
-          mode: "cors",
-          body: `to=${this.formEmail}&name=${this.formName}&message=${this.formMessage}`
-        };
+      this.formAction = true;
+      
+      if (this.formName !== '' && this.formEmail !== '' && this.formMessage !== '') {
+        try {
+          const apiURL = 'http://rstyledesign.com/mail.php';
+          const args = {
+            headers: {
+              "content-type":"application/x-www-form-urlencoded"
+            },
+            method: 'POST',
+            mode: "cors",
+            body: `to=${this.formEmail}&name=${this.formName}&message=${this.formMessage}`
+          };
 
-        const data = await fetch(apiURL, args)
-        .then (response => {
-          console.log(response);
-          this.formAction = true;
-          this.formNameError = false;
-          this.formEmailError = false;
-          this.formMessageError = false;
-          return response.text();
-        })
-        .then (
-          body => {
-            console.log(body);
-            console.log('sent form data');
-          }
-        )
+          const data = await fetch(apiURL, args)
+          .then (response => {
+            console.log(response);
+            this.formAction = true;
+            this.formNameError = false;
+            this.formEmailError = false;
+            this.formMessageError = false;
+            return response.text();
+          })
+          .then (
+            body => {
+              console.log(body);
+              console.log('sent form data');
+            }
+          )
 
-        return data;
+          return data;
+        }
+        catch (error) {
+          console.error(error);
+        }
       }
-      catch (error) {
-        console.error(error);
+      else if (this.formName === '') {
+        this.formNameError = true;
+      }
+      else if (this.formEmail === '') {
+        this.formEmailError = true;
+      }
+      else if (this.formMessage === '') {
+        this.formMessageError = true;
+      }
+      else {
+        this.formNameError = true;
+        this.formEmailError = true;
+        this.formMessageError = true;
       }
     }
   },
