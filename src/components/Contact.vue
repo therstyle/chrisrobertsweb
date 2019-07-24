@@ -5,13 +5,13 @@
       <div class="contact-form">
         <form v-on:submit.prevent="formSubmit">
           <input id="name" type="text" placeholder="NAME" v-model="formName">
-          <span v-if="formAction && formName === ''" class="error">Please fill in this field to continue</span>
+          <span v-if="formAction && formName === ''" class="error">{{ formErrorMessage }}</span>
 
           <input id="email" type="email" placeholder="EMAIL ADDRESS" v-model="formEmail">
-          <span v-if="formAction && formEmail === ''" class="error">Please fill in this field to continue</span>
+          <span v-if="formAction && formEmail === ''" class="error">{{ formErrorMessage }}</span>
 
           <textarea name="" id="message" placeholder="MESSAGE" v-model="formMessage"></textarea>
-          <span v-if="formAction && formMessage === ''" class="error">Please fill in this field to continue</span>
+          <span v-if="formAction && formMessage === ''" class="error">{{ formErrorMessage }}</span>
 
           <button>{{ buttonText }}</button>
         </form>
@@ -51,7 +51,8 @@ export default {
   props: {
     headline: String,
     image: Object,
-    buttonText: String
+    buttonText: String,
+    formErrorMessage: String
   },
   methods: {
     getCurrentPosition() {
@@ -60,7 +61,7 @@ export default {
     },
     async formSubmit() {
       this.formAction = true;
-      
+
       if (this.formName !== '' && this.formEmail !== '' && this.formMessage !== '') {
         try {
           const apiURL = 'http://rstyledesign.com/mail.php';

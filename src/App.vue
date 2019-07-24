@@ -39,6 +39,7 @@
       :headline="contactHeadline"
       :image="contactPhoto"
       :buttonText="contactButtonText"
+      :formErrorMessage="formErrorMessage"
       v-on:intersected="activeItem"
     ></Contact>
 
@@ -84,6 +85,7 @@ export default {
       contactHeadline: '',
       contactPhoto: {},
       contactButtonText: '',
+      formErrorMessage: '',
       active: {
         "intro": false,
         "portfolio": false,
@@ -146,7 +148,7 @@ export default {
       this.contactHeadline = info.contact.headline;
       this.contactPhoto = info.contact.image;
       this.contactButtonText = info.contact.buttonText;
-      //this.loadVideo();
+      this.formErrorMessage = info.contact.formErrorMessage;
     });
   },
   mounted: function() {
