@@ -79,50 +79,6 @@ export default {
           }
         )
       }
-
-
-      // if (errors.length === 0) {
-      //   const to = document.getElementById('email-address').value;
-      //   const name = document.getElementById('full-name').value;
-      //   const message = document.getElementById('message').value;
-      //   let loading = false;
-
-      //   fetch('mail.php', {
-      //       headers: {
-      //         "content-type":"application/x-www-form-urlencoded"
-      //       },
-      //       method: 'POST',
-      //       mode: "same-origin",
-      //       credentials: "same-origin",
-      //       body: `to=${to}&name=${name}&message=${message}`
-      //   })
-      //   .then (
-      //     response => {
-      //       loading = true;
-      //       document.getElementById('submit').classList.add('disabled');
-      //       document.querySelector('.loading').classList.add('active');
-      //       //console.log(response);
-      //       return response.text();
-      //   })
-      //   .then (
-      //     body => {
-      //       //console.log(body);
-      //       loading = false;
-      //       document.querySelector('.loading').classList.remove('active');
-      //       document.querySelector('.status').innerHTML = body;
-      //       document.querySelector('.status').classList.add('active');
-      //       document.getElementById('submit').classList.remove('disabled');
-      //       //console.log('sent form data');
-      //     }
-      //   )
-      //   .catch(
-      //     error => {
-      //       console.log(error);
-      //       document.querySelector('.status').classList.add('active');
-      //       document.querySelector('.status').innerHTML = '<span class="error">An error has occurred. You may be offline.</span>';
-      //     }
-      //   )
-      // }
     }
   },
   mounted() {
