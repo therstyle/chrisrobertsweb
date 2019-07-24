@@ -49,9 +49,8 @@ export default {
       this.amountScrolled = Math.round(this.amountScrolled);
     },
     async formSubmit() {
-      console.log('you pressed submit');
-
-      const apiURL = 'http://rstyledesign.com/mail.php';
+      try {
+        const apiURL = 'http://rstyledesign.com/mail.php';
         const args = {
           headers: {
             "content-type":"application/x-www-form-urlencoded"
@@ -74,6 +73,10 @@ export default {
         )
 
         return data;
+      }
+      catch (error) {
+        console.error(error);
+      }
     }
   },
   mounted() {
