@@ -214,6 +214,11 @@ export default {
     }
   }
 
+  .error {
+    font-size: 12px;
+    display: block;
+  }
+
   @media only screen and (max-width: $lg-tablet-breakpoint) {
     .contact--content.content {
       padding-left: 0;
