@@ -48,11 +48,10 @@ export default {
       this.amountScrolled = window.scrollY;
       this.amountScrolled = Math.round(this.amountScrolled);
     },
-    formSubmit() {
+    async formSubmit() {
       console.log('you pressed submit');
 
-      async () => {
-        const apiURL = 'http://rstyledesign.com/mail.php';
+      const apiURL = 'http://rstyledesign.com/mail.php';
         const args = {
           headers: {
             "content-type":"application/x-www-form-urlencoded"
@@ -62,7 +61,7 @@ export default {
           body: `to=${this.formEmail}&name=${this.formName}&message=${this.formMessage}`
         };
 
-        await fetch(apiURL, args)
+        const data = await fetch(apiURL, args)
         .then (response => {
           console.log(response);
           return response.text();
@@ -74,21 +73,7 @@ export default {
           }
         )
 
-        // const data = await fetch(`http://${location}:9000/api/sensors/`, settings)
-        // .then(response => response.json())
-        // .then(json => {
-        //     return json;
-        // })
-        // .catch(e => {
-        //     return e
-        // });
-
-        // return data;
-
-        //const data = response.text();
-
-        //return data;
-      }
+        return data;
     }
   },
   mounted() {
