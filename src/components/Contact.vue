@@ -13,7 +13,9 @@
           <textarea name="" id="message" placeholder="MESSAGE" v-model="formMessage"></textarea>
           <span v-if="formAction && formMessage === ''" class="error">{{ formErrorMessage }}</span>
 
-          <button>{{ buttonText }}</button>
+          <button>{{ buttonText }} <!-- add loading spinner here --></button>
+
+          <div v-if="formResponse !== ''" class="form-response" v-html="formResponse"></div>
         </form>
         
         <picture class="contact-photo" :data-pixels="amountScrolled">
@@ -42,6 +44,7 @@ export default {
       formMessage: '',
       formMessageError: false,
       formAction: false,
+      formResponse: '',
       loading: false
     }
   },
@@ -89,6 +92,7 @@ export default {
           .then (
             body => {
               console.log(body);
+              this.formResponse = body;
             }
           )
 
