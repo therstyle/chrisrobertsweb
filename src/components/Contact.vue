@@ -49,22 +49,23 @@ export default {
       this.amountScrolled = Math.round(this.amountScrolled);
     },
     formSubmit() {
-      if (this.formName != '' && this.formEmail != '' && this.formMessage != '') {
-        console.log('form submit');
+      console.log('you pressed submit');
 
-        fetch('http://rstyledesign.com/mail.php', {
+      async () => {
+        const apiURL = 'http://rstyledesign.com/mail.php';
+        const args = {
           headers: {
             "content-type":"application/x-www-form-urlencoded"
           },
           method: 'POST',
           mode: "cors",
-          //credentials: "same-origin",
           body: `to=${this.formEmail}&name=${this.formName}&message=${this.formMessage}`
-        })
-        .then (
-          response => {
-            console.log(response);
-            return response.text();
+        };
+
+        await fetch(apiURL, args)
+        .then (response => {
+          console.log(response);
+          return response.text();
         })
         .then (
           body => {
@@ -72,12 +73,21 @@ export default {
             console.log('sent form data');
           }
         )
-        .catch(
-          error => {
-            console.log(error);
-            console.log('An error has occured');
-          }
-        )
+
+        // const data = await fetch(`http://${location}:9000/api/sensors/`, settings)
+        // .then(response => response.json())
+        // .then(json => {
+        //     return json;
+        // })
+        // .catch(e => {
+        //     return e
+        // });
+
+        // return data;
+
+        //const data = response.text();
+
+        //return data;
       }
     }
   },
