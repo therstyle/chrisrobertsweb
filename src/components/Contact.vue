@@ -41,7 +41,8 @@ export default {
       formEmailError: false,
       formMessage: '',
       formMessageError: false,
-      formAction: false
+      formAction: false,
+      loading: false
     }
   },
   mixins: [observer],
@@ -63,6 +64,8 @@ export default {
       this.formAction = true;
 
       if (this.formName !== '' && this.formEmail !== '' && this.formMessage !== '') {
+        this.loading = true;
+
         try {
           const apiURL = 'http://rstyledesign.com/mail.php';
           const args = {
@@ -86,10 +89,10 @@ export default {
           .then (
             body => {
               console.log(body);
-              console.log('sent form data');
             }
           )
 
+          this.loading = false;
           return data;
         }
         catch (error) {
@@ -217,6 +220,7 @@ export default {
   .error {
     font-size: 12px;
     display: block;
+    transition: 0.3s all;
   }
 
   @media only screen and (max-width: $lg-tablet-breakpoint) {
