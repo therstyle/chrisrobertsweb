@@ -4,16 +4,22 @@
     <div class="contact--content content">
       <div class="contact-form">
         <form v-on:submit.prevent="formSubmit">
-          <input id="name" type="text" placeholder="NAME" v-model="formName">
-          <span v-if="formAction && formName === ''" class="error">{{ formErrorMessage }}</span>
+          <div class="field-group">
+            <input id="name" type="text" placeholder="NAME" v-model="formName">
+            <span v-if="formAction && formName === ''" class="error">{{ formErrorMessage }}</span>
+          </div>
 
-          <input id="email" type="email" placeholder="EMAIL ADDRESS" v-model="formEmail">
-          <span v-if="formAction && formEmail === ''" class="error">{{ formErrorMessage }}</span>
+          <div class="field-group">
+            <input id="email" type="email" placeholder="EMAIL ADDRESS" v-model="formEmail">
+            <span v-if="formAction && formEmail === ''" class="error">{{ formErrorMessage }}</span>
+          </div>
 
-          <textarea name="" id="message" placeholder="MESSAGE" v-model="formMessage"></textarea>
-          <span v-if="formAction && formMessage === ''" class="error">{{ formErrorMessage }}</span>
+          <div class="field-group">
+            <textarea name="" id="message" placeholder="MESSAGE" v-model="formMessage"></textarea>
+            <span v-if="formAction && formMessage === ''" class="error">{{ formErrorMessage }}</span>
+          </div>
 
-          <button>{{ buttonText }} <!-- add loading spinner here --></button>
+          <button>{{ buttonText }} <img src="images/loading.svg" v-if="loading"></button>
 
           <div v-if="formResponse !== ''" class="form-response" v-html="formResponse"></div>
         </form>
@@ -92,6 +98,10 @@ export default {
           .then (
             body => {
               console.log(body);
+              this.formAction = false;
+              this.formName = '';
+              this.formEmail = '';
+              this.formMessage = '';
               this.formResponse = body;
             }
           )
@@ -158,9 +168,8 @@ export default {
       left: 0;
       width: 50%;
 
-      > textarea,
+      textarea,
       input {
-        margin-bottom: 2vw;
         display: block;
         width: 100%;
         background: transparent;
@@ -175,19 +184,30 @@ export default {
         border: none;
         background: var(--white);
         font-weight: 900;
-        min-width: 160px;
+        min-width: 208px;
         padding-top: 1vw;
         padding-bottom: 1vw;
         margin: auto;
         display: block;
         font-size: 16px;
         min-height: 46px;
+        position: relative;
+
+        img {
+          max-width: 24px;
+          position: absolute;
+          right: 10px;
+        }
 
         &:hover {
           cursor: pointer;
         }
       }
     }
+  }
+
+  .field-group {
+    margin-bottom: 2vw;
   }
 
   .contact-photo {
@@ -221,10 +241,16 @@ export default {
     }
   }
 
-  .error {
+  .error, 
+  .form-response {
     font-size: 12px;
     display: block;
     transition: 0.3s all;
+    margin-top: 0.5vw;
+  }
+
+  .form-response {
+    margin-top: 2vw;
   }
 
   @media only screen and (max-width: $lg-tablet-breakpoint) {
@@ -247,12 +273,11 @@ export default {
         textarea {
           min-height: 120px;
         }
-
-        > textarea,
-        input {
-            margin-bottom: 4vw;
-        }
       }
+    }
+
+    .field-group {
+       margin-bottom: 4vw;
     }
 
     .contact-photo {
@@ -322,12 +347,11 @@ export default {
     .contact-form {
       form {
         padding: 5vw;
-
-      > textarea,
-      input {
-          margin-bottom: 5vw;
-        }
       }
+    }
+
+    .field-group {
+      margin-bottom: 5vw;
     }
   }
 </style>
