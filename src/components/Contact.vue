@@ -4,10 +4,24 @@
     <div class="contact--content content">
       <div class="contact-form">
         <form v-on:submit.prevent="formSubmit">
-          <input id="name" type="text" placeholder="NAME" v-model="formName">
-          <input id="email" type="email" placeholder="EMAIL ADDRESS" v-model="formEmail">
-          <textarea name="" id="message" placeholder="MESSAGE" v-model="formMessage"></textarea>
-          <button>{{ buttonText }}</button>
+          <div class="field-group">
+            <input id="name" type="text" placeholder="NAME" v-model="formName">
+            <span v-if="formAction && formName === ''" class="error">{{ formErrorMessage }}</span>
+          </div>
+
+          <div class="field-group">
+            <input id="email" type="email" placeholder="EMAIL ADDRESS" v-model="formEmail">
+            <span v-if="formAction && formEmail === ''" class="error">{{ formErrorMessage }}</span>
+          </div>
+
+          <div class="field-group">
+            <textarea name="" id="message" placeholder="MESSAGE" v-model="formMessage"></textarea>
+            <span v-if="formAction && formMessage === ''" class="error">{{ formErrorMessage }}</span>
+          </div>
+
+          <button>{{ buttonText }} <img src="images/loading.svg" v-if="loading"></button>
+
+          <div v-if="formResponse !== ''" class="form-response" v-html="formResponse"></div>
         </form>
         
         <picture class="contact-photo" :data-pixels="amountScrolled">
@@ -30,8 +44,14 @@ export default {
       viewed: false,
       amountScrolled: 0,
       formName: '',
+      formNameError: false,
       formEmail: '',
-      formMessage: ''
+      formEmailError: false,
+      formMessage: '',
+      formMessageError: false,
+      formAction: false,
+      formResponse: '',
+      loading: false
     }
   },
   mixins: [observer],
@@ -41,43 +61,71 @@ export default {
   props: {
     headline: String,
     image: Object,
-    buttonText: String
+    buttonText: String,
+    formErrorMessage: String
   },
   methods: {
     getCurrentPosition() {
       this.amountScrolled = window.scrollY;
       this.amountScrolled = Math.round(this.amountScrolled);
     },
-    formSubmit() {
-      if (this.formName != '' && this.formEmail != '' && this.formMessage != '') {
-        console.log('form submit');
+    async formSubmit() {
+      this.formAction = true;
 
-        fetch('http://rstyledesign.com/mail.php', {
-          headers: {
-            "content-type":"application/x-www-form-urlencoded"
-          },
-          method: 'POST',
-          mode: "cors",
-          //credentials: "same-origin",
-          body: `to=${this.formEmail}&name=${this.formName}&message=${this.formMessage}`
-        })
-        .then (
-          response => {
+      if (this.formName !== '' && this.formEmail !== '' && this.formMessage !== '') {
+        this.loading = true;
+
+        try {
+          const apiURL = 'http://rstyledesign.com/mail.php';
+          const args = {
+            headers: {
+              "content-type":"application/x-www-form-urlencoded"
+            },
+            method: 'POST',
+            mode: "cors",
+            body: `to=${this.formEmail}&name=${this.formName}&message=${this.formMessage}`
+          };
+
+          const data = await fetch(apiURL, args)
+          .then (response => {
             console.log(response);
+            this.formAction = true;
+            this.formNameError = false;
+            this.formEmailError = false;
+            this.formMessageError = false;
             return response.text();
-        })
-        .then (
-          body => {
-            console.log(body);
-            console.log('sent form data');
-          }
-        )
-        .catch(
-          error => {
-            console.log(error);
-            console.log('An error has occured');
-          }
-        )
+          })
+          .then (
+            body => {
+              console.log(body);
+              this.formAction = false;
+              this.formName = '';
+              this.formEmail = '';
+              this.formMessage = '';
+              this.formResponse = body;
+            }
+          )
+
+          this.loading = false;
+          return data;
+        }
+        catch (error) {
+          console.error(error);
+        }
+      }
+      else if (this.formName === '') {
+        this.formNameError = true;
+      }
+      else if (this.formEmail === '') {
+        this.formEmailError = true;
+      }
+      else if (this.formMessage === '') {
+        this.formMessageError = true;
+      }
+      else {
+        this.formNameError = true;
+        this.formEmailError = true;
+        this.formMessageError = true;
       }
     }
   },
@@ -120,9 +168,8 @@ export default {
       left: 0;
       width: 50%;
 
-      > textarea,
+      textarea,
       input {
-        margin-bottom: 2vw;
         display: block;
         width: 100%;
         background: transparent;
@@ -137,19 +184,30 @@ export default {
         border: none;
         background: var(--white);
         font-weight: 900;
-        min-width: 160px;
+        min-width: 208px;
         padding-top: 1vw;
         padding-bottom: 1vw;
         margin: auto;
         display: block;
         font-size: 16px;
         min-height: 46px;
+        position: relative;
+
+        img {
+          max-width: 24px;
+          position: absolute;
+          right: 10px;
+        }
 
         &:hover {
           cursor: pointer;
         }
       }
     }
+  }
+
+  .field-group {
+    margin-bottom: 2vw;
   }
 
   .contact-photo {
@@ -183,6 +241,18 @@ export default {
     }
   }
 
+  .error, 
+  .form-response {
+    font-size: 12px;
+    display: block;
+    transition: 0.3s all;
+    margin-top: 0.5vw;
+  }
+
+  .form-response {
+    margin-top: 2vw;
+  }
+
   @media only screen and (max-width: $lg-tablet-breakpoint) {
     .contact--content.content {
       padding-left: 0;
@@ -203,12 +273,11 @@ export default {
         textarea {
           min-height: 120px;
         }
-
-        > textarea,
-        input {
-            margin-bottom: 4vw;
-        }
       }
+    }
+
+    .field-group {
+       margin-bottom: 4vw;
     }
 
     .contact-photo {
@@ -278,12 +347,11 @@ export default {
     .contact-form {
       form {
         padding: 5vw;
-
-      > textarea,
-      input {
-          margin-bottom: 5vw;
-        }
       }
+    }
+
+    .field-group {
+      margin-bottom: 5vw;
     }
   }
 </style>
