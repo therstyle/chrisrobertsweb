@@ -13,11 +13,12 @@ export default {
     intersected(currentSection) {
       this.$emit('intersected', currentSection);
       this.viewed = true;
+      console.log(this.$el);
     },
     wayPoint() {
       this.observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-          if(entry.isIntersecting) {
+          if(entry.intersectionRatio > 0) {
             if (this.$vnode.elm.id) {
               this.sectionName = this.$vnode.elm.id;
               this.intersected(this.sectionName);
@@ -25,6 +26,17 @@ export default {
           }
         });
       }, this.config);
+
+      // this.observer = new IntersectionObserver(entries => {
+      //   entries.forEach(entry => {
+      //     if(entry.isIntersecting) {
+      //       if (this.$vnode.elm.id) {
+      //         this.sectionName = this.$vnode.elm.id;
+      //         this.intersected(this.sectionName);
+      //       }
+      //     }
+      //   });
+      // }, this.config);
 
       this.observer.observe(this.$el);
     },
