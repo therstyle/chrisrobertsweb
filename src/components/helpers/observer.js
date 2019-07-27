@@ -5,7 +5,7 @@ export default {
       isMobile: '(max-width: 992px)',
       sectionName: '',
       config: {
-        threshold: 0.25
+        threshold: 0
       }
     }
   },
@@ -13,12 +13,12 @@ export default {
     intersected(currentSection) {
       this.$emit('intersected', currentSection);
       this.viewed = true;
-      console.log(this.$el);
     },
     wayPoint() {
       this.observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-          if(entry.intersectionRatio > 0) {
+          if(entry.isIntersecting) {
+            console.log(`${this.$vnode.elm.id} ${entry.intersectionRatio}`);
             if (this.$vnode.elm.id) {
               this.sectionName = this.$vnode.elm.id;
               this.intersected(this.sectionName);
@@ -27,17 +27,6 @@ export default {
         });
       }, this.config);
 
-      // this.observer = new IntersectionObserver(entries => {
-      //   entries.forEach(entry => {
-      //     if(entry.isIntersecting) {
-      //       if (this.$vnode.elm.id) {
-      //         this.sectionName = this.$vnode.elm.id;
-      //         this.intersected(this.sectionName);
-      //       }
-      //     }
-      //   });
-      // }, this.config);
-
       this.observer.observe(this.$el);
     },
     detectMobile() {
@@ -45,7 +34,7 @@ export default {
         this.config.threshold = 0;
       }
       else {
-        this.config.threshold = 0.25;
+        this.config.threshold = 0;
       }
     }
   },
