@@ -4,25 +4,28 @@ export default {
       observer: null,
       isMobile: '(max-width: 992px)',
       sectionName: '',
+      section: {
+
+      },
       config: {
         threshold: 0
       }
     }
   },
   methods: {
-    intersected(currentSection) {
-      this.$emit('intersected', currentSection);
+    intersected(currentSection, threshold) {
+      this.$emit('intersected', currentSection, threshold);
       this.viewed = true;
     },
     wayPoint() {
       this.observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-          if(entry.isIntersecting) {
-            console.log(`${this.$vnode.elm.id} ${entry.intersectionRatio}`);
-            if (this.$vnode.elm.id) {
-              this.sectionName = this.$vnode.elm.id;
-              this.intersected(this.sectionName);
-            }
+          if (this.$vnode.elm.id) {
+            this.sectionName = this.$vnode.elm.id;
+            console.log(`${this.sectionName} - ${entry.intersectionRatio}`);
+
+            this.section[this.sectionName] = entry.intersectionRatio;
+            this.intersected(this.sectionName, entry.intersectionRatio);
           }
         });
       }, this.config);

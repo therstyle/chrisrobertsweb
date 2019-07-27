@@ -91,20 +91,31 @@ export default {
         "portfolio": false,
         "resume": false,
         "contact": false
+      },
+      sections: {
+        "intro": 0,
+        "portfolio": 0,
+        "resume": 0,
+        "contact": 0
       }
     }
   },
   methods: {
-    activeItem: function(currentSection) {
-      //iterate thru active's keys, set one as active
-      Object.keys(this.active).forEach(item => {
-        if (item === currentSection) {
-          this.active[item] = true;
-        }
-        else {
-          this.active[item] = false;
+    activeItem: function(currentSection, threshold) {
+      Object.keys(this.sections).forEach(item => {
+        if(item === currentSection) {
+          this.sections[currentSection] = threshold;
         }
       });
+      //iterate thru active's keys, set one as active
+      // Object.keys(this.active).forEach(item => {
+      //   if (item === currentSection) {
+      //     this.active[item] = true;
+      //   }
+      //   else {
+      //     this.active[item] = false;
+      //   }
+      // });
     },
     scrollHere: function(section) {
       //iterate thru refs, look for a match
@@ -181,6 +192,7 @@ body {
 
     &:not(.intro) {
       padding: 8vw 0;
+      margin-top: 1px; //keep out of viewport for observer
     }
   }
 }
