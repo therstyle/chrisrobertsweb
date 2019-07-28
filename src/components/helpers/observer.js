@@ -12,7 +12,9 @@ export default {
   methods: {
     observed(currentSection, threshold) {
       this.$emit('observed', currentSection, threshold);
-      //this.viewed = true;
+    },
+    intersected(currentSection) {
+      this.$emit('intersected', currentSection);
     },
     wayPoint() {
       this.observer = new IntersectionObserver(entries => {
@@ -21,6 +23,12 @@ export default {
             this.sectionName = this.$vnode.elm.id;
             this.observed(this.sectionName, entry.intersectionRatio);
             //console.log(`${this.sectionName} - ${entry.intersectionRatio}`);
+
+            if (entry.isIntersecting) {
+              //console.log(entry);
+              //console.log('is viewed');
+              this.intersected(this.sectionName);
+            }
           }
         });
       }, this.config);
@@ -37,6 +45,7 @@ export default {
     }
   },
   mounted() {
+    this.detectMobile();
     window.matchMedia(this.isMobile).addListener(this.detectMobile);
   }
 }

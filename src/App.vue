@@ -27,6 +27,7 @@
       :sigText="sigText"
       :viewed="sections.resume.viewed"
       v-on:observed="activeItem"
+      v-on:intersected="viewedItem"
     ></Resume>
 
     <Portfolio
@@ -34,6 +35,7 @@
       :portfolioItems="portfolioItems"
       :viewed="sections.portfolio.viewed"
       v-on:observed="activeItem"
+      v-on:intersected="viewedItem"
     ></Portfolio>
 
     <Contact
@@ -44,6 +46,7 @@
       :formErrorMessage="formErrorMessage"
       :viewed="sections.contact.viewed"
       v-on:observed="activeItem"
+      v-on:intersected="viewedItem"
     ></Contact>
 
     <div class="bg-video">
@@ -122,20 +125,24 @@ export default {
       });
 
       let arr = Object.keys(this.sections).map(section => this.sections[section].threshold);
-      console.log(arr);
+      //console.log(arr);
       this.highValue = Math.max(...arr);
 
-      console.log('high ' + this.highValue);
+      //console.log('high ' + this.highValue);
 
       Object.keys(this.sections).forEach(section => {
         if (this.sections[section].threshold === this.highValue) {
           this.sections[section].active = true;
-          this.sections[section].viewed = true;
+          //this.sections[section].viewed = true;
         }
         else {
           this.sections[section].active = false;
         }
       });
+    },
+    viewedItem: function(currentSection) {
+      console.log(currentSection + ' is viewed');
+      this.sections[currentSection].viewed = true;
     },
     scrollHere: function(section) {
       //iterate thru refs, look for a match
@@ -181,9 +188,6 @@ export default {
       this.contactButtonText = info.contact.buttonText;
       this.formErrorMessage = info.contact.formErrorMessage;
     });
-  },
-  mounted: function() {
-    
   }
 }
 </script>
