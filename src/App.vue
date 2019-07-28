@@ -97,16 +97,39 @@ export default {
         "portfolio": 0,
         "resume": 0,
         "contact": 0
-      }
+      },
+      highValue: 0,
+      highIndex: ''
     }
   },
   methods: {
     activeItem: function(currentSection, threshold) {
       Object.keys(this.sections).forEach(item => {
-        if(item === currentSection) {
+        if (item === currentSection) {
           this.sections[currentSection] = threshold;
         }
+
+        if (this.sections[item] === this.highValue) {
+          this.highIndex = item;
+          this.active[this.highIndex] = true;
+        }
+
+        else {
+          this.active[item] = false;
+        }
+
+        console.log('item ' + item);
+        console.log('high ' + this.highValue);
       });
+
+      let arr = Object.values(this.sections);
+      this.highValue = Math.max(...arr);
+
+      //console.log(`high = ${this.highValue}`);
+
+      //this.winningScore = Math.max.apply(Math, this.players.map(value => value.score));
+      //this.winnerIndex = this.players.findIndex(obj => obj['score'] === this.winningScore);
+      
       //iterate thru active's keys, set one as active
       // Object.keys(this.active).forEach(item => {
       //   if (item === currentSection) {
