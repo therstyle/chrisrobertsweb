@@ -41,7 +41,6 @@ export default {
   name: 'Contact',
   data() {
     return {
-      viewed: false,
       amountScrolled: 0,
       formName: '',
       formNameError: false,
@@ -62,7 +61,8 @@ export default {
     headline: String,
     image: Object,
     buttonText: String,
-    formErrorMessage: String
+    formErrorMessage: String,
+    viewed: Boolean
   },
   methods: {
     getCurrentPosition() {

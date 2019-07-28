@@ -10,16 +10,16 @@ export default {
     }
   },
   methods: {
-    intersected(currentSection, threshold) {
-      this.$emit('intersected', currentSection, threshold);
-      this.viewed = true;
+    observed(currentSection, threshold) {
+      this.$emit('observed', currentSection, threshold);
+      //this.viewed = true;
     },
     wayPoint() {
       this.observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (this.$vnode.elm.id) {
             this.sectionName = this.$vnode.elm.id;
-            this.intersected(this.sectionName, entry.intersectionRatio);
+            this.observed(this.sectionName, entry.intersectionRatio);
             //console.log(`${this.sectionName} - ${entry.intersectionRatio}`);
           }
         });
@@ -29,7 +29,7 @@ export default {
     },
     detectMobile() {
       if (window.matchMedia(this.isMobile).matches) {
-        this.config.threshold = 0;
+        this.config.threshold = 0.25;
       }
       else {
         this.config.threshold = 0;

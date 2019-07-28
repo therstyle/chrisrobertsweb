@@ -27,7 +27,6 @@ export default {
   name: 'Portfolio',
   data() {
     return {
-      viewed: false,
       i: 0
     }
   },
@@ -37,7 +36,8 @@ export default {
     PorfolioItem
   },
   props: {
-    portfolioItems: Array
+    portfolioItems: Array,
+    viewed: Boolean
   },
   mounted() {
     this.wayPoint();

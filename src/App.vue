@@ -13,7 +13,8 @@
       :introSubHeadline="introSubHeadline" 
       :introText="introText"
       :scrollText="scrollText"
-      v-on:intersected="activeItem"
+      :viewed="sections.intro.viewed"
+      v-on:observed="activeItem"
       v-on:scrollRequest="scrollHere"
     ></Intro>
 
@@ -24,13 +25,15 @@
       :devSkills="devSkills"
       :designSkills="designSkills"
       :sigText="sigText"
-      v-on:intersected="activeItem"
+      :viewed="sections.resume.viewed"
+      v-on:observed="activeItem"
     ></Resume>
 
     <Portfolio
       ref="portfolio" 
       :portfolioItems="portfolioItems"
-      v-on:intersected="activeItem"
+      :viewed="sections.portfolio.viewed"
+      v-on:observed="activeItem"
     ></Portfolio>
 
     <Contact
@@ -39,7 +42,8 @@
       :image="contactPhoto"
       :buttonText="contactButtonText"
       :formErrorMessage="formErrorMessage"
-      v-on:intersected="activeItem"
+      :viewed="sections.contact.viewed"
+      v-on:observed="activeItem"
     ></Contact>
 
     <div class="bg-video">
@@ -86,20 +90,24 @@ export default {
       contactButtonText: '',
       formErrorMessage: '',
       sections: {
-        "intro": {
+        intro: {
           active: false,
+          viewed: false,
           threshold: 0
         },
-        "resume": {
+        resume: {
           active: false,
+          viewed: false,
           threshold: 0
         },
-        "portfolio": {
+        portfolio: {
           active: false,
+          viewed: false,
           threshold: 0
         },
-        "contact": {
+        contact: {
           active: false,
+          viewed: false,
           threshold: 0
         }
       },
@@ -122,6 +130,7 @@ export default {
       Object.keys(this.sections).forEach(section => {
         if (this.sections[section].threshold === this.highValue) {
           this.sections[section].active = true;
+          this.sections[section].viewed = true;
         }
         else {
           this.sections[section].active = false;
