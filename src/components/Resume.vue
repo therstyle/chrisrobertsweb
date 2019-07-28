@@ -69,7 +69,6 @@ export default {
     devSkills: Array,
     designSkills: Array,
     sigText: String,
-    active: Object
   },
   mounted() {
     this.wayPoint();

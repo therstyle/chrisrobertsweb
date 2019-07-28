@@ -4,9 +4,6 @@ export default {
       observer: null,
       isMobile: '(max-width: 992px)',
       sectionName: '',
-      section: {
-
-      },
       config: {
         threshold: 0
       }
@@ -22,10 +19,8 @@ export default {
         entries.forEach(entry => {
           if (this.$vnode.elm.id) {
             this.sectionName = this.$vnode.elm.id;
-            //console.log(`${this.sectionName} - ${entry.intersectionRatio}`);
-
-            this.section[this.sectionName] = entry.intersectionRatio;
             this.intersected(this.sectionName, entry.intersectionRatio);
+            //console.log(`${this.sectionName} - ${entry.intersectionRatio}`);
           }
         });
       }, this.config);

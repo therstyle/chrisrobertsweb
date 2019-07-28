@@ -3,7 +3,7 @@
     <Sidebar 
       :github="github"
       :linkedin="linkedin"
-      :active="active"
+      :sections="sections"
       v-on:scrollRequest="scrollHere"
     ></Sidebar>
 
@@ -24,7 +24,6 @@
       :devSkills="devSkills"
       :designSkills="designSkills"
       :sigText="sigText"
-      :active="active"
       v-on:intersected="activeItem"
     ></Resume>
 
@@ -86,17 +85,23 @@ export default {
       contactPhoto: {},
       contactButtonText: '',
       formErrorMessage: '',
-      active: {
-        "intro": false,
-        "portfolio": false,
-        "resume": false,
-        "contact": false
-      },
       sections: {
-        "intro": 0,
-        "portfolio": 0,
-        "resume": 0,
-        "contact": 0
+        "intro": {
+          active: false,
+          threshold: 0
+        },
+        "resume": {
+          active: false,
+          threshold: 0
+        },
+        "portfolio": {
+          active: false,
+          threshold: 0
+        },
+        "contact": {
+          active: false,
+          threshold: 0
+        }
       },
       highValue: 0,
       highIndex: ''
@@ -105,40 +110,23 @@ export default {
   methods: {
     activeItem: function(currentSection, threshold) {
       Object.keys(this.sections).forEach(item => {
-        if (item === currentSection) {
-          this.sections[currentSection] = threshold;
-        }
-
-        if (this.sections[item] === this.highValue) {
-          this.highIndex = item;
-          this.active[this.highIndex] = true;
-        }
-
-        else {
-          this.active[item] = false;
-        }
-
-        console.log('item ' + item);
-        console.log('high ' + this.highValue);
+        this.sections[currentSection].threshold = threshold;
       });
 
-      let arr = Object.values(this.sections);
+      let arr = Object.keys(this.sections).map(section => this.sections[section].threshold);
+      console.log(arr);
       this.highValue = Math.max(...arr);
 
-      //console.log(`high = ${this.highValue}`);
+      console.log('high ' + this.highValue);
 
-      //this.winningScore = Math.max.apply(Math, this.players.map(value => value.score));
-      //this.winnerIndex = this.players.findIndex(obj => obj['score'] === this.winningScore);
-      
-      //iterate thru active's keys, set one as active
-      // Object.keys(this.active).forEach(item => {
-      //   if (item === currentSection) {
-      //     this.active[item] = true;
-      //   }
-      //   else {
-      //     this.active[item] = false;
-      //   }
-      // });
+      Object.keys(this.sections).forEach(section => {
+        if (this.sections[section].threshold === this.highValue) {
+          this.sections[section].active = true;
+        }
+        else {
+          this.sections[section].active = false;
+        }
+      });
     },
     scrollHere: function(section) {
       //iterate thru refs, look for a match
@@ -215,7 +203,7 @@ body {
 
     &:not(.intro) {
       padding: 8vw 0;
-      margin-top: 1px; //keep out of viewport for observer
+      margin-top: 1vw; //keep out of viewport for observer
     }
   }
 }
