@@ -211,7 +211,7 @@ body {
 }
 
 #app {
-  opacity: 0.02; //Debug
+  //opacity: 0.02; //Debug
   display: grid;
   padding-left: var(--sidebar-width);
   position: relative;

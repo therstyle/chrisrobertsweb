@@ -77,7 +77,7 @@ export default {
         this.loading = true;
 
         try {
-          const apiURL = 'http://rstyledesign.com/mail.php';
+          const apiURL = 'https://mailer.chrisrobertsweb.dev';
           const args = {
             headers: {
               "content-type":"application/x-www-form-urlencoded"
@@ -146,7 +146,6 @@ export default {
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
-    overflow: hidden;
 
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: var(--white);
