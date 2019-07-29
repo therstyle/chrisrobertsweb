@@ -146,6 +146,7 @@ export default {
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
+    overflow: hidden;
 
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: var(--white);
@@ -282,10 +283,11 @@ export default {
     }
 
     .contact-photo {
-      width: calc(100vw - (var(--sidebar-width) + 8vw));
+      //width: calc(100vw - (var(--sidebar-width) + 8vw));
+      width: calc(100vw - var(--sidebar-width));
       max-width: none;
       height: 500px;
-      overflow: hidden;
+      overflow-x: hidden;
       z-index: 1;
 
       &:before {
