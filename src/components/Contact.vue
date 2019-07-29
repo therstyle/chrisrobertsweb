@@ -41,7 +41,6 @@ export default {
   name: 'Contact',
   data() {
     return {
-      viewed: false,
       amountScrolled: 0,
       formName: '',
       formNameError: false,
@@ -62,7 +61,8 @@ export default {
     headline: String,
     image: Object,
     buttonText: String,
-    formErrorMessage: String
+    formErrorMessage: String,
+    viewed: Boolean
   },
   methods: {
     getCurrentPosition() {
@@ -281,7 +281,7 @@ export default {
     }
 
     .contact-photo {
-      width: calc(100vw - var(--sidebar-width));
+      width: calc(100vw - (var(--sidebar-width) + 8vw));
       max-width: none;
       height: 500px;
       overflow: hidden;

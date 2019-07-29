@@ -3,7 +3,7 @@
     <Sidebar 
       :github="github"
       :linkedin="linkedin"
-      :active="active"
+      :sections="sections"
       v-on:scrollRequest="scrollHere"
     ></Sidebar>
 
@@ -13,7 +13,8 @@
       :introSubHeadline="introSubHeadline" 
       :introText="introText"
       :scrollText="scrollText"
-      v-on:intersected="activeItem"
+      :viewed="sections.intro.viewed"
+      v-on:observed="activeItem"
       v-on:scrollRequest="scrollHere"
     ></Intro>
 
@@ -24,14 +25,17 @@
       :devSkills="devSkills"
       :designSkills="designSkills"
       :sigText="sigText"
-      :active="active"
-      v-on:intersected="activeItem"
+      :viewed="sections.resume.viewed"
+      v-on:observed="activeItem"
+      v-on:intersected="viewedItem"
     ></Resume>
 
     <Portfolio
       ref="portfolio" 
       :portfolioItems="portfolioItems"
-      v-on:intersected="activeItem"
+      :viewed="sections.portfolio.viewed"
+      v-on:observed="activeItem"
+      v-on:intersected="viewedItem"
     ></Portfolio>
 
     <Contact
@@ -40,7 +44,9 @@
       :image="contactPhoto"
       :buttonText="contactButtonText"
       :formErrorMessage="formErrorMessage"
-      v-on:intersected="activeItem"
+      :viewed="sections.contact.viewed"
+      v-on:observed="activeItem"
+      v-on:intersected="viewedItem"
     ></Contact>
 
     <div class="bg-video">
@@ -86,25 +92,57 @@ export default {
       contactPhoto: {},
       contactButtonText: '',
       formErrorMessage: '',
-      active: {
-        "intro": false,
-        "portfolio": false,
-        "resume": false,
-        "contact": false
-      }
+      sections: {
+        intro: {
+          active: false,
+          viewed: false,
+          threshold: 0
+        },
+        resume: {
+          active: false,
+          viewed: false,
+          threshold: 0
+        },
+        portfolio: {
+          active: false,
+          viewed: false,
+          threshold: 0
+        },
+        contact: {
+          active: false,
+          viewed: false,
+          threshold: 0
+        }
+      },
+      highValue: 0,
+      highIndex: ''
     }
   },
   methods: {
-    activeItem: function(currentSection) {
-      //iterate thru active's keys, set one as active
-      Object.keys(this.active).forEach(item => {
-        if (item === currentSection) {
-          this.active[item] = true;
+    activeItem: function(currentSection, threshold) {
+      Object.keys(this.sections).forEach(item => {
+        this.sections[currentSection].threshold = threshold;
+      });
+
+      let arr = Object.keys(this.sections).map(section => this.sections[section].threshold);
+      //console.log(arr);
+      this.highValue = Math.max(...arr);
+
+      //console.log('high ' + this.highValue);
+
+      Object.keys(this.sections).forEach(section => {
+        if (this.sections[section].threshold === this.highValue) {
+          this.sections[section].active = true;
+          //this.sections[section].viewed = true;
         }
         else {
-          this.active[item] = false;
+          this.sections[section].active = false;
         }
       });
+    },
+    viewedItem: function(currentSection) {
+      console.log(currentSection + ' is viewed');
+      this.sections[currentSection].viewed = true;
     },
     scrollHere: function(section) {
       //iterate thru refs, look for a match
@@ -150,9 +188,6 @@ export default {
       this.contactButtonText = info.contact.buttonText;
       this.formErrorMessage = info.contact.formErrorMessage;
     });
-  },
-  mounted: function() {
-    
   }
 }
 </script>
@@ -181,6 +216,7 @@ body {
 
     &:not(.intro) {
       padding: 8vw 0;
+      margin-top: 1vw; //keep out of viewport for observer
     }
   }
 }

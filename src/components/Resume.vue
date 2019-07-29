@@ -52,11 +52,6 @@ import observer from './helpers/observer.js';
 
 export default {
   name: 'Resume',
-  data() {
-    return {
-      viewed: false
-    }
-  },
   mixins: [observer],
   components: {
     Heading,
@@ -69,7 +64,7 @@ export default {
     devSkills: Array,
     designSkills: Array,
     sigText: String,
-    active: Object
+    viewed: Boolean
   },
   mounted() {
     this.wayPoint();
