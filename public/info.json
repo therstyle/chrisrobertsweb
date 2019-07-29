@@ -186,6 +186,7 @@
       "image_2x": "/images/zakim_2x.jpg" 
     },
     "buttonText": "Submit",
+    "loaderImg": "/images/loading.svg",
     "formErrorMessage": "Please fill in this field to continue"
   }
 }

@@ -19,7 +19,7 @@
             <span v-if="formAction && formMessage === ''" class="error">{{ formErrorMessage }}</span>
           </div>
 
-          <button>{{ buttonText }} <img src="images/loading.svg" v-if="loading"></button>
+          <button>{{ buttonText }} <img :src="loaderImg" v-if="loading && loaderImg"></button>
 
           <div v-if="formResponse !== ''" class="form-response" v-html="formResponse"></div>
         </form>
@@ -50,7 +50,7 @@ export default {
       formMessageError: false,
       formAction: false,
       formResponse: '',
-      loading: false
+      loading: false,
     }
   },
   mixins: [observer],
@@ -62,6 +62,7 @@ export default {
     image: Object,
     buttonText: String,
     formErrorMessage: String,
+    loaderImg: String,
     viewed: Boolean
   },
   methods: {

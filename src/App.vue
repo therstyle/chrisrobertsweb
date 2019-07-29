@@ -44,6 +44,7 @@
       :image="contactPhoto"
       :buttonText="contactButtonText"
       :formErrorMessage="formErrorMessage"
+      :loaderImg="loaderImg"
       :viewed="sections.contact.viewed"
       v-on:observed="activeItem"
       v-on:intersected="viewedItem"
@@ -91,6 +92,7 @@ export default {
       contactHeadline: '',
       contactPhoto: {},
       contactButtonText: '',
+      loaderImg: '',
       formErrorMessage: '',
       sections: {
         intro: {
@@ -187,6 +189,7 @@ export default {
       this.contactPhoto = info.contact.image;
       this.contactButtonText = info.contact.buttonText;
       this.formErrorMessage = info.contact.formErrorMessage;
+      this.loaderImg = info.contact.loaderImg;
     });
   }
 }
