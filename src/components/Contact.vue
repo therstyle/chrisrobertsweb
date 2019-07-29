@@ -89,7 +89,7 @@ export default {
 
           const data = await fetch(apiURL, args)
           .then (response => {
-            console.log(response);
+            //console.log(response);
             this.formAction = true;
             this.formNameError = false;
             this.formEmailError = false;
@@ -98,7 +98,7 @@ export default {
           })
           .then (
             body => {
-              console.log(body);
+              //console.log(body);
               this.formAction = false;
               this.formName = '';
               this.formEmail = '';
