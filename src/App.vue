@@ -116,8 +116,7 @@ export default {
           threshold: 0
         }
       },
-      highValue: 0,
-      highIndex: ''
+      highThreshold: 0
     }
   },
   methods: {
@@ -128,12 +127,12 @@ export default {
 
       let arr = Object.keys(this.sections).map(section => this.sections[section].threshold);
       //console.log(arr);
-      this.highValue = Math.max(...arr);
+      this.highThreshold = Math.max(...arr);
 
-      //console.log('high ' + this.highValue);
+      //console.log('high ' + this.highThreshold);
 
       Object.keys(this.sections).forEach(section => {
-        if (this.sections[section].threshold === this.highValue) {
+        if (this.sections[section].threshold === this.highThreshold) {
           this.sections[section].active = true;
           //this.sections[section].viewed = true;
         }
