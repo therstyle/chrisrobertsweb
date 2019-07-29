@@ -121,16 +121,19 @@ export default {
   },
   methods: {
     activeItem: function(currentSection, threshold) {
+      //Add each sections threshold to object
       Object.keys(this.sections).forEach(item => {
         this.sections[currentSection].threshold = threshold;
       });
 
+      //Create an array of section thresholds and find the highest one
       let arr = Object.keys(this.sections).map(section => this.sections[section].threshold);
       //console.log(arr);
       this.highThreshold = Math.max(...arr);
 
       //console.log('high ' + this.highThreshold);
 
+      //Set the section with highest threshold as active
       Object.keys(this.sections).forEach(section => {
         if (this.sections[section].threshold === this.highThreshold) {
           this.sections[section].active = true;
@@ -146,7 +149,7 @@ export default {
       this.sections[currentSection].viewed = true;
     },
     scrollHere: function(section) {
-      //iterate thru refs, look for a match
+      //Loop thru refs, look for a match
       Object.keys(this.$refs).forEach(item => {
         if (section === item) {
           let clickedSection = this.$refs[item];
@@ -208,7 +211,7 @@ body {
 }
 
 #app {
-  opacity: 0.02; //debug
+  opacity: 0.02; //Debug
   display: grid;
   padding-left: var(--sidebar-width);
   position: relative;
@@ -218,7 +221,7 @@ body {
 
     &:not(.intro) {
       padding: 8vw 0;
-      margin-top: 1vw; //keep out of viewport for observer
+      margin-top: 1vw; //Keep out of viewport for observer
     }
   }
 }
