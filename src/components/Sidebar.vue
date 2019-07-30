@@ -64,13 +64,11 @@
 </template>
 
 <script>
+import scrollRequest from './helpers/scrollRequest.js';
+
 export default {
   name: 'Sidebar',
-  methods: {
-    scrollRequest(section) {
-      this.$emit('scrollRequest', section);
-    }
-  },
+  mixins: [scrollRequest],
   props: {
     sections: Object,
     github: String,

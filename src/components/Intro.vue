@@ -19,6 +19,7 @@
 
 <script>
 import observer from './helpers/observer.js';
+import scrollRequest from './helpers/scrollRequest';
 
 export default {
   name: 'Intro',
@@ -27,18 +28,13 @@ export default {
       viewed: false
     }
   },
-  mixins: [observer],
+  mixins: [observer, scrollRequest],
   props: {
     introHeadline: String,
     introSubHeadline: String,
     introText: String,
     scrollText: String,
     video: String
-  },
-  methods: {
-    scrollRequest(section) {
-      this.$emit('scrollRequest', section);
-    }
   },
   mounted() {
     this.wayPoint();
