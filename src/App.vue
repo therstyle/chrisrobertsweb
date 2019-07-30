@@ -202,6 +202,10 @@ export default {
 @import 'assets/css/reboot';
 @import 'assets/css/fonts';
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   background: var(--body-bg);
   color: var(--white);
