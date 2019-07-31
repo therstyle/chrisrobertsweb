@@ -164,7 +164,7 @@ export default {
     margin-bottom: 0;
 
     > li {
-      font-size: 16px;
+      font-size: 1.6rem;;
       line-height: 1.5;
       list-style: none;
       position: relative;

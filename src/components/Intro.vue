@@ -73,7 +73,7 @@ export default {
   flex: 1;
   width: 100%;
   color: var(--white);
-  font-size: 10px;
+  font-size: 1rem;
   justify-content: center;
   align-items: center;
   text-align: center;
