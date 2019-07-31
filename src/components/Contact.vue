@@ -176,7 +176,7 @@ export default {
         background: transparent;
         border: 1px solid var(--light-gray);
         padding: 1vw;
-        font-size: 16px;
+        font-size: 1.6rem;
         color: var(--white);
       }
 
@@ -190,7 +190,7 @@ export default {
         padding-bottom: 1vw;
         margin: auto;
         display: block;
-        font-size: 16px;
+        font-size: 1.6rem;
         min-height: 46px;
         position: relative;
 
@@ -218,7 +218,7 @@ export default {
     &:before {
       content: attr(data-pixels);
       display: block;
-      font-size: 4vw;
+      font-size: 6rem;
       font-weight: 600;
       position: absolute;
       right: 4vw;
@@ -228,7 +228,7 @@ export default {
     &:after {
       content: 'Pixels Made With Style';
       font-family: var(--accent-font);
-      font-size: 1vw;
+      font-size: 1.4rem;
       text-transform: uppercase;
       position: absolute;
       top: -2.5vw;
@@ -244,7 +244,7 @@ export default {
 
   .error, 
   .form-response {
-    font-size: 12px;
+    font-size: 1.2rem;
     display: block;
     transition: 0.3s all;
     margin-top: 0.5vw;
@@ -294,7 +294,7 @@ export default {
         bottom: -5.5vw;
         left: 0;
         right: 0;
-        font-size: 7.5vw;
+        font-size: 10.5rem;
         text-align: center;
       }
       
@@ -303,7 +303,7 @@ export default {
         bottom: -6vw;
         left: 0;
         right: 0;
-        font-size: 1.5vw;
+        font-size: 2rem;
         text-align: center;
       }
 
@@ -331,12 +331,12 @@ export default {
     .contact-photo {
       &:before {
         bottom: -7.5vw;
-        font-size: 10vw;
+        font-size: 14.4rem;
       }
       
       &:after {
         bottom: -8vw;
-        font-size: 2vw;
+        font-size: 3rem;
       }
 
       img {

@@ -164,7 +164,7 @@ export default {
     margin-bottom: 0;
 
     > li {
-      font-size: 1.6rem;;
+      font-size: 1.6rem;
       line-height: 1.5;
       list-style: none;
       position: relative;
@@ -201,7 +201,7 @@ export default {
     h3 {
       text-align: center;
       text-transform: uppercase;
-      font-size: 1.6vw;
+      font-size: 2.4rem;
     }
   }
 
@@ -296,7 +296,7 @@ export default {
     margin-right: auto;
 
     h3 {
-      font-size: 3vw;
+      font-size: 4.4rem;
     }
   }
 }

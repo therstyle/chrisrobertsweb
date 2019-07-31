@@ -89,7 +89,7 @@ export default {
   }
 
   .description {
-    font-size: 14px;
+    font-size: 1.4rem;
     padding: 2vw;
     background: var(--med-gray-alpha);
     flex: 1;

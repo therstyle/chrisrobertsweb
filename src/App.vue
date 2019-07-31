@@ -215,7 +215,7 @@ body {
 }
 
 #app {
-  //opacity: 0.02; //Debug
+  opacity: 0.1; //Debug
   display: grid;
   padding-left: var(--sidebar-width);
   position: relative;
@@ -235,7 +235,7 @@ img {
 }
 
 .heading {
-  font-size: 6.1vw;
+  font-size: 8.8rem;
   margin-bottom: var(--space-2);
   text-transform: uppercase;
 }
