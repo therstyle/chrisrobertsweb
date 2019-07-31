@@ -297,9 +297,10 @@ p {
   }
 }
 
-@media only screen and (min-width: $phone-breakpoint) and (max-width: $desktop-breakpoint) {
+@media only screen and (min-width: $sm-phone-breakpoint) and (max-width: $desktop-breakpoint) {
   body {
-    font-size: calc(var(--min-font-size) + (var(--max-font-size) - var(--min-font-size)) * ((100vw - $phone-breakpoint) / ($max-breakpoint - $phone-breakpoint)));
+    //font-size: calc(var(--min-font-size) + (var(--max-font-size) - var(--min-font-size)) * ((100vw - #{$sm-phone-breakpoint}) / (#{$max-breakpoint} - #{$sm-phone-breakpoint})));
+    font-size: calc(1.4rem + (1.8rem - 1.4rem) * ((100vw - 400px) / (1440px - 400px)));
   }
 }
 
