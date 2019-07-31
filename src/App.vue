@@ -210,7 +210,7 @@ body {
   background: var(--body-bg);
   color: var(--white);
   font-family: var(--main-font);
-  font-size: var(--font-size);
+  font-size: var(--min-font-size);
   line-height: var(--line-height);
 }
 
@@ -294,6 +294,18 @@ p {
     min-height: 100vh;
     object-fit: fill;
     margin-left: 15vw;
+  }
+}
+
+@media only screen and (min-width: $phone-breakpoint) and (max-width: $desktop-breakpoint) {
+  body {
+    font-size: calc(var(--min-font-size) + (var(--max-font-size) - var(--min-font-size)) * ((100vw - $phone-breakpoint) / ($max-breakpoint - $phone-breakpoint)));
+  }
+}
+
+@media only screen and (min-width: $desktop-breakpoint) {
+  body {
+    font-size: var(--max-font-size);
   }
 }
 </style>
