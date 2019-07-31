@@ -58,13 +58,13 @@ export default {
   margin-bottom: 4vw;
 
   .heading {
-    font-size: 6.6vw;
+    font-size: 9.6rem;
     line-height: 83%;  
   }
 
   .sub-heading {
     color: var(--red);
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 }
 
@@ -104,11 +104,11 @@ export default {
     max-width: none;
 
     .heading {
-      font-size: 8.5vw;
+      font-size: 6.4rem;
     }
 
     .sub-heading {
-      font-size: 14px;
+      font-size: 1.4rem;
     }
   }
 }
@@ -116,7 +116,7 @@ export default {
 @media only screen and (max-width: $tablet-breakpoint) {
   .intro--content {
     .heading {
-      font-size: 11vw;
+      font-size: 8.4rem;
     }
   }
 }
