@@ -215,7 +215,7 @@ body {
 }
 
 #app {
-  opacity: 0.1; //Debug
+  //opacity: 0.1; //Debug
   display: grid;
   padding-left: var(--sidebar-width);
   position: relative;
@@ -299,7 +299,8 @@ p {
 
 @media only screen and (min-width: $phone-breakpoint) and (max-width: $desktop-breakpoint) {
   body {
-    font-size: calc(var(--min-font-size) + (var(--max-font-size) - var(--min-font-size)) * ((100vw - $phone-breakpoint) / ($max-breakpoint - $phone-breakpoint)));
+    //font-size: calc(var(--min-font-size) + (var(--max-font-size) - var(--min-font-size)) * ((100vw - $phone-breakpoint) / ($max-breakpoint - $phone-breakpoint)));
+    font-size: calc(14 + (18 - 14) * ((100vw - 400px) / (1440px - 400px)));
   }
 }
 
