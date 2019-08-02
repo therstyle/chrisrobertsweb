@@ -50,7 +50,7 @@ export default {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding: 4vw;
+  padding: var(--space-4);
 }
 
 .intro--content {
