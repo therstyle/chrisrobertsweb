@@ -262,6 +262,7 @@ export default {
     .contact--content.content {
       padding-left: 0;
       padding-right: 0;
+      padding-bottom: var(--space-8) !important;
     }
 
     .contact-form {
@@ -287,7 +288,7 @@ export default {
 
     .contact-photo {
       //width: calc(100vw - (var(--sidebar-width) + 8vw));
-      width: calc(100vw - var(--sidebar-width));
+      width: 100%;
       max-width: none;
       height: 500px;
       overflow-x: hidden;

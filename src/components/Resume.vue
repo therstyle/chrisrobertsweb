@@ -206,6 +206,9 @@ export default {
   }
 
   .skill-tree--photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     box-shadow: 0 0 40px rgba(0,0,0,0.66);
     margin-bottom: var(--space-2);
   }
