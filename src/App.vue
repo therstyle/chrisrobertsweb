@@ -215,7 +215,7 @@ body {
 }
 
 #app {
-  //opacity: 0.1; //Debug
+  opacity: 0.1; //Debug
   display: grid;
   padding-left: var(--sidebar-width);
   position: relative;
@@ -224,7 +224,11 @@ body {
     min-height: 100vh;
 
     &:not(.intro) {
+<<<<<<< HEAD
       padding: 11.6rem 0;
+=======
+      padding: var(--space-8) 0;
+>>>>>>> 27fbb22091ac5474a04d6a47fb6c2eaf4e84dce0
       margin-top: 1vw; //Keep out of viewport for observer
     }
   }
@@ -297,7 +301,7 @@ p {
   }
 }
 
-@media only screen and (min-width: $phone-breakpoint) and (max-width: $desktop-breakpoint) {
+@media only screen and (min-width: $sm-phone-breakpoint) and (max-width: $desktop-breakpoint) {
   body {
     //font-size: calc(var(--min-font-size) + (var(--max-font-size) - var(--min-font-size)) * ((100vw - $phone-breakpoint) / ($max-breakpoint - $phone-breakpoint)));
     font-size: calc(14 + (18 - 14) * ((100vw - 400px) / (1440px - 400px)));

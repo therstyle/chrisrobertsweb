@@ -243,7 +243,7 @@ nav.main-nav {
 
     &:first-child {
       flex: 1;
-      margin-bottom: 20px;
+      //margin-bottom: 20px;
     }
 
     a {
