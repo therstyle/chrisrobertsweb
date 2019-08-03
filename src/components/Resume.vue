@@ -191,9 +191,10 @@ export default {
 
   .skill-tree {
     max-width: 40vw;
+    min-width: 244px;
 
     .sig {
-      margin-bottom: 7vw;
+      margin-bottom: var(--space-7);
       text-transform: none;
     }
 

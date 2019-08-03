@@ -162,7 +162,7 @@ export default {
 
     form {
       display: block;
-      padding: 3rem;
+      padding: var(--space-2);
       background: var(--med-gray-alpha-alt);
       box-shadow: 0 0 90px rgba(0,0,0,0.25);
       position: absolute;
@@ -175,9 +175,13 @@ export default {
         width: 100%;
         background: transparent;
         border: 1px solid var(--light-gray);
-        padding: 1vw;
+        padding: 1.2rem;
         font-size: 1.6rem;
         color: var(--white);
+      }
+
+      textarea {
+        min-height: 100px;
       }
 
       button {
@@ -208,7 +212,7 @@ export default {
   }
 
   .field-group {
-    margin-bottom: 2vw;
+    margin-bottom: calc(var(--space-1) + var(--space-half));
   }
 
   .contact-photo {
@@ -221,8 +225,8 @@ export default {
       font-size: 6rem;
       font-weight: 600;
       position: absolute;
-      right: 4vw;
-      top: -2.5vw;
+      right: 3.2rem;
+      top: -3.6rem;
     }
 
     &:after {
@@ -231,9 +235,9 @@ export default {
       font-size: 1.4rem;
       text-transform: uppercase;
       position: absolute;
-      top: -2.5vw;
-      margin-top: 4.9vw;
-      right: 3.2vw;
+      top: -2.6rem;
+      margin-top: 6rem;
+      right: 3.2rem;
     }
 
     img {

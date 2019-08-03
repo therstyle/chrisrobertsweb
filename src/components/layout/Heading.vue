@@ -71,7 +71,7 @@ export default {
 @import '../../assets/css/vars';
 
 header.heading {
-  padding: 20px 0 20px var(--space-4);
+  padding: 20px 20px 20px var(--space-4);
   transition: 0.3s all ease-in-out;
   margin-bottom: var(--space-8);
   position: relative;

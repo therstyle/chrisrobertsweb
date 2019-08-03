@@ -225,8 +225,8 @@ body {
     min-height: 100vh;
 
     &:not(.intro) {
-      padding: 11.6rem 0;
-      padding: var(--space-8) 0;
+    //padding: 11.6rem 0;
+    //padding: var(--space-8) 0;
 
       .content {
         padding-top: 0;
