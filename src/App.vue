@@ -216,9 +216,10 @@ body {
 
 #app {
   //opacity: 0.1; //Debug
-  display: grid;
+  display: flex;
   padding-left: var(--sidebar-width);
   position: relative;
+  flex-direction: column;
 
   > section {
     min-height: 100vh;
@@ -226,7 +227,18 @@ body {
     &:not(.intro) {
       padding: 11.6rem 0;
       padding: var(--space-8) 0;
-      margin-top: 1vw; //Keep out of viewport for observer
+
+      .content {
+        padding-top: 0;
+        padding-bottom: 0;
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &:not(.contact) {
+      margin-bottom: var(--space-8); //Keep out of viewport for observer
     }
   }
 }
@@ -237,7 +249,6 @@ img {
 
 .heading {
   font-size: 8.8rem;
-  margin-bottom: var(--space-2);
   text-transform: uppercase;
 }
 

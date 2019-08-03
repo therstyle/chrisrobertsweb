@@ -73,6 +73,7 @@ export default {
 header.heading {
   padding: 20px 0 20px var(--space-4);
   transition: 0.3s all ease-in-out;
+  margin-bottom: var(--space-8);
   position: relative;
   overflow: hidden;
 
@@ -152,8 +153,6 @@ header.heading {
 
 @media only screen and (max-width: $tablet-breakpoint) {
  header.heading {
-   margin-bottom: 6vw;
-   
    .line-grid {
      left: -35vw;
    }

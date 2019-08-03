@@ -2,7 +2,7 @@
   <section id="resume" class="resume" :class="{ viewed : viewed }">
     <Heading title="Resume"></Heading>
 
-    <div class="resume--content">
+    <div class="resume--content content">
       <div class="timeline">
         <Timeline-Entry 
           v-for="(entry, index) in entries"
@@ -77,7 +77,6 @@ export default {
 @import '../assets/css/vars';
 
   .resume--content {
-    padding: var(--space-4) var(--space-4) 0 var(--space-4);
     display: flex;
   }
 

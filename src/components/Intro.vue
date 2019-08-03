@@ -1,5 +1,5 @@
 <template>
-  <section id="intro" class="intro" :class="{ viewed : viewed }">
+  <section id="intro" class="intro content" :class="{ viewed : viewed }">
     <div class="intro--content">
       <h6 class="sub-heading">{{ introSubHeadline }}</h6>
       <h1 class="heading" v-html="introHeadline"></h1>
@@ -52,21 +52,22 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: var(--space-4);
 }
 
 .intro--content {
   max-width: 40vw;
-  margin-bottom: 4vw;
+  margin-bottom: var(--space-2);
 
   .heading {
     font-size: 9.6rem;
-    line-height: 83%;  
+    line-height: 0.85;
+    margin-bottom: var(--space-2); 
   }
 
   .sub-heading {
     color: var(--red);
     font-size: 1.6rem;
+    margin-bottom: var(--space-1);
   }
 }
 

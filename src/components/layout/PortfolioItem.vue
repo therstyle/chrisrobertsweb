@@ -52,12 +52,6 @@ export default {
 <style lang="scss">
 @import '../../assets/css/vars';
 
-.portfolio--content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: calc(var(--space-1) + (var(--space-1) / 2));
-}
-
 .portfolio--content-entry {
   box-shadow: 0 0 30px rgba(0,0,0,0.1);
   transition: 0.3s transform, 0.3s box-shadow;

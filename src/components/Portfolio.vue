@@ -44,3 +44,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.portfolio--content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: calc(var(--space-1) + var(--space-half));
+}
+</style>
+

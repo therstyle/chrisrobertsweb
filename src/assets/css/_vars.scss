@@ -30,6 +30,7 @@ $sm-phone-breakpoint: 400px;
 
   //sizes
   --space: 1.6rem;
+  --space-half: calc(var(--space) / 2);
   --space-1: var(--space);
   --space-2: calc(var(--space) * 2);
   --space-3: calc(var(--space) * 3);
