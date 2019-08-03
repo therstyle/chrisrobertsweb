@@ -162,7 +162,7 @@ export default {
 
     form {
       display: block;
-      padding: 2vw;
+      padding: 3rem;
       background: var(--med-gray-alpha-alt);
       box-shadow: 0 0 90px rgba(0,0,0,0.25);
       position: absolute;

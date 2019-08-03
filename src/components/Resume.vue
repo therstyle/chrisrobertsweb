@@ -77,7 +77,7 @@ export default {
 @import '../assets/css/vars';
 
   .resume--content {
-    padding: 4vw 4vw 0 4vw;
+    padding: var(--space-4) var(--space-4) 0 var(--space-4);
     display: flex;
   }
 

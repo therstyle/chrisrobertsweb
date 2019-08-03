@@ -224,7 +224,7 @@ body {
     min-height: 100vh;
 
     &:not(.intro) {
-      padding: 8vw 0;
+      padding: 11.6rem 0;
       margin-top: 1vw; //Keep out of viewport for observer
     }
   }
@@ -257,7 +257,7 @@ p {
 }
 
 .content {
-  padding: 4vw;
+  padding: var(--space-4);
 }
 
 .bg-video,

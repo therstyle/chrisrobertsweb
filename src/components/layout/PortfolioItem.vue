@@ -55,7 +55,7 @@ export default {
 .portfolio--content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.3vw;
+  grid-gap: calc(var(--space-1) + (var(--space-1) / 2));
 }
 
 .portfolio--content-entry {
@@ -90,7 +90,7 @@ export default {
 
   .description {
     font-size: 1.4rem;
-    padding: 2vw;
+    padding: var(--space-2);
     background: var(--med-gray-alpha);
     flex: 1;
 
@@ -117,7 +117,7 @@ export default {
 @media only screen and (max-width: $lg-tablet-breakpoint) {
   .portfolio--content {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2vw;
+    grid-gap: var(--space-2);
   }
 
   .portfolio--content-entry {
