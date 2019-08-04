@@ -334,6 +334,9 @@ export default {
 
 @media only screen and (max-width: $md-phone-breakpoint) {
   .contact-form form {
+    width: calc(100% - var(--space-4));
+    margin: 0 var(--space-2);
+
     button {
       width: 100%;
       min-width: 0;

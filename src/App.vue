@@ -310,7 +310,7 @@ p {
   }
 }
 
-@media only screen and (max-width: $xs-breakpoint) {
+@media only screen and (max-width: $md-phone-breakpoint) {
   .content {
     padding: var(--space-2);
   }

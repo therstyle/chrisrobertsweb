@@ -185,6 +185,8 @@ header.heading {
 
 @media only screen and (max-width: $md-phone-breakpoint) {
  header.heading {
+   padding-left: var(--space-2);
+   
    .line-grid {
      left: -75vw;
    }
@@ -193,8 +195,6 @@ header.heading {
 
 @media only screen and (max-width: $xs-breakpoint) {
  header.heading {
-   padding-left: var(--space-2);
-   
    h1 {
      font-size: 3.6rem;
    }
