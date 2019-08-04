@@ -119,7 +119,7 @@ export default {
 @media only screen and (max-width: $phone-breakpoint) {
   .intro--content {
     .heading {
-      font-size: 5.8rem;
+      font-size: 5rem;
     }
 
     .sub-heading {
