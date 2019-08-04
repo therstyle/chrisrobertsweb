@@ -99,7 +99,7 @@ nav.main-nav {
   max-height: 460px;
   background: var(--black);
   min-height: 100vh;
-  padding: 2vw 0;
+  padding: var(--space-4) 0;
   box-shadow: 0 15px 30px rgba(0,0,0,0.25);
   position: fixed;
   top: 0;
@@ -205,7 +205,7 @@ nav.main-nav {
     }
 
     a {
-      padding: 1vw;
+      padding: 1rem;
       position: relative;
 
       &:before {
@@ -247,7 +247,7 @@ nav.main-nav {
     }
 
     a {
-      padding: 1vw;
+      padding: 1rem;
     }
   }
 
@@ -260,10 +260,21 @@ nav.main-nav {
 }
 
 @media only screen and (max-width: $phone-breakpoint) {
-  nav.main-nav {
-    padding: 6vw 0;
+  .main-nav--internal {
+    svg {
+      max-width: 32px;
+      max-height: 32px;
+    }
   }
+}
 
+@media only screen and (max-width: $xs-breakpoint) {
+  nav.main-nav {
+    padding: var(--space-2) 0;
+  }
+}
+
+@media only screen and (min-width: $phone-breakpoint) and (max-height: 500px) {
   .main-nav--internal {
     svg {
       max-width: 32px;
