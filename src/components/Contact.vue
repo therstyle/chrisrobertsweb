@@ -273,9 +273,11 @@ export default {
 
     form {
       z-index: 10;
-      width: calc(100% - 8vw);
+      //width: calc(100% - 8vw);
+      width: calc(100% - var(--space-8));
       top: -75px;
-      margin: 0 4vw;
+      //margin: 0 4vw;
+      margin: 0 var(--space-4);
 
       textarea {
         min-height: 120px;
@@ -334,13 +336,16 @@ export default {
   }
 }
 
-@media only screen and (max-width: $xs-breakpoint) {
+@media only screen and (max-width: $md-phone-breakpoint) {
   .contact-form {
     button {
       width: 100%;
+      min-width: none;
     }
   }
+}
 
+@media only screen and (max-width: $xs-breakpoint) {
   .contact-photo {
     &:before {
       bottom: -3.5rem;
