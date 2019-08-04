@@ -93,6 +93,8 @@ export default {
     padding: var(--space-2);
     background: var(--med-gray-alpha);
     flex: 1;
+    display: flex;
+    flex-direction: column;
 
     > h3 {
       margin-bottom: var(--space);
@@ -100,6 +102,7 @@ export default {
 
     > p {
       margin-bottom: var(--space-2);
+      flex: 1;
     }
 
     a {
