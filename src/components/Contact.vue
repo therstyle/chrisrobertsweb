@@ -194,8 +194,7 @@ export default {
       background: var(--white);
       font-weight: 900;
       min-width: 208px;
-      padding-top: 1vw;
-      padding-bottom: 1vw;
+      padding: 1rem;
       margin: auto;
       display: block;
       font-size: 1.6rem;
@@ -255,11 +254,11 @@ export default {
   font-size: 1.2rem;
   display: block;
   transition: 0.3s all;
-  margin-top: 0.5vw;
+  margin-top: 1rem;
 }
 
 .form-response {
-  margin-top: 2vw;
+  margin-top: 2rem;
 }
 
 @media only screen and (max-width: $lg-tablet-breakpoint) {
@@ -273,10 +272,8 @@ export default {
 
     form {
       z-index: 10;
-      //width: calc(100% - 8vw);
       width: calc(100% - var(--space-8));
       top: -75px;
-      //margin: 0 4vw;
       margin: 0 var(--space-4);
 
       textarea {
@@ -286,7 +283,6 @@ export default {
   }
 
   .contact-photo {
-    //width: calc(100vw - (var(--sidebar-width) + 8vw));
     width: 100%;
     max-width: none;
     height: 500px;
