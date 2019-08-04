@@ -105,14 +105,6 @@ export default {
 @media only screen and (max-width: $md-tablet-breakpoint) {
   .intro--content {
     max-width: none;
-
-    .heading {
-      font-size: 6.4rem;
-    }
-
-    .sub-heading {
-      font-size: 1.4rem;
-    }
   }
 }
 
@@ -125,10 +117,26 @@ export default {
 }
 
 @media only screen and (max-width: $phone-breakpoint) {
-  .intro {
-    padding-top: 6vw;
-    padding-left: 6vw;
-    padding-right: 6vw;
+  .intro--content {
+    .heading {
+      font-size: 5.8rem;
+    }
+
+    .sub-heading {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $xs-breakpoint) {
+  .intro--content {
+    .heading {
+      font-size: 4.5rem;
+    }
+
+    .sub-heading {
+      font-size: 1.2rem;
+    }
   }
 }
 </style>

@@ -151,8 +151,24 @@ header.heading {
   }
 }
 
+@media only screen and (max-width: $md-tablet-breakpoint) {
+  header.heading {
+    h1 {
+      font-size: 6.4rem;
+    }
+
+   .line-grid {
+     left: -15vw;
+   }
+ } 
+}
+
 @media only screen and (max-width: $tablet-breakpoint) {
  header.heading {
+   h1 {
+     font-size: 4.4rem;
+   }
+
    .line-grid {
      left: -35vw;
    }
@@ -171,6 +187,20 @@ header.heading {
  header.heading {
    .line-grid {
      left: -75vw;
+   }
+ } 
+}
+
+@media only screen and (max-width: $xs-breakpoint) {
+ header.heading {
+   padding-left: var(--space-2);
+   
+   h1 {
+     font-size: 3.6rem;
+   }
+
+   .line-grid {
+     left: -95vw;
    }
  } 
 }

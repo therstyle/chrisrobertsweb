@@ -297,10 +297,6 @@ export default {
   .skill-tree {
     margin-left: auto;
     margin-right: auto;
-
-    h3 {
-      font-size: 4.4rem;
-    }
   }
 }
 

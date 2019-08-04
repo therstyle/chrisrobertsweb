@@ -270,6 +270,7 @@ p {
 
 .content {
   padding: var(--space-4);
+  overflow: hidden;
 }
 
 .bg-video,
@@ -309,16 +310,9 @@ p {
   }
 }
 
-@media only screen and (min-width: $sm-phone-breakpoint) and (max-width: $desktop-breakpoint) {
-  body {
-    //font-size: calc(var(--min-font-size) + (var(--max-font-size) - var(--min-font-size)) * ((100vw - $phone-breakpoint) / ($max-breakpoint - $phone-breakpoint)));
-    font-size: calc(14 + (18 - 14) * ((100vw - 400px) / (1440px - 400px)));
-  }
-}
-
-@media only screen and (min-width: $desktop-breakpoint) {
-  body {
-    font-size: var(--max-font-size);
+@media only screen and (max-width: $xs-breakpoint) {
+  .content {
+    padding: var(--space-2);
   }
 }
 </style>
