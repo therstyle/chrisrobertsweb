@@ -55,7 +55,7 @@ export default {
 .portfolio--content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.3vw;
+  grid-gap: calc(var(--space-1) + var(--space-half));
 }
 
 .portfolio--content-entry {
@@ -89,10 +89,12 @@ export default {
   }
 
   .description {
-    font-size: 14px;
-    padding: 2vw;
+    font-size: 1.4rem;
+    padding: var(--space-2);
     background: var(--med-gray-alpha);
     flex: 1;
+    display: flex;
+    flex-direction: column;
 
     > h3 {
       margin-bottom: var(--space);
@@ -100,6 +102,7 @@ export default {
 
     > p {
       margin-bottom: var(--space-2);
+      flex: 1;
     }
 
     a {
@@ -117,26 +120,12 @@ export default {
 @media only screen and (max-width: $lg-tablet-breakpoint) {
   .portfolio--content {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2vw;
-  }
-
-  .portfolio--content-entry {
-    .description {
-      padding: 3vw;
-    }
   }
 }
 
 @media only screen and (max-width: $tablet-breakpoint) {
   .portfolio--content {
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 4vw;
-  }
-
-  .portfolio--content-entry {
-    .description {
-      padding: 4vw;
-    }
   }
 }
 </style>

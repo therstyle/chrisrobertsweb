@@ -138,222 +138,223 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '../assets/css/vars';
+@import '../assets/css/vars';
 
-  .contact-form {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
+.contact--content.content {
+  overflow: visible;
+}
 
-    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: var(--white);
-      opacity: 1; /* Firefox */
-    }
+.contact-form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
 
-    :-ms-input-placeholder { /* Internet Explorer 10-11 */
-      color: #FFF;
-    }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--white);
+    opacity: 1; /* Firefox */
+  }
 
-    ::-ms-input-placeholder { /* Microsoft Edge */
-      color: var(--white);
-    }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #FFF;
+  }
 
-    form {
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--white);
+  }
+
+  form {
+    display: block;
+    padding: var(--space-2);
+    background: var(--med-gray-alpha-alt);
+    box-shadow: 0 0 90px rgba(0,0,0,0.25);
+    position: absolute;
+    left: 0;
+    width: 50%;
+
+    textarea,
+    input {
       display: block;
-      padding: 2vw;
-      background: var(--med-gray-alpha-alt);
-      box-shadow: 0 0 90px rgba(0,0,0,0.25);
-      position: absolute;
-      left: 0;
-      width: 50%;
+      width: 100%;
+      background: transparent;
+      border: 1px solid var(--light-gray);
+      padding: 1.2rem;
+      font-size: 1.6rem;
+      color: var(--white);
+    }
 
-      textarea,
-      input {
-        display: block;
-        width: 100%;
-        background: transparent;
-        border: 1px solid var(--light-gray);
-        padding: 1vw;
-        font-size: 16px;
-        color: var(--white);
+    textarea {
+      min-height: 100px;
+    }
+
+    button {
+      text-transform: uppercase;
+      border: none;
+      background: var(--white);
+      font-weight: 900;
+      min-width: 208px;
+      padding: 1rem;
+      margin: auto;
+      display: block;
+      font-size: 1.6rem;
+      min-height: 46px;
+      position: relative;
+
+      img {
+        max-width: 24px;
+        position: absolute;
+        right: 10px;
       }
 
-      button {
-        text-transform: uppercase;
-        border: none;
-        background: var(--white);
-        font-weight: 900;
-        min-width: 208px;
-        padding-top: 1vw;
-        padding-bottom: 1vw;
-        margin: auto;
-        display: block;
-        font-size: 16px;
-        min-height: 46px;
-        position: relative;
-
-        img {
-          max-width: 24px;
-          position: absolute;
-          right: 10px;
-        }
-
-        &:hover {
-          cursor: pointer;
-        }
+      &:hover {
+        cursor: pointer;
       }
     }
   }
+}
 
-  .field-group {
-    margin-bottom: 2vw;
+.field-group {
+  margin-bottom: calc(var(--space-1) + var(--space-half));
+}
+
+.contact-photo {
+  width: 100%;
+  max-width: 60%;
+
+  &:before {
+    content: attr(data-pixels);
+    display: block;
+    font-size: 6rem;
+    font-weight: 600;
+    position: absolute;
+    right: 3.2rem;
+    top: -3.6rem;
+  }
+
+  &:after {
+    content: 'Pixels Made With Style';
+    font-family: var(--accent-font);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: -2.6rem;
+    margin-top: 6rem;
+    right: 3.2rem;
+  }
+
+  img {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.error, 
+.form-response {
+  font-size: 1.2rem;
+  display: block;
+  transition: 0.3s all;
+  margin-top: 1rem;
+}
+
+.form-response {
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: $lg-tablet-breakpoint) {
+  .contact--content.content {
+    padding: var(--space-8) 0 !important;
+  }
+
+  .contact-form {
+    flex-direction: column;
+    margin-top: -6.4rem;
+
+    form {
+      z-index: 10;
+      width: calc(100% - var(--space-8));
+      top: -75px;
+      margin: 0 var(--space-4);
+
+      textarea {
+        min-height: 120px;
+      }
+    }
   }
 
   .contact-photo {
     width: 100%;
-    max-width: 60%;
+    max-width: none;
+    height: 500px;
+    overflow-x: hidden;
+    z-index: 1;
 
     &:before {
-      content: attr(data-pixels);
-      display: block;
-      font-size: 4vw;
-      font-weight: 600;
-      position: absolute;
-      right: 4vw;
-      top: -2.5vw;
+      top: auto;
+      bottom: -5.5rem;
+      left: 0;
+      right: 0;
+      font-size: 6.4rem;
+      text-align: center;
     }
-
+    
     &:after {
-      content: 'Pixels Made With Style';
-      font-family: var(--accent-font);
-      font-size: 1vw;
-      text-transform: uppercase;
-      position: absolute;
-      top: -2.5vw;
-      margin-top: 4.9vw;
-      right: 3.2vw;
+      top: auto;
+      bottom: -5.5rem;
+      left: 0;
+      right: 0;
+      font-size: 1.4rem;
+      text-align: center;
     }
 
     img {
-      max-width: none;
       width: 100%;
     }
   }
 
-  .error, 
-  .form-response {
-    font-size: 12px;
-    display: block;
-    transition: 0.3s all;
-    margin-top: 0.5vw;
+  .contact-form form,
+  .contact-photo {
+    flex: 1 100%;
   }
+}
 
-  .form-response {
-    margin-top: 2vw;
-  }
-
-  @media only screen and (max-width: $lg-tablet-breakpoint) {
-    .contact--content.content {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .contact-form {
-      flex-direction: column;
-      margin-top: 75px;
-
-      form {
-        z-index: 10;
-        width: calc(100% - 8vw);
-        top: -75px;
-        padding: 4vw;
-        margin: 0 4vw;
-
-        textarea {
-          min-height: 120px;
-        }
-      }
-    }
-
-    .field-group {
-       margin-bottom: 4vw;
-    }
-
-    .contact-photo {
-      //width: calc(100vw - (var(--sidebar-width) + 8vw));
-      width: calc(100vw - var(--sidebar-width));
-      max-width: none;
-      height: 500px;
-      overflow-x: hidden;
-      z-index: 1;
-
-      &:before {
-        top: auto;
-        bottom: -5.5vw;
-        left: 0;
-        right: 0;
-        font-size: 7.5vw;
-        text-align: center;
-      }
-      
-      &:after {
-        top: auto;
-        bottom: -6vw;
-        left: 0;
-        right: 0;
-        font-size: 1.5vw;
-        text-align: center;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-
-    .contact-form form,
-    .contact-photo {
-      flex: 1 100%;
+@media only screen and (max-width: $tablet-breakpoint) {
+  .contact-photo {
+    img {
+      width: auto;
     }
   }
+}
 
-  @media only screen and (max-width: $tablet-breakpoint) {
-    .contact-form {
-      form {
-        > input,
-        textarea {
-          padding: 1.5vw;
-        }
-      }
-    }
+@media only screen and (max-width: $phone-breakpoint) {
+  .contact-form {
+    margin-top: 0;
+  }
+}
 
-    .contact-photo {
-      &:before {
-        bottom: -7.5vw;
-        font-size: 10vw;
-      }
-      
-      &:after {
-        bottom: -8vw;
-        font-size: 2vw;
-      }
+@media only screen and (max-width: $md-phone-breakpoint) {
+  .contact-form form {
+    width: calc(100% - var(--space-4));
+    margin: 0 var(--space-2);
 
-      img {
-        width: auto;
-      }
+    button {
+      width: 100%;
+      min-width: 0;
     }
   }
+}
 
-  @media only screen and (max-width: $phone-breakpoint) {
-    .contact-form {
-      form {
-        padding: 5vw;
-      }
+@media only screen and (max-width: $xs-breakpoint) {
+  .contact-photo {
+    &:before {
+      bottom: -3.5rem;
+      font-size: 4.4rem;
     }
 
-    .field-group {
-      margin-bottom: 5vw;
+    &:after {
+      bottom: -4.5rem;
+      font-size: 1.2rem;
     }
   }
+}
 </style>

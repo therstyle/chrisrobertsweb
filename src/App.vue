@@ -202,6 +202,10 @@ export default {
 @import 'assets/css/reboot';
 @import 'assets/css/fonts';
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   background: var(--body-bg);
   color: var(--white);
@@ -211,17 +215,30 @@ body {
 }
 
 #app {
-  //opacity: 0.02; //Debug
-  display: grid;
+  //opacity: 0.1; //Debug
+  display: flex;
   padding-left: var(--sidebar-width);
   position: relative;
+  flex-direction: column;
 
   > section {
     min-height: 100vh;
 
     &:not(.intro) {
-      padding: 8vw 0;
-      margin-top: 1vw; //Keep out of viewport for observer
+    //padding: 11.6rem 0;
+    //padding: var(--space-8) 0;
+
+      .content {
+        padding-top: 0;
+        padding-bottom: 0;
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &:not(.contact) {
+      margin-bottom: var(--space-8); //Keep out of viewport for observer
     }
   }
 }
@@ -231,8 +248,7 @@ img {
 }
 
 .heading {
-  font-size: 6.1vw;
-  margin-bottom: var(--space-2);
+  font-size: 8.8rem;
   text-transform: uppercase;
 }
 
@@ -253,7 +269,8 @@ p {
 }
 
 .content {
-  padding: 4vw;
+  padding: var(--space-4);
+  overflow: hidden;
 }
 
 .bg-video,
@@ -290,6 +307,12 @@ p {
     min-height: 100vh;
     object-fit: fill;
     margin-left: 15vw;
+  }
+}
+
+@media only screen and (max-width: $md-phone-breakpoint) {
+  .content {
+    padding: var(--space-2);
   }
 }
 </style>

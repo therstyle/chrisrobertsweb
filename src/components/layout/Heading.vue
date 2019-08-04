@@ -71,13 +71,14 @@ export default {
 @import '../../assets/css/vars';
 
 header.heading {
-  padding: 20px 0 20px 4vw;
+  padding: 20px 20px 20px var(--space-4);
   transition: 0.3s all ease-in-out;
+  margin-bottom: var(--space-8);
   position: relative;
   overflow: hidden;
 
   h1 {
-    font-size: 6.1vw;
+    font-size: 8.8rem;
     line-height: 1;
     margin-bottom: 0;
     opacity: 0;
@@ -150,10 +151,24 @@ header.heading {
   }
 }
 
+@media only screen and (max-width: $md-tablet-breakpoint) {
+  header.heading {
+    h1 {
+      font-size: 6.4rem;
+    }
+
+   .line-grid {
+     left: -15vw;
+   }
+ } 
+}
+
 @media only screen and (max-width: $tablet-breakpoint) {
  header.heading {
-   margin-bottom: 6vw;
-   
+   h1 {
+     font-size: 4.4rem;
+   }
+
    .line-grid {
      left: -35vw;
    }
@@ -170,8 +185,22 @@ header.heading {
 
 @media only screen and (max-width: $md-phone-breakpoint) {
  header.heading {
+   padding-left: var(--space-2);
+   
    .line-grid {
      left: -75vw;
+   }
+ } 
+}
+
+@media only screen and (max-width: $xs-breakpoint) {
+ header.heading {
+   h1 {
+     font-size: 3.6rem;
+   }
+
+   .line-grid {
+     left: -95vw;
    }
  } 
 }

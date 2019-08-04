@@ -1,5 +1,5 @@
 <template>
-  <section id="intro" class="intro" :class="{ viewed : viewed }">
+  <section id="intro" class="intro content" :class="{ viewed : viewed }">
     <div class="intro--content">
       <h6 class="sub-heading">{{ introSubHeadline }}</h6>
       <h1 class="heading" v-html="introHeadline"></h1>
@@ -50,21 +50,24 @@ export default {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding: 4vw;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .intro--content {
   max-width: 40vw;
-  margin-bottom: 4vw;
+  margin-bottom: var(--space-2);
 
   .heading {
-    font-size: 6.6vw;
-    line-height: 83%;  
+    font-size: 9.6rem;
+    line-height: 0.85;
+    margin-bottom: var(--space-2); 
   }
 
   .sub-heading {
     color: var(--red);
-    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: var(--space-1);
   }
 }
 
@@ -73,7 +76,7 @@ export default {
   flex: 1;
   width: 100%;
   color: var(--white);
-  font-size: 10px;
+  font-size: 1rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -102,30 +105,38 @@ export default {
 @media only screen and (max-width: $md-tablet-breakpoint) {
   .intro--content {
     max-width: none;
-
-    .heading {
-      font-size: 8.5vw;
-    }
-
-    .sub-heading {
-      font-size: 14px;
-    }
   }
 }
 
 @media only screen and (max-width: $tablet-breakpoint) {
   .intro--content {
     .heading {
-      font-size: 11vw;
+      font-size: 8.4rem;
     }
   }
 }
 
 @media only screen and (max-width: $phone-breakpoint) {
-  .intro {
-    padding-top: 6vw;
-    padding-left: 6vw;
-    padding-right: 6vw;
+  .intro--content {
+    .heading {
+      font-size: 5rem;
+    }
+
+    .sub-heading {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $xs-breakpoint) {
+  .intro--content {
+    .heading {
+      font-size: 4.5rem;
+    }
+
+    .sub-heading {
+      font-size: 1.2rem;
+    }
   }
 }
 </style>

@@ -2,7 +2,7 @@
   <section id="resume" class="resume" :class="{ viewed : viewed }">
     <Heading title="Resume"></Heading>
 
-    <div class="resume--content">
+    <div class="resume--content content">
       <div class="timeline">
         <Timeline-Entry 
           v-for="(entry, index) in entries"
@@ -77,7 +77,6 @@ export default {
 @import '../assets/css/vars';
 
   .resume--content {
-    padding: 4vw 4vw 0 4vw;
     display: flex;
   }
 
@@ -105,7 +104,7 @@ export default {
   }
 
   .timeline--entry {
-    padding: 4.1vw;
+    padding: var(--space-3);
     border-bottom: 1px solid var(--light-gray);
     position: relative;
 
@@ -115,8 +114,8 @@ export default {
       display: block;
       border-radius: 100%;
       top: 6.1vw;
-      left: calc(-4.1vw - 24px);
-      margin-left: calc(4.1vw + 12px);
+      left: calc((var(--space-3) - var(--space-6)) - 24px);
+      margin-left: calc(var(--space-3) + 12px);
       width: 24px;
       height: 24px;
       border: 5px solid var(--red);
@@ -139,10 +138,10 @@ export default {
     header {
       display: flex;
       align-items: center;
-      margin-bottom: 4.1vw;
+      margin-bottom: var(--space-2);
 
       img {
-          margin-right: 1.3vw;
+          margin-right: calc(var(--space-1) + var(--space-half));
           max-width: 42px;
           padding: 7px;
           background: var(--white);
@@ -164,7 +163,7 @@ export default {
     margin-bottom: 0;
 
     > li {
-      font-size: 16px;
+      font-size: 1.6rem;
       line-height: 1.5;
       list-style: none;
       position: relative;
@@ -192,20 +191,24 @@ export default {
 
   .skill-tree {
     max-width: 40vw;
+    min-width: 244px;
 
     .sig {
-      margin-bottom: 7vw;
+      margin-bottom: var(--space-7);
       text-transform: none;
     }
 
     h3 {
       text-align: center;
       text-transform: uppercase;
-      font-size: 1.6vw;
+      font-size: 2.4rem;
     }
   }
 
   .skill-tree--photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     box-shadow: 0 0 40px rgba(0,0,0,0.66);
     margin-bottom: var(--space-2);
   }
@@ -283,7 +286,7 @@ export default {
 
   .timeline {
     max-width: none;
-    margin-right: calc(4.1vw / 2);
+    //margin-right: calc(4.1vw / 2);
     margin-bottom: var(--space-8);
   }
 
@@ -294,10 +297,6 @@ export default {
   .skill-tree {
     margin-left: auto;
     margin-right: auto;
-
-    h3 {
-      font-size: 3vw;
-    }
   }
 }
 
@@ -315,14 +314,7 @@ export default {
 }
 
 @media only screen and (max-width: $phone-breakpoint) {
-  .timeline {
-    margin-left: 10vw;
-    margin-right: calc(5vw / 2);
-  }
-
   .timeline--entry {
-    padding: 5vw;
-
     &:after {
       font-size: 5vw;
       left: -10vw;
@@ -334,7 +326,7 @@ export default {
       align-items: flex-start;
 
       img {
-        margin-bottom: 4vw;
+        margin-bottom: calc(var(--space-1) + var(--space-half));
         max-width: 30px;
         max-height: 30px;
       }
@@ -343,6 +335,7 @@ export default {
 
   .details {
     > li {
+      font-size: 1.3rem;
       margin-left: 20px;
 
       &:before {
