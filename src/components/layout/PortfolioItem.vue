@@ -120,26 +120,12 @@ export default {
 @media only screen and (max-width: $lg-tablet-breakpoint) {
   .portfolio--content {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: var(--space-2);
-  }
-
-  .portfolio--content-entry {
-    .description {
-      padding: 3vw;
-    }
   }
 }
 
 @media only screen and (max-width: $tablet-breakpoint) {
   .portfolio--content {
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 4vw;
-  }
-
-  .portfolio--content-entry {
-    .description {
-      padding: 4vw;
-    }
   }
 }
 </style>
