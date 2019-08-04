@@ -210,7 +210,7 @@ body {
   background: var(--body-bg);
   color: var(--white);
   font-family: var(--main-font);
-  font-size: var(--min-font-size);
+  font-size: var(--font-size);
   line-height: var(--line-height);
 }
 

@@ -104,7 +104,7 @@ export default {
   }
 
   .timeline--entry {
-    padding: 4.1vw;
+    padding: var(--space-3);
     border-bottom: 1px solid var(--light-gray);
     position: relative;
 
@@ -114,8 +114,8 @@ export default {
       display: block;
       border-radius: 100%;
       top: 6.1vw;
-      left: calc(-4.1vw - 24px);
-      margin-left: calc(4.1vw + 12px);
+      left: calc((var(--space-3) - var(--space-6)) - 24px);
+      margin-left: calc(var(--space-3) + 12px);
       width: 24px;
       height: 24px;
       border: 5px solid var(--red);
@@ -138,7 +138,7 @@ export default {
     header {
       display: flex;
       align-items: center;
-      margin-bottom: 4.1vw;
+      margin-bottom: var(--space-2);
 
       img {
           margin-right: 1.3vw;
