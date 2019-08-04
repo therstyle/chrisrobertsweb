@@ -145,7 +145,7 @@ export default {
       });
     },
     viewedItem: function(currentSection) {
-      console.log(currentSection + ' is viewed');
+      //console.log(currentSection + ' is viewed');
       this.sections[currentSection].viewed = true;
     },
     scrollHere: function(section) {

@@ -22,6 +22,7 @@ export default {
           if (this.$vnode.elm.id) {
             this.sectionName = this.$vnode.elm.id;
             this.observed(this.sectionName, entry.intersectionRatio);
+            //console.log(this.sectionName + ' ' + entry.intersectionRatio);
 
             if (entry.isIntersecting) {
               this.intersected(this.sectionName);
@@ -34,7 +35,7 @@ export default {
     },
     detectMobile() {
       if (window.matchMedia(this.isMobile).matches) {
-        this.config.threshold = 0.25;
+        this.config.threshold = 0.1;
       }
       else {
         this.config.threshold = 0;
