@@ -141,7 +141,7 @@ export default {
       margin-bottom: var(--space-2);
 
       img {
-          margin-right: 1.3vw;
+          margin-right: calc(var(--space-1) + var(--space-half));
           max-width: 42px;
           padding: 7px;
           background: var(--white);
@@ -286,7 +286,7 @@ export default {
 
   .timeline {
     max-width: none;
-    margin-right: calc(4.1vw / 2);
+    //margin-right: calc(4.1vw / 2);
     margin-bottom: var(--space-8);
   }
 
@@ -314,14 +314,7 @@ export default {
 }
 
 @media only screen and (max-width: $phone-breakpoint) {
-  .timeline {
-    margin-left: 10vw;
-    margin-right: calc(5vw / 2);
-  }
-
   .timeline--entry {
-    padding: 5vw;
-
     &:after {
       font-size: 5vw;
       left: -10vw;
@@ -333,7 +326,7 @@ export default {
       align-items: flex-start;
 
       img {
-        margin-bottom: 4vw;
+        margin-bottom: calc(var(--space-1) + var(--space-half));
         max-width: 30px;
         max-height: 30px;
       }
@@ -342,6 +335,7 @@ export default {
 
   .details {
     > li {
+      font-size: 1.3rem;
       margin-left: 20px;
 
       &:before {
