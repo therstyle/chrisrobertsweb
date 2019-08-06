@@ -60,6 +60,7 @@ export default {
 
   .heading {
     font-size: 9.6rem;
+    font-weight: 800;
     line-height: 0.85;
     margin-bottom: var(--space-2); 
   }

@@ -202,6 +202,15 @@ export default {
 @import 'assets/css/reboot';
 @import 'assets/css/fonts';
 
+*,
+*:after,
+*:after {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 html {
   font-size: 62.5%;
 }

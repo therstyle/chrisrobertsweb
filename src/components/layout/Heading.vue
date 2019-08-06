@@ -79,6 +79,7 @@ header.heading {
 
   h1 {
     font-size: 8.8rem;
+    font-weight: 800;
     line-height: 1;
     margin-bottom: 0;
     opacity: 0;
