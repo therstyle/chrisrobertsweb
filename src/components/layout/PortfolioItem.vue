@@ -106,9 +106,19 @@ export default {
     }
 
     a {
-      color: var(--light-red);
-      display: block;
-      margin-top: 8px;
+      color: var(--white);
+      background-image: linear-gradient(120deg, var(--red) 0%, var(--red) 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 0.3rem;
+      background-position: 0 115%;
+      padding-bottom: 0.3rem;
+    }
+
+    small {
+      a {
+        display: block;
+        margin-top: 8px;
+      }
     }
   }
 

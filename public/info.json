@@ -176,6 +176,32 @@
         "type": "Vue.js",
         "typeImage": "/images/project-type/icon-vuejs.svg"
   
+      },
+      {	
+        "url": "https://latinroguecleaning.com/",	
+        "image": {	
+          "image_1x": "/images/portfolio/lrc.jpg",	
+          "image_2x": "/images/portfolio/lrc_2x.jpg"	
+        },	
+        "video": "/video/portfolio/lrc.mp4",	
+        "name": "Latin Rogue Cleaning",	
+        "description": "A single page, custom responsive WordPress theme, featured on <a href=\"http://onepagelove.com\">One Page Love</a>",	
+        "type": "WordPress",	
+        "typeImage": "/images/project-type/icon-wordpress.svg"	
+
+      },	
+      {	
+        "url": "http://kettlebellkickboxing.com/",	
+        "image": {	
+          "image_1x": "/images/portfolio/kb.jpg",	
+          "image_2x": "/images/portfolio/kb_2x.jpg"	
+        },	
+        "video": "/video/portfolio/kb.mp4",	
+        "name": "Kettlebell Kickboxing",	
+        "description": "A custom built membership website powered by WooCommerce and WordPress",	
+        "type": "WordPress",	
+        "typeImage": "/images/project-type/icon-wordpress.svg"	
+
       }
     ]
   },
