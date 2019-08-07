@@ -28,6 +28,7 @@
         "title": "Senior Front End Developer",
         "details": [
           "Develop and maintain custom WordPress themes for clients utilizing PHP, JavaScript, SASS/CSS",
+          "Completely revamped internal WordPress framework to use modern build tools and ES6+ JavaScript",
           "Use REST APIs to develop SPAs with Vue.JS and React",
           "Work closely with design team to maintain design and web development standards",
           "Mentor, assist, and provide code reviews for junior web developers"
@@ -159,7 +160,7 @@
         },
         "video": "/video/portfolio/stanley.mp4",
         "name": "Stanley Black & Decker",
-        "description": "Online portal for Stanley Healthcare's products, powered by Drupal <small class=\"credit\"><a href=\"#\">Credit 829 Studios</a></small>",
+        "description": "Online portal for Stanley Healthcare's products, powered by Drupal <small><a href=\"#\">Credit 829 Studios</a></small>",
         "type": "Drupal",
         "typeImage": "/images/project-type/icon-drupal.svg"
   
