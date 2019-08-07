@@ -115,6 +115,9 @@ export default {
     }
 
     small {
+      display: block;
+      margin-top: var(--space-1);
+
       a {
         display: inline-block;
         margin-top: 8px;
