@@ -116,7 +116,7 @@ export default {
 
     small {
       a {
-        display: block;
+        display: inline-block;
         margin-top: 8px;
       }
     }
