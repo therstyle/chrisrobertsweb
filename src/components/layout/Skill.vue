@@ -24,7 +24,6 @@ export default {
   props: {
     logo: String,
     name: String,
-    years: Number,
     startYear: Number
   }
 }

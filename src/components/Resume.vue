@@ -26,7 +26,6 @@
             :key="index"
             :logo="devSkill.logo"
             :name="devSkill.name"
-            :years="devSkill.years"
             :startYear="devSkill.startYear"
           ></Skill>
         </ul>
@@ -37,7 +36,6 @@
             :key="index"
             :logo="designSkill.logo"
             :name="designSkill.name"
-            :years="designSkill.years"
             :startYear="designSkill.startYear"
           ></Skill>
         </ul>
