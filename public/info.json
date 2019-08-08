@@ -28,7 +28,7 @@
         "title": "Senior Front End Developer",
         "details": [
           "Develop and maintain custom WordPress themes for clients utilizing PHP, JavaScript, SASS/CSS",
-          "Completely revamped internal WordPress framework to use modern build tools and ES6+ JavaScript",
+          "Revamped internal WordPress framework to use modern build tools and ES6+ JavaScript",
           "Use REST APIs to develop SPAs with Vue.js and React",
           "Work closely with design team to maintain design and web development standards",
           "Mentor, assist, and review code for junior web developers"
@@ -40,10 +40,9 @@
         "company": "Firefield",
         "title": "Front End Developer",
         "details": [
-          "Collaborated with back end developers to oversee design of web applications",
+          "Worked on front end development of applications utilizing HTML, Ruby, SASS, Bootstrap, and React",
           "Developed universal style guide for consistent styling across our applications",
-          "Worked on front end development of applications utilizing HTML, Ruby, Sass, Bootstrap, React, and Git",
-          "Designed and contributed to development of in-house web applications for internal team use"
+          "Collaborated with back end developers to oversee design of web applications"
         ]
       },
       {
@@ -53,8 +52,8 @@
         "title": "Web Designer & Developer",
         "details": [
           "Designed, developed, and customized custom websites based on the client’s unique needs utilizing WordPress, custom post types, and Advanced Custom Fields (ACF)",
-          "Created branding, marketing materials, landing pages, and digital & print advertisements",
-          "Implemented search engine optimization techniques on client websites"
+          "Created branding, marketing materials, landing pages, and digital advertisements",
+          "Implemented SEO and page load speed improvements on client websites"
         ]
       },
       {
