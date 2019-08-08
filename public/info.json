@@ -75,64 +75,76 @@
         {
           "logo": "/images/icon-html.svg",
           "name": "HTML",
-          "years": 15
+          "years": 15,
+          "startYear": 2004
         },
         {
           "logo": "/images/icon-css.svg",
           "name": "CSS/SASS",
-          "years": 15
+          "years": 15,
+          "startYear": 2004
         },
         {
           "logo": "/images/icon-php.svg",
           "name": "PHP",
-          "years": 13
+          "years": 13,
+          "startYear": 2006
         },
         {
           "logo": "/images/icon-javascript.svg",
           "name": "JavaScript",
-          "years": 6
+          "years": 6,
+          "startYear": 2011
         },
         {
           "logo": "/images/icon-wordpress.svg",
           "name": "WordPress",
-          "years": 10
+          "years": 10,
+          "startYear": 2009
         },
         {
           "logo": "/images/icon-git.svg",
           "name": "Git",
-          "years": 5
+          "years": 5,
+          "startYear": 2013
         },
         {
           "logo": "/images/icon-vuejs.svg",
           "name": "Vue.js",
-          "years": 2
+          "years": 2,
+          "startYear": 2017
         },
         {
           "logo": "/images/icon-react.svg",
           "name": "React",
-          "years": 2
+          "years": 2,
+          "startYear": 2017
         }
       ],
       "design": [
         {
           "logo": "/images/icon-photoshop.svg",
           "name": "Photoshop",
-          "years": 14
+          "years": 14,
+          "startYear": 2004
         },
         {
           "logo": "/images/icon-illustrator.svg",
           "name": "Illustrator",
-          "years": 14
+          "years": 14,
+          "startYear": 2004
         },
         {
           "logo": "/images/icon-figma.svg",
           "name": "Figma",
-          "years": 3
+          "years": 3,
+          "startYear": 2016
         },
         {
           "logo": "/images/icon-sketch.svg",
           "name": "Sketch",
-          "years": 3
+          "years": 3,
+          "startYear": 2016
         }
       ]
     }
