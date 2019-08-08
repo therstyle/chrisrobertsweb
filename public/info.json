@@ -27,10 +27,10 @@
         "company": "829 Studios",
         "title": "Senior Front End Developer",
         "details": [
-          "Develop and maintain custom WordPress themes for clients utilizing PHP, JavaScript, SASS/CSS",
+          "Develop and maintain custom WordPress themes for clients utilizing PHP, JavaScript, and SASS/CSS",
           "Revamped internal WordPress framework to use modern build tools and ES6+ JavaScript",
           "Use REST APIs to develop SPAs with Vue.js and React",
-          "Work closely with design team to maintain design and web development standards",
+          "Work closely with design team to maintain design and development standards",
           "Mentor, assist, and review code for junior web developers"
         ]
       },
@@ -41,7 +41,7 @@
         "title": "Front End Developer",
         "details": [
           "Worked on front end development of applications utilizing HTML, Ruby, SASS, Bootstrap, and React",
-          "Developed universal style guide for consistent styling across our applications",
+          "Developed universal style guide for consistent styling of components across our applications",
           "Collaborated with back end developers to oversee design of web applications"
         ]
       },
@@ -63,8 +63,8 @@
         "title": "Web Designer & Developer",
         "details": [
           "Collaborated with design team, and managed design process from concept to code",
-          "Developed and maintained code for in-house and client projects using WordPress, HTML, CSS, PHP, and JavaScript / jQuery",
-          "Designed web and print materials for promotional events",
+          "Developed and maintained code for projects using WordPress, HTML, CSS, PHP, and JavaScript / jQuery",
+          "Designed materials for promotional events",
           "Provided direction for team members and interns"
         ]
       }
