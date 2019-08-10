@@ -78,12 +78,12 @@ export default {
 
   .resume--content {
     display: flex;
+    flex-direction: column;
   }
 
   .timeline {
     position: relative;
     margin: 0 7vw;
-    max-width: 60vw;
 
     article:first-child {
       padding-top: 0;
