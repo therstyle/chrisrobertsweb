@@ -234,9 +234,6 @@ body {
     min-height: 100vh;
 
     &:not(.intro) {
-    //padding: 11.6rem 0;
-    //padding: var(--space-8) 0;
-
       .content {
         padding-top: 0;
         padding-bottom: 0;
@@ -278,7 +275,7 @@ p {
 }
 
 .content {
-  padding: var(--space-4);
+  padding: var(--space-2);
   overflow: hidden;
 }
 
@@ -318,9 +315,9 @@ p {
   }
 }
 
-@media only screen and (max-width: $md-phone-breakpoint) {
+@media only screen and (min-width: $md-phone-breakpoint) {
   .content {
-    padding: var(--space-2);
+    padding: var(--space-4);
   }
 }
 </style>
