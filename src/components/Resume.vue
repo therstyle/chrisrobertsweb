@@ -114,11 +114,11 @@ export default {
       display: block;
       border-radius: 100%;
       top: 6.1vw;
-      left: calc((var(--space-3) - var(--space-6)) - 24px);
-      margin-left: calc(var(--space-3) + 12px);
-      width: 24px;
-      height: 24px;
-      border: 5px solid var(--red);
+      left: calc(-4.1vw - 14px);
+      margin-left: calc(4.1vw + 7px);
+      width: 14px;
+      height: 14px;
+      border: 3px solid var(--red);
       background: var(--body-bg);
     }
 
@@ -126,23 +126,24 @@ export default {
       content: attr(data-year);
       font-weight: 600;
       color: var(--red);
-      font-size: 4.1vw;
+      font-size: 5vw;
+      left: -10vw;
+      top: 2.1vw;
       writing-mode: vertical-rl;
       text-orientation: sideways;
       transform: rotate(180deg);
       position: absolute;
-      left: -7vw;
-      top: 2.1vw;
     }
 
     header {
-      display: flex;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
       margin-bottom: var(--space-2);
 
       img {
-          margin-right: calc(var(--space-1) + var(--space-half));
-          max-width: 42px;
+          margin-bottom: calc(var(--space-1) + var(--space-half));
+          max-width: 30px;
+          max-height: 30px;
           padding: 7px;
           background: var(--white);
       }
@@ -164,10 +165,10 @@ export default {
 
     > li {
       font-size: 1.6rem;
+      margin-left: 30px;
       line-height: 1.5;
       list-style: none;
       position: relative;
-      margin-left: 30px;
       margin-bottom: var(--space-2);
 
       &:before {
@@ -175,9 +176,9 @@ export default {
         display: block;
         position: absolute;
         top: 5px;
-        left: -30px;
         width: 12px;
         height: 12px;
+        left: -30px;
         border-radius: 100%;
         background: var(--red);
         margin-right: 10px;
@@ -192,6 +193,8 @@ export default {
   .skill-tree {
     max-width: 40vw;
     min-width: 244px;
+    margin-left: auto;
+    margin-right: auto;
 
     .sig {
       margin-bottom: var(--space-7);
@@ -279,28 +282,7 @@ export default {
     }
   }
 
-@media only screen and (max-width: $md-tablet-breakpoint) {
-  .resume--content {
-    flex-wrap: wrap;
-  }
-
-  .timeline {
-    max-width: none;
-    //margin-right: calc(4.1vw / 2);
-    margin-bottom: var(--space-8);
-  }
-
-  .timeline--entry {
-    padding-right: 0;
-  }
-
-  .skill-tree {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media only screen and (max-width: $tablet-breakpoint) {
+@media only screen and (min-width: $md-phone-breakpoint) {
   .timeline--entry {
     &:before {
       left: calc(-4.1vw - 18px);
@@ -313,50 +295,66 @@ export default {
   }
 }
 
-@media only screen and (max-width: $phone-breakpoint) {
+@media only screen and (min-width: $tablet-breakpoint) {
   .timeline--entry {
     &:after {
-      font-size: 5vw;
-      left: -10vw;
-      top: 2.1vw;
+      font-size: 4.1vw;
+      left: -7vw;
     }
 
     header {
-      flex-direction: column;
-      align-items: flex-start;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
       img {
-        margin-bottom: calc(var(--space-1) + var(--space-half));
-        max-width: 30px;
-        max-height: 30px;
+        margin-right: calc(var(--space-1) + var(--space-half));
+        margin-bottom: 0;
+        max-width: 42px;
+        max-height: 42px;
       }
     }
-  }
 
-  .details {
-    > li {
-      font-size: 1.3rem;
-      margin-left: 20px;
+    .details {
+      > li {
+        font-size: 1.6rem;
+        margin-left: 30px;
 
-      &:before {
-        width: 8px;
-        height: 8px;
-        left: -20px;
+        &:before {
+          width: 12px;
+          height: 12px;
+          left: -30px;
+        }
       }
     }
   }
 }
 
-@media only screen and (max-width: $sm-phone-breakpoint) {
+@media only screen and (min-width: $desktop-breakpoint) {
+  .resume--content {
+    display: flex;
+  }
+
+  .timeline {
+    max-width: 60vw;
+    margin-bottom: 0;
+  }
+
   .timeline--entry {
+    padding: var(--space-3);
+
     &:before {
-      left: calc(-4.1vw - 14px);
-      margin-left: calc(4.1vw + 7px);
-      width: 14px;
-      height: 14px;
-      border: 3px solid var(--red);
-      background: var(--body-bg);
+      content: '';
+      left: calc((var(--space-3) - var(--space-6)) - 24px);
+      margin-left: calc(var(--space-3) + 12px);
+      width: 24px;
+      height: 24px;
+      border: 5px solid var(--red);
     }
+  }
+
+  .skill-tree {
+
   }
 }
 </style>
