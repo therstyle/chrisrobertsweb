@@ -96,10 +96,25 @@ export default {
     max-height: 32px;
     display: block;
     margin-bottom: 12px;
+    animation: scroll-down linear 1.5s infinite;
   }
 
   span {
     display: block;
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -126,6 +141,10 @@ export default {
     .sub-heading {
       font-size: 1.4rem;
     }
+  }
+
+  .scroll-down {
+    align-items: center;
   }
 }
 
