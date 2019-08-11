@@ -79,7 +79,7 @@ export default {
   color: var(--white);
   font-size: 1rem;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   text-align: center;
 
   a {
