@@ -279,6 +279,20 @@ export default {
     }
   }
 
+@media only screen and (min-width: $max-breakpoint) {
+  .timeline--entry {
+    &:before {
+      top: 9rem;
+    }
+
+    &:after {
+      font-size: 5.9rem;
+      left: -10.2rem;
+      top: 3.1rem;
+    }
+  }
+}
+
 @media only screen and (max-width: $md-tablet-breakpoint) {
   .resume--content {
     flex-wrap: wrap;
