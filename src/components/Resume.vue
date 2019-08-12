@@ -12,6 +12,7 @@
           :company="entry.company"
           :title="entry.title"
           :details="entry.details"
+          :featuredBrands="entry.featuredBrands"
         ></Timeline-Entry>
       </div>
 

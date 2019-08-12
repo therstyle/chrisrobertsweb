@@ -11,18 +11,28 @@
     <ul class="details">
       <li v-for="detail in details" :key="detail">{{ detail }}</li>
     </ul>
+
+    <template v-if="featuredBrands">
+      <featuredBrands></featuredBrands>
+    </template>
   </article>
 </template>
 
 <script>
+import FeaturedBrands from './FeaturedBrands.vue';
+
 export default {
   name: 'Timeline-Entry',
+  components: {
+    FeaturedBrands
+  },
   props: {
     year: Number,
     logo: String,
     company: String,
     title: String,
-    details: Array
+    details: Array,
+    featuredBrands: Array
   }
 }
 </script>

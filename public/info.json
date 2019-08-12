@@ -33,6 +33,20 @@
           "Use REST APIs to develop SPAs with Vue.js and React",
           "Work closely with design team to create and maintain development standards",
           "Mentor, assist, and review code for junior web developers"
+        ],
+        "featuredBrands": [
+          {
+            "name": "Stanley Black & Decker",
+            "logo": "/images/brands/stanley.svg"
+          },
+          {
+            "name": "REI",
+            "logo": "/images/brands/rei.svg"
+          },
+          {
+            "name": "YMCA",
+            "logo": "/images/brands/ymca.svg"
+          }
         ]
       },
       {
