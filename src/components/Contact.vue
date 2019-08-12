@@ -84,7 +84,7 @@ export default {
             },
             method: 'POST',
             mode: "cors",
-            body: `to=${this.formEmail}&name=${this.formName}&message=${this.formMessage}`
+            body: `from=${this.formEmail}&name=${this.formName}&message=${this.formMessage}`
           };
 
           const data = await fetch(apiURL, args)
