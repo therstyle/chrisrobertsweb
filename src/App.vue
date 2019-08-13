@@ -224,7 +224,7 @@ body {
 }
 
 #app {
-  //opacity: 0.1; //Debug
+  opacity: 0.1; //Debug
   display: flex;
   padding-left: var(--sidebar-width);
   position: relative;
@@ -234,9 +234,6 @@ body {
     min-height: 100vh;
 
     &:not(.intro) {
-    //padding: 11.6rem 0;
-    //padding: var(--space-8) 0;
-
       .content {
         padding-top: 0;
         padding-bottom: 0;

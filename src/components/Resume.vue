@@ -17,8 +17,11 @@
       </div>
 
       <aside class="skill-tree">
-        <img v-if="image.image_2x" :src="image.image_1x" :srcset="`${image.image_1x} 1x, ${image.image_2x} 2x`" alt="Chris Roberts" class="skill-tree--photo">
-        <img v-else :src="image.image_1x" alt="Chris Roberts" class="skill-tree--photo">
+        <picture>
+          <source v-if="image.image_2x_webp" :srcset="`${image.image_1x_webp} 1x, ${image.image_2x_webp} 2x`" type="image/webp">
+          <source v-if="image.image_2x" :srcset="`${image.image_1x} 1x, ${image.image_2x} 2x`" type="image/jpeg">
+          <img v-if="image.image_1x" :src="image.image_1x" alt="Chris Roberts" class="skill-tree--photo">
+        </picture>
         <h3 class="sig">{{ sigText }}</h3>
 
         <h3>Dev Skills</h3>

@@ -17,7 +17,9 @@
     "headline": "Resume",
     "image": {
       "image_1x": "/images/me.jpg",
-      "image_2x": "/images/me_2x.jpg"
+      "image_1x_webp": "/images/me.webp",
+      "image_2x": "/images/me_2x.jpg",
+      "image_2x_webp": "/images/me_2x.webp"
     },
     "sigText": "Chris Roberts",
     "entries": [
@@ -231,7 +233,9 @@
     "headline": "Contact",
     "image": {
       "image_1x": "/images/zakim.jpg",
-      "image_2x": "/images/zakim_2x.jpg" 
+      "image_1x_webp": "/images/zakim.webp",
+      "image_2x": "/images/zakim_2x.jpg",
+      "image_2x_webp": "/images/zakim_2x.webp"  
     },
     "buttonText": "Submit",
     "loaderImg": "/images/loading.svg",
