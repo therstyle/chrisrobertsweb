@@ -13,7 +13,7 @@
     </ul>
 
     <template v-if="featuredBrands">
-      <featuredBrands></featuredBrands>
+      <featuredBrands :featuredBrands="featuredBrands"></featuredBrands>
     </template>
   </article>
 </template>

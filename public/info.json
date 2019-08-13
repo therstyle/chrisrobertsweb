@@ -37,15 +37,19 @@
         "featuredBrands": [
           {
             "name": "Stanley Black & Decker",
-            "logo": "/images/brands/stanley.svg"
+            "logo": "https://dummyimage.com/100x40/000/fff&text=placeholder.png"
           },
           {
             "name": "REI",
-            "logo": "/images/brands/rei.svg"
+            "logo": "https://dummyimage.com/100x40/000/fff&text=placeholder.png"
           },
           {
             "name": "YMCA",
-            "logo": "/images/brands/ymca.svg"
+            "logo": "https://dummyimage.com/100x40/000/fff&text=placeholder.png"
+          },
+          {
+            "name": "Test",
+            "logo": "https://dummyimage.com/100x40/000/fff&text=placeholder.png"
           }
         ]
       },
