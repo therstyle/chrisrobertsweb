@@ -22,7 +22,11 @@
       "image_2x_webp": "/images/me_2x.webp"
     },
     "sigText": "Chris Roberts",
-    "pdfSource": "https://chrisrobertsweb.dev/chris-roberts-resume.pdf",
+    "pdf": {
+      "source": "https://chrisrobertsweb.dev/chris-roberts-resume.pdf",
+      "icon": "/images/icon-pdf.svg",
+      "text": "Download Resume"
+    },
     "entries": [
       {
         "year": 2018,

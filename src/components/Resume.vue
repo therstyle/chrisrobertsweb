@@ -17,12 +17,19 @@
       </div>
 
       <aside class="skill-tree">
-        <picture>
-          <source v-if="image.image_2x_webp" :srcset="`${image.image_1x_webp} 1x, ${image.image_2x_webp} 2x`" type="image/webp">
-          <source v-if="image.image_2x" :srcset="`${image.image_1x} 1x, ${image.image_2x} 2x`" type="image/jpeg">
-          <img v-if="image.image_1x" :src="image.image_1x" alt="Chris Roberts" class="skill-tree--photo">
-        </picture>
-        <h3 class="sig">{{ sigText }}</h3>
+        <div class="photo">
+          <picture>
+            <source v-if="image.image_2x_webp" :srcset="`${image.image_1x_webp} 1x, ${image.image_2x_webp} 2x`" type="image/webp">
+            <source v-if="image.image_2x" :srcset="`${image.image_1x} 1x, ${image.image_2x} 2x`" type="image/jpeg">
+            <img v-if="image.image_1x" :src="image.image_1x" alt="Chris Roberts" class="skill-tree--photo">
+          </picture>
+
+          <h3 class="sig">{{ sigText }}</h3>
+        </div>
+        
+        <div class="info">
+          <a v-if="pdf" :href="pdf.source"><img :src="pdf.icon" alt="PDF">{{ pdf.text }}</a>
+        </div>
 
         <h3>Dev Skills</h3>
         <ul class="skills">
@@ -68,6 +75,7 @@ export default {
     devSkills: Array,
     designSkills: Array,
     sigText: String,
+    pdf: Object,
     viewed: Boolean
   },
   mounted() {
@@ -198,7 +206,6 @@ export default {
     min-width: 244px;
 
     .sig {
-      margin-bottom: var(--space-7);
       text-transform: none;
     }
 
@@ -207,6 +214,11 @@ export default {
       text-transform: uppercase;
       font-size: 2.4rem;
     }
+  }
+
+  .photo {
+    position: relative;
+    margin-bottom: var(--space-7);
   }
 
   .skill-tree--photo {
@@ -221,6 +233,14 @@ export default {
     font-family: var(--sig-font);
     text-align: center;
     font-weight: normal;
+    margin-bottom: 0;
+    position: absolute;
+    width: 100%;
+    bottom: -18px;
+  }
+
+  .info {
+    text-align: center;
   }
 
   .skills {
