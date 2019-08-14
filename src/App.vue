@@ -25,6 +25,7 @@
       :devSkills="devSkills"
       :designSkills="designSkills"
       :sigText="sigText"
+      :pdf="pdf"
       :viewed="sections.resume.viewed"
       v-on:observed="activeItem"
       v-on:intersected="viewedItem"
@@ -86,6 +87,7 @@ export default {
       resumeEntries: [],
       resumePhoto: {},
       sigText: '',
+      pdf: {},
       devSkills: [],
       designSkills: [],
       portfolioItems: [],
@@ -184,6 +186,7 @@ export default {
       this.resumeEntries = info.resume.entries;
       this.resumePhoto = info.resume.image;
       this.sigText = info.resume.sigText;
+      this.pdf = info.resume.pdf;
       this.devSkills = info.resume.skills.dev;
       this.designSkills = info.resume.skills.design;
       this.portfolioItems = info.portfolio.entries;
@@ -234,9 +237,6 @@ body {
     min-height: 100vh;
 
     &:not(.intro) {
-    //padding: 11.6rem 0;
-    //padding: var(--space-8) 0;
-
       .content {
         padding-top: 0;
         padding-bottom: 0;
@@ -269,6 +269,20 @@ img {
 
 a {
   text-decoration: none;
+
+  &.link {
+    color: var(--white);
+    background-image: linear-gradient(120deg, var(--red) 0%, var(--red) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.3rem;
+    background-position: 0 115%;
+    padding-bottom: 0.3rem;
+    transition: 0.3s all;
+
+    &:hover {
+      background-image: linear-gradient(120deg, var(--dark-red) 0%, var(--dark-red) 100%);
+    }
+  }
 }
 
 p {

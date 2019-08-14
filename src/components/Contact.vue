@@ -25,8 +25,9 @@
         </form>
         
         <picture class="contact-photo" :data-pixels="amountScrolled">
-          <img v-if="image.image_1x" :src="image.image_1x" :srcset="`${image.image_1x} 1x, ${image.image_2x} 2x`" alt="">
-          <img v-else :src="image.image_1x" alt="">
+          <source v-if="image.image_2x_webp" :srcset="`${image.image_1x_webp} 1x, ${image.image_2x_webp} 2x`" type="image/webp">
+          <source v-if="image.image_2x" :srcset="`${image.image_1x} 1x, ${image.image_2x} 2x`" type="image/jpeg">
+          <img v-if="image.image_1x" :src="image.image_1x" alt="">
         </picture>
       </div>
     </div>
