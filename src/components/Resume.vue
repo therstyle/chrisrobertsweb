@@ -27,9 +27,9 @@
           <h3 class="sig">{{ sigText }}</h3>
         </div>
         
-        <div class="info">
-          <a v-if="pdf" :href="pdf.source"><img :src="pdf.icon" alt="PDF">{{ pdf.text }}</a>
-        </div>
+        <ul class="info">
+          <li v-if="pdf"><img :src="pdf.icon" alt="PDF"><a :href="pdf.source" class="link">{{ pdf.text }}</a></li>
+        </ul>
 
         <h3>Dev Skills</h3>
         <ul class="skills">
@@ -218,7 +218,7 @@ export default {
 
   .photo {
     position: relative;
-    margin-bottom: var(--space-7);
+    margin-bottom: var(--space-4);
   }
 
   .skill-tree--photo {
@@ -240,7 +240,21 @@ export default {
   }
 
   .info {
-    text-align: center;
+    margin: 0 auto var(--space-7) auto;
+    padding: 0;
+    font-size: 14px;
+
+    > li {
+      list-style: none;
+      display: block;
+      text-align: center;
+
+      img {
+        max-width: 16px;
+        display: inline-block;
+        margin-right: var(--space-half);
+      }
+    }
   }
 
   .skills {

@@ -227,7 +227,7 @@ body {
 }
 
 #app {
-  opacity: 0.1; //Debug
+  //opacity: 0.1; //Debug
   display: flex;
   padding-left: var(--sidebar-width);
   position: relative;
@@ -269,6 +269,20 @@ img {
 
 a {
   text-decoration: none;
+
+  &.link {
+    color: var(--white);
+    background-image: linear-gradient(120deg, var(--red) 0%, var(--red) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.3rem;
+    background-position: 0 115%;
+    padding-bottom: 0.3rem;
+    transition: 0.3s all;
+
+    &:hover {
+      background-image: linear-gradient(120deg, var(--dark-red) 0%, var(--dark-red) 100%);
+    }
+  }
 }
 
 p {

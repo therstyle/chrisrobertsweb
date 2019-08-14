@@ -105,15 +105,6 @@ export default {
       flex: 1;
     }
 
-    a {
-      color: var(--white);
-      background-image: linear-gradient(120deg, var(--red) 0%, var(--red) 100%);
-      background-repeat: no-repeat;
-      background-size: 100% 0.3rem;
-      background-position: 0 115%;
-      padding-bottom: 0.3rem;
-    }
-
     small {
       display: block;
       margin-top: var(--space-1);
