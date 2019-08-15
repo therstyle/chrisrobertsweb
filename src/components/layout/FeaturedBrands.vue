@@ -43,10 +43,16 @@ export default {
 }
 
 .brand {
-  width: 33.33%;
+  width: calc(33.33% - 1px);
   height: 40px;
   display: flex;
   justify-content: center;
+  border-left: 1px solid var(--light-gray);
+  padding: 0 1rem;
+
+  &:first-child {
+    border-left: none;
+  }
 }
 
 h5 {
