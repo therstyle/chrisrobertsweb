@@ -66,6 +66,12 @@
           "Developed universal style guide for consistent styling of components across our applications",
           "Worked with React Native to publish iOS & Android apps",
           "Collaborated with back end developers to oversee UI design of web applications"
+        ],
+        "featuredBrands": [
+          {
+            "name": "Sagely Health",
+            "logo": "/images/brands/sagely-health.svg"
+          }
         ]
       },
       {
