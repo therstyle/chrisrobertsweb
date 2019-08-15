@@ -11,6 +11,10 @@
     <ul class="details">
       <li v-for="detail in details" :key="detail">{{ detail }}</li>
     </ul>
+
+    <template v-if="featuredBrands">
+      <FeaturedBrands :featuredBrands="featuredBrands"></featuredBrands>
+    </template>
   </article>
 </template>
 
