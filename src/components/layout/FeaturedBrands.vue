@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       carouselWidth: 0,
-      shadowActive: false,
+      draggable: false,
       brandWidth: 200,
       totalBrands: 0
     }
@@ -27,7 +27,11 @@ export default {
     featuredBrands: Array
   },
   methods: {
-    shadow() {
+    count() {
+      this.totalBrands++;
+      console.log(this.totalBrands);
+    },
+    isDraggable() {
       this.carouselWidth = this.$refs.carousel.offsetWidth;
 
       const threshold = this.carouselWidth - 50;
@@ -37,11 +41,11 @@ export default {
       console.log(`brandspace = ${brandSpace}`);
 
       if (threshold < brandSpace) {
-        this.shadowActive = true;
+        this.draggable = true;
         console.log('add a shadow!')
       }
       else {
-        this.shadowActive = false;
+        this.draggable = false;
         console.log('nah no shadow');
       }
     },
@@ -53,7 +57,7 @@ export default {
         pageDots: false
       });
 
-      this.shadow();
+      this.isDraggable();
     }
   },
   mounted: function() {
