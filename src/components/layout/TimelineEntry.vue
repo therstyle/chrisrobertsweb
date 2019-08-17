@@ -15,16 +15,21 @@
     <template v-if="featuredBrands">
       <FeaturedBrands :featuredBrands="featuredBrands"></featuredBrands>
     </template>
+
+    <template v-if="stats">
+      <Stats :stats="stats"></Stats>
+    </template>
   </article>
 </template>
 
 <script>
 import FeaturedBrands from './FeaturedBrands.vue';
+import Stats from './Stats.vue';
 
 export default {
   name: 'Timeline-Entry',
   components: {
-    FeaturedBrands
+    FeaturedBrands, Stats
   },
   props: {
     year: Number,
@@ -32,7 +37,8 @@ export default {
     company: String,
     title: String,
     details: Array,
-    featuredBrands: Array
+    featuredBrands: Array,
+    stats: Array
   }
 }
 </script>

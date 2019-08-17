@@ -13,6 +13,7 @@
           :title="entry.title"
           :details="entry.details"
           :featuredBrands="entry.featuredBrands"
+          :stats="entry.stats"
         ></Timeline-Entry>
       </div>
 

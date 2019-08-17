@@ -84,6 +84,16 @@
           "Managed and maintained a variety of client websites in CMS' such as Drupal, Joomla, and Magento",
           "Created branding, marketing materials, landing pages, and digital advertisements",
           "Implemented SEO and page load speed improvements for client websites"
+        ],
+        "stats": [
+          {
+            "percent": 22,
+            "summary": "Increased visitor duration post company website redesign"
+          },
+          {
+            "percent": 19,
+            "summary": "Increased page views post company website redesign"
+          }
         ]
       },
       {
@@ -96,6 +106,16 @@
           "Utilized Adobe Photoshop & Illustrator to design websites, HTML emails, and digital advertisements",
           "Managed web design process from concept to code",
           "Provided direction for team members and interns"
+        ],
+        "stats": [
+          {
+            "percent": 34,
+            "summary": "Increased click-throughs of company newsletter post redesign"
+          },
+          {
+            "percent": 16,
+            "summary": "Average increase of client website page views"
+          }
         ]
       }
     ],
@@ -216,7 +236,7 @@
         },	
         "video": "/video/portfolio/lrc.mp4",	
         "name": "Latin Rogue Cleaning",	
-        "description": "A single page, custom responsive WordPress theme, featured on <a href=\"http://onepagelove.com\">One Page Love</a>",	
+        "description": "A single page, custom responsive WordPress theme, featured on <a class=\"link\" href=\"http://onepagelove.com\">One Page Love</a>",	
         "type": "WordPress",	
         "typeImage": "/images/project-type/icon-wordpress.svg"	
 
