@@ -84,6 +84,12 @@
           "Managed and maintained a variety of client websites in CMS' such as Drupal, Joomla, and Magento",
           "Created branding, marketing materials, landing pages, and digital advertisements",
           "Implemented SEO and page load speed improvements for client websites"
+        ],
+        "stats": [
+          {
+            "percent": 25,
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          }
         ]
       },
       {
