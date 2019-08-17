@@ -44,19 +44,15 @@
         "featuredBrands": [
           {
             "name": "Stanley Black & Decker",
-            "logo": "https://dummyimage.com/100x40/000/fff&text=placeholder.png"
+            "logo": "/images/brands/stanley.svg"
           },
           {
             "name": "REI",
-            "logo": "https://dummyimage.com/100x40/000/fff&text=placeholder.png"
+            "logo": "/images/brands/rei.svg"
           },
           {
             "name": "YMCA",
-            "logo": "https://dummyimage.com/100x40/000/fff&text=placeholder.png"
-          },
-          {
-            "name": "Test",
-            "logo": "https://dummyimage.com/100x40/000/fff&text=placeholder.png"
+            "logo": "/images/brands/ymca.svg"
           }
         ]
       },
@@ -70,6 +66,12 @@
           "Developed universal style guide for consistent styling of components across our applications",
           "Worked with React Native to publish iOS & Android apps",
           "Collaborated with back end developers to oversee UI design of web applications"
+        ],
+        "featuredBrands": [
+          {
+            "name": "Sagely Health",
+            "logo": "/images/brands/sagely.svg"
+          }
         ]
       },
       {

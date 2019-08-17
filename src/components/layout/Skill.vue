@@ -17,7 +17,6 @@ export default {
       const currentYear = date.getFullYear();
       const years = currentYear - startYear;
       const label = years > 1 ? 'Years' : 'Year';
-      console.log(currentYear);
       return `${years} ${label}`;
     }
   },
