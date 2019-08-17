@@ -236,7 +236,7 @@
         },	
         "video": "/video/portfolio/lrc.mp4",	
         "name": "Latin Rogue Cleaning",	
-        "description": "A single page, custom responsive WordPress theme, featured on <a href=\"http://onepagelove.com\">One Page Love</a>",	
+        "description": "A single page, custom responsive WordPress theme, featured on <a class=\"link\" href=\"http://onepagelove.com\">One Page Love</a>",	
         "type": "WordPress",	
         "typeImage": "/images/project-type/icon-wordpress.svg"	
 
