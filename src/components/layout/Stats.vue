@@ -10,7 +10,7 @@
           a 15.9155 15.9155 0 0 1 0 -31.831"
       />
       <path class="circle"
-        stroke-dasharray="30, 100"
+        :stroke-dasharray="`${stat.percent}, 100`"
         d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -38,13 +38,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/css/vars';
+
 .stats {
   margin-top: var(--space-2);
+  display: flex;
+  justify-content: space-between;
 }
 
 .stat {
   display: flex;
-  width: calc(50% - var(--space-2));
+  width: calc(50% - var(--space-1));
   align-items: center;
 
   svg {
@@ -56,14 +60,15 @@ export default {
 }
 
 .stat--focal {
-  flex: 1;
+  //flex: 1;
   margin-right: var(--space-1);
   display: flex;
   align-items: center;
 }
 
 .stat--summary {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 .flex-wrapper {
@@ -103,6 +108,18 @@ export default {
 @keyframes progress {
   0% {
     stroke-dasharray: 0 100;
+  }
+}
+
+@media only screen and (max-width: $tablet-breakpoint) {
+  .stats {
+    flex-direction: column;
+  }
+
+  .stat {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: var(--space-1);
   }
 }
 </style>

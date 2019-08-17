@@ -87,8 +87,12 @@
         ],
         "stats": [
           {
-            "percent": 25,
-            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            "percent": 22,
+            "summary": "Increased visitor duration post company website redesign"
+          },
+          {
+            "percent": 19,
+            "summary": "Increased page views post company website redesign"
           }
         ]
       },
@@ -102,6 +106,16 @@
           "Utilized Adobe Photoshop & Illustrator to design websites, HTML emails, and digital advertisements",
           "Managed web design process from concept to code",
           "Provided direction for team members and interns"
+        ],
+        "stats": [
+          {
+            "percent": 34,
+            "summary": "Increased click-throughs of company newsletter post redesign"
+          },
+          {
+            "percent": 16,
+            "summary": "Average increase of client website page views"
+          }
         ]
       }
     ],
