@@ -29,7 +29,7 @@
         </div>
         
         <ul class="info">
-          <li v-if="pdf"><img :src="pdf.icon" alt="PDF"><a :href="pdf.source" class="link">{{ pdf.text }}</a></li>
+          <li v-if="pdf"><img :src="pdf.icon" alt="PDF"><a :href="pdf.source" target="_blank" class="link">{{ pdf.text }}</a></li>
         </ul>
 
         <h3>Dev Skills</h3>
