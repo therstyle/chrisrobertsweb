@@ -65,8 +65,9 @@ export default {
       this.isDraggable();
     }
   },
-  mounted: function() {
+  mounted() {
     this.initCarousel();
+    this.animate();
   }
 }
 </script>
