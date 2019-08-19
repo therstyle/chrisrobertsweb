@@ -12,6 +12,7 @@
 
 <script>
 import Flickity from 'flickity';
+import animate from './../helpers/animate.js';
 
 export default {
   name: "FeaturedBrands",
@@ -22,6 +23,7 @@ export default {
       draggable: false,
     }
   },
+  mixins: [animate],
   props: {
     featuredBrands: Array
   },
@@ -46,11 +48,9 @@ export default {
 
       if (threshold < brandWidth) {
         this.draggable = true;
-        console.log('add a shadow!')
       }
       else {
         this.draggable = false;
-        console.log('nah no shadow');
       }
     },
     initCarousel() {
@@ -110,7 +110,6 @@ h5 {
 }
 
 .brand {
-  //min-width: calc(33.33% - 1px);
   min-width: 200px;
   height: 40px;
   display: flex;
