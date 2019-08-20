@@ -1,5 +1,5 @@
 <template>
-  <footer class="stats">
+  <footer class="stats" :class="{viewed : viewed }">
     <div class="stat" v-for="(stat, index) in stats" :key="index">
       <div class="stat--focal">
         <div class="single-chart">
@@ -10,7 +10,7 @@
           a 15.9155 15.9155 0 0 1 0 -31.831"
       />
       <path class="circle"
-        :stroke-dasharray="`${stat.percent}, 100`"
+        :stroke-dasharray="`${percent(stat.percent)}, 100`"
         d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -28,10 +28,25 @@
 </template>
 
 <script>
+import animate from './../helpers/animate.js';
+
 export default {
   name: "Stats",
+  mixins: [animate],
   props: {
     stats: Array
+  },
+  methods: {
+    percent(value) {
+      if (!this.viewed) {
+        value = 0;
+      }
+
+      return value;
+    }
+  },
+  mounted() {
+    this.animate();
   }
 }
 
@@ -95,13 +110,21 @@ export default {
   fill: none;
   stroke-width: 2;
   stroke-linecap: round;
-  animation: progress 1s ease-out forwards;
+  //stroke-dasharray: 0 100;
+  transition: 0.3s all ease-in-out;
+}
+
+.viewed {
+  .circle {
+    animation: progress 1s ease-out;
+    animation-fill-mode: forwards;
+    //stroke-dasharray: 0 100;
+  }
 }
 
 .percentage {
   fill: var(--red);
   font-size: .9rem;
-  //font-size: 0.5em;
   text-anchor: middle;
 }
 

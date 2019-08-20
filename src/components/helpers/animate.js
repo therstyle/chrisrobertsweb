@@ -1,7 +1,8 @@
 export default {
   data() {
     return {
-      observer: null
+      observer: null,
+      viewed: false
     }
   },
   methods: {
@@ -9,12 +10,12 @@ export default {
       this.observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            console.log('visible');
+            this.viewed = true;
             this.observer.unobserve(entry.target);
+            console.log('visible');
           }
         });
       });
-      console.log('init animate js');
 
       this.observer.observe(this.$el); //Init observer
     }

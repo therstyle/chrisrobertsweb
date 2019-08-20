@@ -12,7 +12,6 @@
 
 <script>
 import Flickity from 'flickity';
-import animate from './../helpers/animate.js';
 
 export default {
   name: "FeaturedBrands",
@@ -23,7 +22,6 @@ export default {
       draggable: false,
     }
   },
-  mixins: [animate],
   props: {
     featuredBrands: Array
   },
@@ -67,7 +65,6 @@ export default {
   },
   mounted() {
     this.initCarousel();
-    this.animate();
   }
 }
 </script>
