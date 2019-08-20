@@ -3,21 +3,8 @@
     <div class="stat" v-for="(stat, index) in stats" :key="index">
       <div class="stat--focal">
         <div class="single-chart">
-    <svg width="64" height="64" viewBox="0 0 36 36" class="circular-chart orange">
-      <path class="circle-bg"
-        d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-      />
-      <path class="circle"
-        :stroke-dasharray="`${percent(stat.percent)}, 100`"
-        d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-      />
-      <text x="18" y="20.35" class="percentage">{{ stat.percent }}%</text>
-    </svg>
-  </div>
+          <Circle :amount="stat.percent"></Circle>
+        </div>
       </div>
 
       <div class="stat--summary">
@@ -29,10 +16,14 @@
 
 <script>
 import animate from './../helpers/animate.js';
+import Circle from './Circle.vue';
 
 export default {
   name: "Stats",
   mixins: [animate],
+  components: {
+    Circle
+  },
   props: {
     stats: Array
   },
@@ -94,10 +85,6 @@ export default {
 .circular-chart {
   display: block;
   margin: 10px auto;
-
-  .circle {
-    stroke: var(--red);
-  }
 }
 
 .circle-bg {
@@ -110,16 +97,9 @@ export default {
   fill: none;
   stroke-width: 2;
   stroke-linecap: round;
+  stroke: var(--red);
   //stroke-dasharray: 0 100;
   transition: 0.3s all ease-in-out;
-}
-
-.viewed {
-  .circle {
-    animation: progress 1s ease-out;
-    animation-fill-mode: forwards;
-    //stroke-dasharray: 0 100;
-  }
 }
 
 .percentage {
