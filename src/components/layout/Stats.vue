@@ -3,7 +3,7 @@
     <div class="stat" v-for="(stat, index) in stats" :key="index">
       <div class="stat--focal">
         <div class="single-chart">
-          <Circle :amount="stat.percent"></Circle>
+          <Percentage></Percentage>
         </div>
       </div>
 
@@ -16,25 +16,16 @@
 
 <script>
 import animate from './../helpers/animate.js';
-import Circle from './Circle.vue';
+import Percentage from './Percentage.vue';
 
 export default {
   name: "Stats",
   mixins: [animate],
   components: {
-    Circle
+    Percentage
   },
   props: {
     stats: Array
-  },
-  methods: {
-    percent(value) {
-      if (!this.viewed) {
-        value = 0;
-      }
-
-      return value;
-    }
   },
   mounted() {
     this.animate();
@@ -43,7 +34,7 @@ export default {
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../../assets/css/vars';
 
 .stats {
