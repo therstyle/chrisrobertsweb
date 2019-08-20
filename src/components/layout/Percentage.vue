@@ -6,8 +6,8 @@
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
       />
-      <path class="circle"
-        :stroke-dasharray="`0, 100`"
+      <path class="circle" :class="{viewed : viewed}"
+        :stroke-dasharray="`${amount}, 100`"
         d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -21,17 +21,30 @@
 export default {
   name: 'Percentage',
   props: {
-   amount: Number 
+   amount: Number,
+   viewed: Boolean,
+   index: Number 
+  },
+  methods: {
+    getPercent(value) {
+      if (!this.viewed) {
+        value = 0;
+      }
+      return value;
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.viewed {
-  .circle {
-    animation: progress 1s ease-out;
-    animation-fill-mode: forwards;
+@keyframes progress {
+  0% {
     stroke-dasharray: 0 100;
   }
+}
+
+.circle.viewed {
+  animation: progress 1s ease-in-out;
+  animation-fill-mode: forwards;
 }
 </style>

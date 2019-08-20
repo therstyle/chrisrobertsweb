@@ -3,7 +3,11 @@
     <div class="stat" v-for="(stat, index) in stats" :key="index">
       <div class="stat--focal">
         <div class="single-chart">
-          <Percentage :amount="stat.percent"></Percentage>
+          <Percentage 
+            :amount="stat.percent"
+            :viewed="viewed"
+            :index="index"
+          ></Percentage>
         </div>
       </div>
 
@@ -97,12 +101,6 @@ export default {
   fill: var(--red);
   font-size: .9rem;
   text-anchor: middle;
-}
-
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
 }
 
 @media only screen and (max-width: $tablet-breakpoint) {
