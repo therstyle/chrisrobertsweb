@@ -3,7 +3,7 @@
     <div class="stat" v-for="(stat, index) in stats" :key="index">
       <div class="stat--focal">
         <div class="single-chart">
-          <Percentage></Percentage>
+          <Percentage :amount="stat.percent"></Percentage>
         </div>
       </div>
 
