@@ -9,7 +9,10 @@
     </header>
 
     <ul class="details">
-      <li v-for="detail in details" :key="detail">{{ detail }}</li>
+      <EntryDetail v-for="(detail, index) in details" 
+        :key="index"
+        :detail="detail"
+        ></EntryDetail>
     </ul>
 
     <template v-if="featuredBrands">
@@ -25,13 +28,14 @@
 <script>
 import FeaturedBrands from './FeaturedBrands.vue';
 import Stats from './Stats.vue';
+import EntryDetail from './EntryDetail.vue';
 import animate from './../helpers/animate.js';
 
 export default {
   name: 'Timeline-Entry',
   mixins: [animate],
   components: {
-    FeaturedBrands, Stats
+    FeaturedBrands, Stats, EntryDetail
   },
   props: {
     year: Number,

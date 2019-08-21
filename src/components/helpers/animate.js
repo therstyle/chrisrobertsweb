@@ -6,7 +6,7 @@ export default {
     }
   },
   methods: {
-    animate() {
+    animate(config) {
       this.observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
