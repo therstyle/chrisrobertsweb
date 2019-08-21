@@ -26,11 +26,6 @@ export default {
     featuredBrands: Array
   },
   methods: {
-    count(amount) {
-      amount++;
-      console.log(amount);
-      return amount;
-    },
     isDraggable() {
       this.carouselWidth = this.$refs.carousel.offsetWidth;
 

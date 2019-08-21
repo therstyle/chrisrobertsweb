@@ -227,7 +227,7 @@ body {
 }
 
 #app {
-  //opacity: 0.1; //Debug
+  opacity: 0.1; //Debug
   display: flex;
   padding-left: var(--sidebar-width);
   position: relative;
@@ -329,6 +329,17 @@ p {
     min-height: 100vh;
     object-fit: fill;
     margin-left: 15vw;
+  }
+}
+
+.animate {
+  transform: translateY(var(--space-2));
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+
+  &.viewed {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
