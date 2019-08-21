@@ -6,7 +6,7 @@ export default {
     }
   },
   methods: {
-    animate(config) {
+    animate(settings) {
       this.observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -14,7 +14,7 @@ export default {
             this.observer.unobserve(entry.target);
           }
         });
-      });
+      }, settings);
 
       this.observer.observe(this.$el); //Init observer
     }
