@@ -124,7 +124,7 @@ export default {
   methods: {
     activeItem: function(currentSection, threshold) {
       //Add each sections threshold to object
-      Object.keys(this.sections).forEach(item => {
+      Object.keys(this.sections).forEach(() => {
         this.sections[currentSection].threshold = threshold;
       });
 

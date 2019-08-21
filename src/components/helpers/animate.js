@@ -12,7 +12,6 @@ export default {
           if (entry.isIntersecting) {
             this.viewed = true;
             this.observer.unobserve(entry.target);
-            console.log('visible');
           }
         });
       });

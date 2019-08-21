@@ -25,9 +25,11 @@
 <script>
 import FeaturedBrands from './FeaturedBrands.vue';
 import Stats from './Stats.vue';
+import animate from './../helpers/animate.js';
 
 export default {
   name: 'Timeline-Entry',
+  mixins: [animate],
   components: {
     FeaturedBrands, Stats
   },
