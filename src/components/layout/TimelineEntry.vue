@@ -1,6 +1,6 @@
 <template>
   <article class="timeline--entry" :data-year="year">
-    <header>
+    <header class="animate" :class="{ viewed : viewed }">
       <img :src="logo" :alt="company">
       <div class="company-info">
         <h3>{{ company }}</h3>
@@ -29,7 +29,7 @@
 import FeaturedBrands from './FeaturedBrands.vue';
 import Stats from './Stats.vue';
 import EntryDetail from './EntryDetail.vue';
-import animate from './../helpers/animate.js';
+import animate from '../helpers/animate.js';
 
 export default {
   name: 'Timeline-Entry',
@@ -45,6 +45,9 @@ export default {
     details: Array,
     featuredBrands: Array,
     stats: Array
+  },
+  mounted() {
+    this.animate();
   }
 }
 </script>
