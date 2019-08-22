@@ -44,7 +44,7 @@ export default {
 }
 
 .circle.viewed {
-  animation: progress 1s ease-in-out;
+  animation: progress 1.6s ease-in-out;
   animation-fill-mode: forwards;
 }
 </style>

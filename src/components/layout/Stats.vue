@@ -1,5 +1,5 @@
 <template>
-  <footer class="stats" :class="{viewed : viewed }">
+  <footer class="stats animate" :class="{viewed : viewed }">
     <div class="stat" v-for="(stat, index) in stats" :key="index">
       <div class="stat--focal">
         <div class="single-chart">

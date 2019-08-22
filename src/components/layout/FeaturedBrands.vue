@@ -1,5 +1,5 @@
 <template>
-  <footer class="featured-brands">
+  <footer class="featured-brands animate" :class="{ viewed : viewed }">
     <h5>Brands I've Worked With</h5>
 
     <div class="brand-carousel" :class="{ draggable : draggable }" ref="carousel">
@@ -11,10 +11,12 @@
 </template>
 
 <script>
+import animate from '../helpers/animate.js';
 import Flickity from 'flickity';
 
 export default {
   name: "FeaturedBrands",
+  mixins: [animate],
   data() {
     return {
       carouselWidth: 0,
@@ -60,6 +62,7 @@ export default {
   },
   mounted() {
     this.initCarousel();
+    this.animate();
   }
 }
 </script>
