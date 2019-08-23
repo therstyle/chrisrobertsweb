@@ -1,6 +1,6 @@
 <template>
-  <footer class="stats animate" :class="{viewed : viewed }">
-    <div class="stat" v-for="(stat, index) in stats" :key="index">
+  <footer class="stats">
+    <div class="stat animate" :class="{viewed : viewed}" v-for="(stat, index) in stats" :key="index">
       <div class="stat--focal">
         <div class="single-chart">
           <Percentage 

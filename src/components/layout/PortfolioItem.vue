@@ -26,7 +26,7 @@ export default {
   data() {
     return {
        settings: {
-        threshold: 0.5
+        threshold: 0.25
       }
     }
   },

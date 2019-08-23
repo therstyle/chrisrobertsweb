@@ -1,5 +1,5 @@
 <template>
-  <article class="timeline--entry" :data-year="year">
+  <article class="timeline--entry" :class="{ viewed : viewed }" :data-year="year">
     <JobTitle 
       :logo="logo"
       :company="company"
@@ -36,6 +36,13 @@ export default {
   components: {
     FeaturedBrands, Stats, EntryDetail, JobTitle
   },
+  data() {
+    return {
+      settings: {
+        threshold: 0.5
+      }
+    }
+  },
   props: {
     year: Number,
     logo: String,
@@ -46,7 +53,7 @@ export default {
     stats: Array
   },
   mounted() {
-    this.animate();
+    this.animate(this.settings);
   }
 }
 </script>
