@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import animate from './../helpers/animate.js';
+import animate from '../helpers/animate.js';
 import Percentage from './Percentage.vue';
 
 export default {

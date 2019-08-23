@@ -1,12 +1,10 @@
 <template>
   <article class="timeline--entry" :data-year="year">
-    <header class="animate" :class="{ viewed : viewed }">
-      <img :src="logo" :alt="company">
-      <div class="company-info">
-        <h3>{{ company }}</h3>
-        <small>{{ title }}</small>
-      </div>
-    </header>
+    <JobTitle 
+      :logo="logo"
+      :company="company"
+      :title="title"
+    ></JobTitle>
 
     <ul class="details">
       <EntryDetail v-for="(detail, index) in details" 
@@ -29,13 +27,14 @@
 import FeaturedBrands from './FeaturedBrands.vue';
 import Stats from './Stats.vue';
 import EntryDetail from './EntryDetail.vue';
+import JobTitle from './JobTitle.vue';
 import animate from '../helpers/animate.js';
 
 export default {
   name: 'Timeline-Entry',
   mixins: [animate],
   components: {
-    FeaturedBrands, Stats, EntryDetail
+    FeaturedBrands, Stats, EntryDetail, JobTitle
   },
   props: {
     year: Number,
