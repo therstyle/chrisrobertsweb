@@ -31,7 +31,7 @@ import JobTitle from './JobTitle.vue';
 import animate from '../helpers/animate.js';
 
 export default {
-  name: 'Timeline-Entry',
+  name: 'timelineEntry',
   mixins: [animate],
   components: {
     FeaturedBrands, Stats, EntryDetail, JobTitle

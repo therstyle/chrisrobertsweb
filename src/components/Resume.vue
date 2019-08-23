@@ -4,7 +4,7 @@
 
     <div class="resume--content content">
       <div class="timeline">
-        <Timeline-Entry 
+        <timelineEntry 
           v-for="(entry, index) in entries"
           :key="index"
           :year="entry.year"
@@ -14,7 +14,7 @@
           :details="entry.details"
           :featuredBrands="entry.featuredBrands"
           :stats="entry.stats"
-        ></Timeline-Entry>
+        ></timelineEntry>
       </div>
 
       <aside class="skill-tree">
@@ -58,7 +58,7 @@
 
 <script>
 import Heading from './layout/Heading.vue';
-import TimelineEntry from './layout/TimelineEntry.vue';
+import timelineEntry from './layout/timelineEntry.vue';
 import Skill from './layout/Skill.vue';
 import observer from './helpers/observer.js';
 
@@ -67,7 +67,7 @@ export default {
   mixins: [observer],
   components: {
     Heading,
-    TimelineEntry,
+    timelineEntry,
     Skill
   },
   props: {
