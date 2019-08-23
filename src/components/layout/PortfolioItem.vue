@@ -23,6 +23,13 @@ import animate from '../helpers/animate';
 
 export default {
   name: "PortfolioItem",
+  data() {
+    return {
+       settings: {
+        threshold: 0.5
+      }
+    }
+  },
   mixins: [animate],
   props: {
     url: String,
@@ -48,7 +55,7 @@ export default {
   },
   mounted() {
     this.loadVideos();
-    this.animate();
+    this.animate(this.settings);
   }
 }
 </script>

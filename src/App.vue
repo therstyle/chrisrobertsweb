@@ -227,7 +227,7 @@ body {
 }
 
 #app {
-  opacity: 0.1; //Debug
+  //opacity: 0.1; //Debug
   display: flex;
   padding-left: var(--sidebar-width);
   position: relative;
@@ -336,6 +336,10 @@ p {
   transform: translateY(var(--space-2));
   opacity: 0;
   transition: opacity 0.3s, transform 0.3s;
+
+  &.portfolio--content-entry {
+    transform: translateY(var(--space-4));
+  }
 
   &.viewed {
     transform: translateY(0);

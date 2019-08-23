@@ -24,6 +24,13 @@ import Percentage from './Percentage.vue';
 
 export default {
   name: "Stats",
+  data() {
+    return {
+       settings: {
+        threshold: 1
+      }
+    }
+  },
   mixins: [animate],
   components: {
     Percentage
@@ -32,7 +39,7 @@ export default {
     stats: Array
   },
   mounted() {
-    this.animate();
+    this.animate(this.settings);
   }
 }
 

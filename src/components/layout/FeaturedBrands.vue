@@ -22,6 +22,9 @@ export default {
       carouselWidth: 0,
       brandWidth: 200,
       draggable: false,
+       settings: {
+        threshold: 1
+      }
     }
   },
   props: {
@@ -62,7 +65,7 @@ export default {
   },
   mounted() {
     this.initCarousel();
-    this.animate();
+    this.animate(this.settings);
   }
 }
 </script>
