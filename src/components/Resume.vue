@@ -34,22 +34,22 @@
 
         <h3>Dev Skills</h3>
         <ul class="skills">
-          <Skill v-for="(devSkill, index) in devSkills" 
+          <skill v-for="(devSkill, index) in devSkills" 
             :key="index"
             :logo="devSkill.logo"
             :name="devSkill.name"
             :startYear="devSkill.startYear"
-          ></Skill>
+          ></skill>
         </ul>
 
         <h3>Design Skills</h3>
         <ul class="skills">
-          <Skill v-for="(designSkill, index) in designSkills" 
+          <skill v-for="(designSkill, index) in designSkills" 
             :key="index"
             :logo="designSkill.logo"
             :name="designSkill.name"
             :startYear="designSkill.startYear"
-          ></Skill>
+          ></skill>
         </ul>
       </aside>
     </div>
@@ -59,7 +59,7 @@
 <script>
 import Heading from './layout/Heading.vue';
 import timelineEntry from './layout/timelineEntry.vue';
-import Skill from './layout/Skill.vue';
+import skill from './layout/skill.vue';
 import observer from './helpers/observer.js';
 
 export default {
@@ -68,7 +68,7 @@ export default {
   components: {
     Heading,
     timelineEntry,
-    Skill
+    skill
   },
   props: {
     entries: Array,
