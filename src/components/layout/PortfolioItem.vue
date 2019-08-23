@@ -1,5 +1,5 @@
 <template>
-  <article class="portfolio--content-entry" v-on:mouseover="startVideo" v-on:mouseout="endVideo">
+  <article class="portfolio--content-entry animate" :class="{ viewed : viewed }" v-on:mouseover="startVideo" v-on:mouseout="endVideo">
     <a :href="url" target="_blank">
       <header>
         <video ref="video" muted autoplay loop v-if="video" :poster="image.image_2x">
@@ -19,8 +19,18 @@
 </template>
 
 <script>
+import animate from '../helpers/animate';
+
 export default {
   name: "PortfolioItem",
+  data() {
+    return {
+       settings: {
+        threshold: 0.25
+      }
+    }
+  },
+  mixins: [animate],
   props: {
     url: String,
     image: Object,
@@ -45,6 +55,7 @@ export default {
   },
   mounted() {
     this.loadVideos();
+    this.animate(this.settings);
   }
 }
 </script>

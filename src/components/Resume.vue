@@ -121,6 +121,13 @@ export default {
     border-bottom: 1px solid var(--light-gray);
     position: relative;
 
+    &.viewed {
+      &:after {
+        transform: rotate(180deg) translateY(0);
+        opacity: 1;
+      }
+    }
+
     &:before {
       content: '';
       position: absolute;
@@ -142,10 +149,13 @@ export default {
       font-size: 4.1vw;
       writing-mode: vertical-rl;
       text-orientation: sideways;
-      transform: rotate(180deg);
+      transform: rotate(180deg) translateY(-100%);
       position: absolute;
       left: -7vw;
       top: 2.1vw;
+      opacity: 0;
+      transition: opacity 0.6s, transform 0.6s;
+      display: inline-block;
     }
 
     header {

@@ -124,7 +124,7 @@ export default {
   methods: {
     activeItem: function(currentSection, threshold) {
       //Add each sections threshold to object
-      Object.keys(this.sections).forEach(item => {
+      Object.keys(this.sections).forEach(() => {
         this.sections[currentSection].threshold = threshold;
       });
 
@@ -329,6 +329,21 @@ p {
     min-height: 100vh;
     object-fit: fill;
     margin-left: 15vw;
+  }
+}
+
+.animate {
+  transform: translateY(var(--space-2));
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+
+  &.portfolio--content-entry {
+    transform: translateY(var(--space-4));
+  }
+
+  &.viewed {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 

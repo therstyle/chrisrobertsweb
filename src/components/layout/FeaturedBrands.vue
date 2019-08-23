@@ -1,5 +1,5 @@
 <template>
-  <footer class="featured-brands">
+  <footer class="featured-brands animate" :class="{ viewed : viewed }">
     <h5>Brands I've Worked With</h5>
 
     <div class="brand-carousel" :class="{ draggable : draggable }" ref="carousel">
@@ -11,26 +11,26 @@
 </template>
 
 <script>
+import animate from '../helpers/animate.js';
 import Flickity from 'flickity';
 
 export default {
   name: "FeaturedBrands",
+  mixins: [animate],
   data() {
     return {
       carouselWidth: 0,
       brandWidth: 200,
       draggable: false,
+       settings: {
+        threshold: 1
+      }
     }
   },
   props: {
     featuredBrands: Array
   },
   methods: {
-    count(amount) {
-      amount++;
-      console.log(amount);
-      return amount;
-    },
     isDraggable() {
       this.carouselWidth = this.$refs.carousel.offsetWidth;
 
@@ -46,11 +46,9 @@ export default {
 
       if (threshold < brandWidth) {
         this.draggable = true;
-        console.log('add a shadow!')
       }
       else {
         this.draggable = false;
-        console.log('nah no shadow');
       }
     },
     initCarousel() {
@@ -65,8 +63,9 @@ export default {
       this.isDraggable();
     }
   },
-  mounted: function() {
+  mounted() {
     this.initCarousel();
+    this.animate(this.settings);
   }
 }
 </script>
@@ -110,7 +109,6 @@ h5 {
 }
 
 .brand {
-  //min-width: calc(33.33% - 1px);
   min-width: 200px;
   height: 40px;
   display: flex;
