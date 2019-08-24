@@ -27,7 +27,7 @@
       :designSkillsHeadline="designSkillsHeadline"
       :designSkills="designSkills"
       :sigText="sigText"
-      :pdf="pdf"
+      :linkList="linkList"
       :viewed="sections.resume.viewed"
       v-on:observed="activeItem"
       v-on:intersected="viewedItem"
@@ -89,7 +89,7 @@ export default {
       resumeEntries: [],
       resumePhoto: {},
       sigText: '',
-      pdf: {},
+      linkList: {},
       devSkillsHeadline: '',
       devSkills: [],
       designSkillsHeadline: '',
@@ -190,7 +190,7 @@ export default {
       this.resumeEntries = info.resume.entries;
       this.resumePhoto = info.resume.image;
       this.sigText = info.resume.sigText;
-      this.pdf = info.resume.pdf;
+      this.linkList = info.resume.linkList;
       this.devSkillsHeadline = info.resume.skills.dev.headline;
       this.devSkills = info.resume.skills.dev.skillset;
       this.designSkillsHeadline = info.resume.skills.design.headline;

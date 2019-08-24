@@ -18,19 +18,14 @@
       </div>
 
       <aside class="skill-tree">
-        <div class="photo">
-          <picture>
-            <source v-if="image.image_2x_webp" :srcset="`${image.image_1x_webp} 1x, ${image.image_2x_webp} 2x`" type="image/webp">
-            <source v-if="image.image_2x" :srcset="`${image.image_1x} 1x, ${image.image_2x} 2x`" type="image/jpeg">
-            <img v-if="image.image_1x" :src="image.image_1x" alt="Chris Roberts" class="skill-tree--photo">
-          </picture>
-
-          <h3 class="sig">{{ sigText }}</h3>
-        </div>
+        <profilePhoto
+        :image="image"
+        :name="sigText"
+        ></profilePhoto>
         
-        <ul class="info">
-          <li v-if="pdf"><img :src="pdf.icon" alt="PDF"><a :href="pdf.source" target="_blank" class="link">{{ pdf.text }}</a></li>
-        </ul>
+        <linkList
+        :links="linkList"
+        ></linkList>
 
         <skillset
         :headline="devSkillsHeadline"
@@ -49,6 +44,8 @@
 <script>
 import heading from './layout/heading.vue';
 import timelineEntry from './layout/timelineEntry.vue';
+import profilePhoto from './layout/profilePhoto.vue';
+import linkList from './layout/linkList.vue';
 import skill from './layout/skill.vue';
 import skillset from './layout/skillset.vue';
 import observer from './helpers/observer.js';
@@ -59,6 +56,8 @@ export default {
   components: {
     heading,
     timelineEntry,
+    profilePhoto,
+    linkList,
     skillset,
     skill
   },
@@ -70,7 +69,7 @@ export default {
     designSkillsHeadline: String,
     designSkills: Array,
     sigText: String,
-    pdf: Object,
+    linkList: Object,
     viewed: Boolean
   },
   mounted() {

@@ -1,5 +1,5 @@
 <template>
-  <div class="skillset">
+  <div class="skillset animate" :class="{ viewed : viewed }">
     <h3>{{ headline }}</h3>
     <ul class="skills">
       <skill v-for="(skill, index) in skillset" 
@@ -22,9 +22,19 @@ export default {
   components: {
     skill
   },
+  data() {
+    return {
+      settings: {
+        threshold: 0.33
+      }
+    }
+  },
   props: {
     headline: String,
     skillset: Array,
+  },
+  mounted() {
+    this.animate(this.settings);
   }
 }
 </script>

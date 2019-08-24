@@ -22,10 +22,12 @@
       "image_2x_webp": "/images/me_2x.webp"
     },
     "sigText": "Chris Roberts",
-    "pdf": {
-      "source": "https://chrisrobertsweb.dev/chris-roberts-resume.pdf",
-      "icon": "/images/icon-pdf.svg",
-      "text": "Download Resume"
+    "linkList": {
+      "pdf": {
+        "source": "https://chrisrobertsweb.dev/chris-roberts-resume.pdf",
+        "icon": "/images/icon-pdf.svg",
+        "text": "Download Resume"
+      }
     },
     "entries": [
       {
