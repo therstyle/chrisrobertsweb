@@ -22,7 +22,7 @@
 import animate from '../helpers/animate';
 
 export default {
-  name: "PortfolioItem",
+  name: "portfolioItem",
   data() {
     return {
        settings: {

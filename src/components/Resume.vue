@@ -1,6 +1,6 @@
 <template>
   <section id="resume" class="resume" :class="{ viewed : viewed }">
-    <Heading title="Resume"></Heading>
+    <heading title="Resume"></heading>
 
     <div class="resume--content content">
       <div class="timeline">
@@ -57,16 +57,16 @@
 </template>
 
 <script>
-import Heading from './layout/Heading.vue';
+import heading from './layout/heading.vue';
 import timelineEntry from './layout/timelineEntry.vue';
 import skill from './layout/skill.vue';
 import observer from './helpers/observer.js';
 
 export default {
-  name: 'Resume',
+  name: 'resume',
   mixins: [observer],
   components: {
-    Heading,
+    heading,
     timelineEntry,
     skill
   },

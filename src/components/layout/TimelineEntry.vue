@@ -1,40 +1,43 @@
 <template>
   <article class="timeline--entry" :class="{ viewed : viewed }" :data-year="year">
-    <JobTitle 
+    <jobTitle 
       :logo="logo"
       :company="company"
       :title="title"
-    ></JobTitle>
+    ></jobTitle>
 
     <ul class="details">
-      <EntryDetail v-for="(detail, index) in details" 
+      <entryDetail v-for="(detail, index) in details" 
         :key="index"
         :detail="detail"
-        ></EntryDetail>
+        ></entryDetail>
     </ul>
 
     <template v-if="featuredBrands">
-      <FeaturedBrands :featuredBrands="featuredBrands"></featuredBrands>
+      <featuredBrands :featuredBrands="featuredBrands"></featuredBrands>
     </template>
 
     <template v-if="stats">
-      <Stats :stats="stats"></Stats>
+      <stats :stats="stats"></stats>
     </template>
   </article>
 </template>
 
 <script>
-import FeaturedBrands from './FeaturedBrands.vue';
-import Stats from './Stats.vue';
-import EntryDetail from './EntryDetail.vue';
-import JobTitle from './JobTitle.vue';
+import featuredBrands from './featuredBrands.vue';
+import stats from './stats.vue';
+import entryDetail from './entryDetail.vue';
+import jobTitle from './jobTitle.vue';
 import animate from '../helpers/animate.js';
 
 export default {
   name: 'timelineEntry',
   mixins: [animate],
   components: {
-    FeaturedBrands, Stats, EntryDetail, JobTitle
+    featuredBrands, 
+    stats, 
+    entryDetail, 
+    jobTitle
   },
   data() {
     return {

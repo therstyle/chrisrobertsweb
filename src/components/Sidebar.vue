@@ -76,7 +76,7 @@
 import scrollRequest from './helpers/scrollRequest.js';
 
 export default {
-  name: 'Sidebar',
+  name: 'sidebar',
   mixins: [scrollRequest],
   props: {
     sections: Object,

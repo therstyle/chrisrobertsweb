@@ -12,7 +12,7 @@
 import animate from '../helpers/animate.js';
 
 export default {
-  name: "JobTitle",
+  name: "jobTitle",
   mixins: [animate],
   data() {
     return {
