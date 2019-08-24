@@ -22,10 +22,12 @@
       "image_2x_webp": "/images/me_2x.webp"
     },
     "sigText": "Chris Roberts",
-    "pdf": {
-      "source": "https://chrisrobertsweb.dev/chris-roberts-resume.pdf",
-      "icon": "/images/icon-pdf.svg",
-      "text": "Download Resume"
+    "linkList": {
+      "pdf": {
+        "source": "https://chrisrobertsweb.dev/chris-roberts-resume.pdf",
+        "icon": "/images/icon-pdf.svg",
+        "text": "Download Resume"
+      }
     },
     "entries": [
       {
@@ -120,70 +122,76 @@
       }
     ],
     "skills": {
-      "dev": [
-        {
-          "logo": "/images/icon-html.svg",
-          "name": "HTML",
-          "startYear": 2004
-        },
-        {
-          "logo": "/images/icon-css.svg",
-          "name": "CSS/SASS",
-          "startYear": 2004
-        },
-        {
-          "logo": "/images/icon-php.svg",
-          "name": "PHP",
-          "startYear": 2006
-        },
-        {
-          "logo": "/images/icon-javascript.svg",
-          "name": "JavaScript",
-          "startYear": 2011
-        },
-        {
-          "logo": "/images/icon-wordpress.svg",
-          "name": "WordPress",
-          "startYear": 2009
-        },
-        {
-          "logo": "/images/icon-git.svg",
-          "name": "Git",
-          "startYear": 2013
-        },
-        {
-          "logo": "/images/icon-vuejs.svg",
-          "name": "Vue.js",
-          "startYear": 2017
-        },
-        {
-          "logo": "/images/icon-react.svg",
-          "name": "React",
-          "startYear": 2017
-        }
-      ],
-      "design": [
-        {
-          "logo": "/images/icon-photoshop.svg",
-          "name": "Photoshop",
-          "startYear": 2004
-        },
-        {
-          "logo": "/images/icon-illustrator.svg",
-          "name": "Illustrator",
-          "startYear": 2004
-        },
-        {
-          "logo": "/images/icon-figma.svg",
-          "name": "Figma",
-          "startYear": 2016
-        },
-        {
-          "logo": "/images/icon-sketch.svg",
-          "name": "Sketch",
-          "startYear": 2016
-        }
-      ]
+      "dev": {
+        "headline": "Dev Skills",
+        "skillset": [
+          {
+            "logo": "/images/icon-html.svg",
+            "name": "HTML",
+            "startYear": 2004
+          },
+          {
+            "logo": "/images/icon-css.svg",
+            "name": "CSS/SASS",
+            "startYear": 2004
+          },
+          {
+            "logo": "/images/icon-php.svg",
+            "name": "PHP",
+            "startYear": 2006
+          },
+          {
+            "logo": "/images/icon-javascript.svg",
+            "name": "JavaScript",
+            "startYear": 2011
+          },
+          {
+            "logo": "/images/icon-wordpress.svg",
+            "name": "WordPress",
+            "startYear": 2009
+          },
+          {
+            "logo": "/images/icon-git.svg",
+            "name": "Git",
+            "startYear": 2013
+          },
+          {
+            "logo": "/images/icon-vuejs.svg",
+            "name": "Vue.js",
+            "startYear": 2017
+          },
+          {
+            "logo": "/images/icon-react.svg",
+            "name": "React",
+            "startYear": 2017
+          }
+        ]
+      },
+      "design": {
+        "headline": "Design Skills",
+        "skillset": [
+          {
+            "logo": "/images/icon-photoshop.svg",
+            "name": "Photoshop",
+            "startYear": 2004
+          },
+          {
+            "logo": "/images/icon-illustrator.svg",
+            "name": "Illustrator",
+            "startYear": 2004
+          },
+          {
+            "logo": "/images/icon-figma.svg",
+            "name": "Figma",
+            "startYear": 2016
+          },
+          {
+            "logo": "/images/icon-sketch.svg",
+            "name": "Sketch",
+            "startYear": 2016
+          }
+        ]
+      }
     }
   },
   "portfolio": {

@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'Skill',
+  name: 'skill',
   methods: {
     experience(startYear) {
       const date = new Date();

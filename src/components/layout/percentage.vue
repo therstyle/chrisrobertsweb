@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'Percentage',
+  name: 'percentage',
   props: {
    amount: Number,
    viewed: Boolean,

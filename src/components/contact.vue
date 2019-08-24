@@ -1,6 +1,6 @@
 <template>
   <section id="contact" class="contact" :class="{ viewed : viewed }">
-    <Heading :title="headline"></Heading>
+    <heading :title="headline"></heading>
     <div class="contact--content content">
       <div class="contact-form">
         <form v-on:submit.prevent="formSubmit">
@@ -35,11 +35,11 @@
 </template>
 
 <script>
-import Heading from './layout/Heading.vue';
+import heading from './layout/heading.vue';
 import observer from './helpers/observer.js';
 
 export default {
-  name: 'Contact',
+  name: 'contact',
   data() {
     return {
       amountScrolled: 0,
@@ -56,7 +56,7 @@ export default {
   },
   mixins: [observer],
   components: {
-    Heading
+    heading
   },
   props: {
     headline: String,

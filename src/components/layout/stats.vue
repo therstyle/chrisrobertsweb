@@ -3,11 +3,11 @@
     <div class="stat animate" :class="{viewed : viewed}" v-for="(stat, index) in stats" :key="index">
       <div class="stat--focal">
         <div class="single-chart">
-          <Percentage 
+          <percentage 
             :amount="stat.percent"
             :viewed="viewed"
             :index="index"
-          ></Percentage>
+          ></percentage>
         </div>
       </div>
 
@@ -20,10 +20,10 @@
 
 <script>
 import animate from '../helpers/animate.js';
-import Percentage from './Percentage.vue';
+import percentage from './percentage.vue';
 
 export default {
-  name: "Stats",
+  name: "stats",
   data() {
     return {
        settings: {
@@ -33,7 +33,7 @@ export default {
   },
   mixins: [animate],
   components: {
-    Percentage
+    percentage
   },
   props: {
     stats: Array
@@ -68,7 +68,6 @@ export default {
 }
 
 .stat--focal {
-  //flex: 1;
   margin-right: var(--space-1);
   display: flex;
   align-items: center;

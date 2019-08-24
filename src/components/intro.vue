@@ -22,7 +22,7 @@ import observer from './helpers/observer.js';
 import scrollRequest from './helpers/scrollRequest';
 
 export default {
-  name: 'Intro',
+  name: 'intro',
   data() {
     return {
       viewed: false

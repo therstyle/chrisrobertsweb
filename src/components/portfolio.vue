@@ -1,9 +1,9 @@
 <template>
   <section id="portfolio" class="portfolio" :class="{ viewed : viewed }">
-    <Heading title="Portfolio"></Heading>
+    <heading title="Portfolio"></heading>
 
     <div class="portfolio--content content">
-      <PorfolioItem v-for="(portfolioItem, index) in portfolioItems" 
+      <porfolioItem v-for="(portfolioItem, index) in portfolioItems" 
         :count="index + 1"
         :key="index"
         :url="portfolioItem.url"
@@ -13,18 +13,18 @@
         :description="portfolioItem.description"
         :type="portfolioItem.type"
         :typeImage="portfolioItem.typeImage"
-      ></PorfolioItem>
+      ></porfolioItem>
     </div>
   </section>
 </template>
 
 <script>
-import Heading from './layout/Heading.vue';
-import PorfolioItem from './layout/PortfolioItem.vue';
+import heading from './layout/heading.vue';
+import porfolioItem from './layout/portfolioItem.vue';
 import observer from './helpers/observer.js';
 
 export default {
-  name: 'Portfolio',
+  name: 'portfolio',
   data() {
     return {
       i: 0
@@ -32,8 +32,8 @@ export default {
   },
   mixins: [observer],
   components: {
-    Heading,
-    PorfolioItem
+    heading,
+    porfolioItem
   },
   props: {
     portfolioItems: Array,
@@ -44,4 +44,3 @@ export default {
   }
 }
 </script>
-

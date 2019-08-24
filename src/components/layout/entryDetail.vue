@@ -6,7 +6,7 @@
 import animate from '../helpers/animate';
 
 export default {
-  name: 'EntryDetail',
+  name: 'entryDetail',
   data() {
     return {
       settings: {

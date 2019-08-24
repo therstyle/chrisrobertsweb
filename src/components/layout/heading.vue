@@ -62,8 +62,10 @@
 
 <script>
 export default {
-  name: 'Heading',
-  props: ['title']
+  name: 'heading',
+  props: {
+    title: String
+  }
 }
 </script>
 

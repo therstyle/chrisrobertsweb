@@ -1,13 +1,13 @@
 <template>
   <main id="app">
-    <Sidebar 
+    <sidebar 
       :github="github"
       :linkedin="linkedin"
       :sections="sections"
       v-on:scrollRequest="scrollHere"
-    ></Sidebar>
+    ></sidebar>
 
-    <Intro
+    <intro
       ref="intro" 
       :introHeadline="introHeadline" 
       :introSubHeadline="introSubHeadline" 
@@ -16,30 +16,32 @@
       :viewed="sections.intro.viewed"
       v-on:observed="activeItem"
       v-on:scrollRequest="scrollHere"
-    ></Intro>
+    ></intro>
 
-    <Resume
+    <resume
       ref="resume"  
       :entries="resumeEntries"
       :image="resumePhoto"
+      :devSkillsHeadline="devSkillsHeadline"
       :devSkills="devSkills"
+      :designSkillsHeadline="designSkillsHeadline"
       :designSkills="designSkills"
       :sigText="sigText"
-      :pdf="pdf"
+      :linkList="linkList"
       :viewed="sections.resume.viewed"
       v-on:observed="activeItem"
       v-on:intersected="viewedItem"
-    ></Resume>
+    ></resume>
 
-    <Portfolio
+    <portfolio
       ref="portfolio" 
       :portfolioItems="portfolioItems"
       :viewed="sections.portfolio.viewed"
       v-on:observed="activeItem"
       v-on:intersected="viewedItem"
-    ></Portfolio>
+    ></portfolio>
 
-    <Contact
+    <contact
       ref="contact" 
       :headline="contactHeadline"
       :image="contactPhoto"
@@ -49,7 +51,7 @@
       :viewed="sections.contact.viewed"
       v-on:observed="activeItem"
       v-on:intersected="viewedItem"
-    ></Contact>
+    ></contact>
 
     <div class="bg-video">
       <video ref="bgVideo" autoplay muted loop class="full-height"> 
@@ -60,20 +62,20 @@
 </template>
 
 <script>
-import Sidebar from './components/Sidebar.vue';
-import Intro from './components/Intro.vue';
-import Resume from './components/Resume.vue';
-import Portfolio from './components/Portfolio.vue';
-import Contact from './components/Contact.vue';
+import sidebar from './components/sidebar.vue';
+import intro from './components/intro.vue';
+import resume from './components/resume.vue';
+import portfolio from './components/portfolio.vue';
+import contact from './components/contact.vue';
 
 export default {
   name: 'app',
   components: {
-    Sidebar,
-    Intro,
-    Resume,
-    Portfolio,
-    Contact
+    sidebar,
+    intro,
+    resume,
+    portfolio,
+    contact
   },
   data() {
     return {
@@ -87,8 +89,10 @@ export default {
       resumeEntries: [],
       resumePhoto: {},
       sigText: '',
-      pdf: {},
+      linkList: {},
+      devSkillsHeadline: '',
       devSkills: [],
+      designSkillsHeadline: '',
       designSkills: [],
       portfolioItems: [],
       contactHeadline: '',
@@ -186,9 +190,11 @@ export default {
       this.resumeEntries = info.resume.entries;
       this.resumePhoto = info.resume.image;
       this.sigText = info.resume.sigText;
-      this.pdf = info.resume.pdf;
-      this.devSkills = info.resume.skills.dev;
-      this.designSkills = info.resume.skills.design;
+      this.linkList = info.resume.linkList;
+      this.devSkillsHeadline = info.resume.skills.dev.headline;
+      this.devSkills = info.resume.skills.dev.skillset;
+      this.designSkillsHeadline = info.resume.skills.design.headline;
+      this.designSkills = info.resume.skills.design.skillset;
       this.portfolioItems = info.portfolio.entries;
       this.contactHeadline = info.contact.headline;
       this.contactPhoto = info.contact.image;

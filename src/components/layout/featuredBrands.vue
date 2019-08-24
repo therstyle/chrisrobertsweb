@@ -15,7 +15,7 @@ import animate from '../helpers/animate.js';
 import Flickity from 'flickity';
 
 export default {
-  name: "FeaturedBrands",
+  name: "featuredBrands",
   mixins: [animate],
   data() {
     return {
