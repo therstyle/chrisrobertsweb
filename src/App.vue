@@ -22,7 +22,9 @@
       ref="resume"  
       :entries="resumeEntries"
       :image="resumePhoto"
+      :devSkillsHeadline="devSkillsHeadline"
       :devSkills="devSkills"
+      :designSkillsHeadline="designSkillsHeadline"
       :designSkills="designSkills"
       :sigText="sigText"
       :pdf="pdf"
@@ -88,7 +90,9 @@ export default {
       resumePhoto: {},
       sigText: '',
       pdf: {},
+      devSkillsHeadline: '',
       devSkills: [],
+      designSkillsHeadline: '',
       designSkills: [],
       portfolioItems: [],
       contactHeadline: '',
@@ -187,8 +191,10 @@ export default {
       this.resumePhoto = info.resume.image;
       this.sigText = info.resume.sigText;
       this.pdf = info.resume.pdf;
-      this.devSkills = info.resume.skills.dev;
-      this.designSkills = info.resume.skills.design;
+      this.devSkillsHeadline = info.resume.skills.dev.headline;
+      this.devSkills = info.resume.skills.dev.skillset;
+      this.designSkillsHeadline = info.resume.skills.design.headline;
+      this.designSkills = info.resume.skills.design.skillset;
       this.portfolioItems = info.portfolio.entries;
       this.contactHeadline = info.contact.headline;
       this.contactPhoto = info.contact.image;

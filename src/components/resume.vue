@@ -32,25 +32,15 @@
           <li v-if="pdf"><img :src="pdf.icon" alt="PDF"><a :href="pdf.source" target="_blank" class="link">{{ pdf.text }}</a></li>
         </ul>
 
-        <h3>Dev Skills</h3>
-        <ul class="skills">
-          <skill v-for="(devSkill, index) in devSkills" 
-            :key="index"
-            :logo="devSkill.logo"
-            :name="devSkill.name"
-            :startYear="devSkill.startYear"
-          ></skill>
-        </ul>
+        <skillset
+        :headline="devSkillsHeadline"
+        :skillset="devSkills"
+        ></skillset>
 
-        <h3>Design Skills</h3>
-        <ul class="skills">
-          <skill v-for="(designSkill, index) in designSkills" 
-            :key="index"
-            :logo="designSkill.logo"
-            :name="designSkill.name"
-            :startYear="designSkill.startYear"
-          ></skill>
-        </ul>
+        <skillset
+        :headline="designSkillsHeadline"
+        :skillset="designSkills"
+        ></skillset>
       </aside>
     </div>
   </section>
@@ -60,6 +50,7 @@
 import heading from './layout/heading.vue';
 import timelineEntry from './layout/timelineEntry.vue';
 import skill from './layout/skill.vue';
+import skillset from './layout/skillset.vue';
 import observer from './helpers/observer.js';
 
 export default {
@@ -68,12 +59,15 @@ export default {
   components: {
     heading,
     timelineEntry,
+    skillset,
     skill
   },
   props: {
     entries: Array,
     image: Object,
+    devSkillsHeadline: String,
     devSkills: Array,
+    designSkillsHeadline: String,
     designSkills: Array,
     sigText: String,
     pdf: Object,
