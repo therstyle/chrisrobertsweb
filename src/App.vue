@@ -202,6 +202,9 @@ export default {
       this.formErrorMessage = info.contact.formErrorMessage;
       this.loaderImg = info.contact.loaderImg;
     });
+  },
+  mounted () {
+    this.$ua.trackView('Home');
   }
 }
 </script>
