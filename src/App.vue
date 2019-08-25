@@ -67,7 +67,7 @@ import intro from './components/intro.vue';
 import resume from './components/resume.vue';
 import portfolio from './components/portfolio.vue';
 import contact from './components/contact.vue';
-import { page } from 'vue-analytics';
+//import { page } from 'vue-analytics';
 
 export default {
   name: 'app',
