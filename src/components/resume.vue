@@ -46,7 +46,6 @@ import heading from './layout/heading.vue';
 import timelineEntry from './layout/timelineEntry.vue';
 import profilePhoto from './layout/profilePhoto.vue';
 import linkList from './layout/linkList.vue';
-import skill from './layout/skill.vue';
 import skillset from './layout/skillset.vue';
 import observer from './helpers/observer.js';
 
@@ -59,7 +58,6 @@ export default {
     profilePhoto,
     linkList,
     skillset,
-    skill
   },
   props: {
     entries: Array,
@@ -114,12 +112,12 @@ export default {
     border-bottom: 1px solid var(--light-gray);
     position: relative;
 
-    &.viewed {
-      &:after {
-        transform: rotate(180deg) translateY(0);
-        opacity: 1;
-      }
-    }
+    // &.viewed {
+    //   &:after {
+    //     transform: rotate(180deg) translateY(0);
+    //     opacity: 1;
+    //   }
+    // }
 
     &:before {
       content: '';
@@ -142,12 +140,12 @@ export default {
       font-size: 4.1vw;
       writing-mode: vertical-rl;
       text-orientation: sideways;
-      transform: rotate(180deg) translateY(-100%);
+      transform: rotate(180deg);
       position: absolute;
       left: -7vw;
       top: 2.1vw;
-      opacity: 0;
-      transition: opacity 0.6s, transform 0.6s;
+      //opacity: 0;
+      //transition: opacity 0.6s, transform 0.6s;
       display: inline-block;
     }
 
