@@ -67,7 +67,7 @@ import intro from './components/intro.vue';
 import resume from './components/resume.vue';
 import portfolio from './components/portfolio.vue';
 import contact from './components/contact.vue';
-import VueAnalytics from 'vue-ua';
+import { page } from 'vue-analytics';
 
 export default {
   name: 'app',
@@ -177,6 +177,9 @@ export default {
       const info = await response.json();
       await this.loadVideo();
       return info;
+    },
+    track() {
+      this.$ga.page('/');
     }
   },
   created: function() {
@@ -205,7 +208,7 @@ export default {
     });
   },
   mounted () {
-    this.$ua.trackView('Home');
+    this.track();
   }
 }
 </script>
