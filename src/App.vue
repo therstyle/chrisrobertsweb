@@ -68,6 +68,7 @@ import resume from './components/resume.vue';
 import portfolio from './components/portfolio.vue';
 import contact from './components/contact.vue';
 //import { page } from 'vue-analytics';
+import ua from 'universal-analytics';
 
 export default {
   name: 'app',
@@ -179,7 +180,8 @@ export default {
       return info;
     },
     track() {
-      this.$ga.page('/');
+      const visitor = ua('UA-9665180-9');
+      visitor.pageview("/").send();
     }
   },
   created: function() {
