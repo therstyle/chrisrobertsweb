@@ -54,7 +54,7 @@
     ></contact>
 
     <div class="bg-video">
-      <video ref="bgVideo" autoplay muted loop class="full-height"> 
+      <video ref="bgVideo" preload="auto" autoplay muted loop class="full-height"> 
         <source :src="introVideo.video_mp4" type="video/mp4"> 
       </video>
     </div>
