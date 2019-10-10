@@ -54,7 +54,7 @@ $xs-breakpoint: $sm-phone-breakpoint - 1px;
     --line-height: 1.3;
   }
 
-  @media only screen and (min-width: $phone-breakpoint) and (max-height: 615px) {
+  @media only screen and (min-width: $phone-breakpoint) and (max-height: 650px) {
     --sidebar-width: 60px;
   }
 }

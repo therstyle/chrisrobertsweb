@@ -337,7 +337,7 @@ nav.main-nav {
   }
 }
 
-@media only screen and (min-width: $md-phone-breakpoint) and (max-height: 615px) {
+@media only screen and (min-width: $md-phone-breakpoint) and (max-height: 650px) {
   nav.main-nav {
     padding: var(--space-2) 0;
   }
