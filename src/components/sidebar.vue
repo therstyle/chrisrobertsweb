@@ -305,9 +305,17 @@ nav.main-nav {
 
 @media only screen and (max-width: $phone-breakpoint) {
   .main-nav--internal {
+    min-height: 0;
+
+    li {
+      a {
+        padding: 1rem 0.5rem;
+      }
+    }
+
     svg {
-      max-width: 32px;
-      max-height: 32px;
+      max-width: 24px;
+      max-height: 24px;
     }
   }
 
@@ -329,11 +337,23 @@ nav.main-nav {
   }
 }
 
-@media only screen and (min-width: $phone-breakpoint) and (max-height: 500px) {
+@media only screen and (min-width: $md-phone-breakpoint) and (max-height: 615px) {
+  nav.main-nav {
+    padding: var(--space-2) 0;
+  }
+
   .main-nav--internal {
+    min-height: 0;
+
+    li {
+     a {
+        padding: 1rem 0.5rem;
+      }
+    }
+
     svg {
-      max-width: 32px;
-      max-height: 32px;
+      max-width: 24px;
+      max-height: 24px;
     }
   }
 
@@ -342,6 +362,10 @@ nav.main-nav {
       max-width: 16px;
       max-width: 16px;
     }
+  }
+
+  .menu-title {
+    font-size: 1rem;
   }
 }
 </style>
