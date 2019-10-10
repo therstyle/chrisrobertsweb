@@ -249,12 +249,12 @@ export default {
     > li {
       list-style: none;
       display: block;
-      text-align: center;
+      margin-bottom: var(--space-half);
 
       img {
         max-width: 16px;
         display: inline-block;
-        margin-right: var(--space-half);
+        margin-right: var(--space-1);
       }
     }
   }

@@ -23,9 +23,19 @@
     },
     "sigText": "Chris Roberts",
     "linkList": {
+      "github": {
+        "source": "https://github.com/therstyle",
+        "icon": "/images/icon-github.svg",
+        "text": "GitHub"
+      },
+      "linkedin": {
+        "source": "https://www.linkedin.com/in/xchrisroberts/",
+        "icon": "/images/icon-linkedin.svg",
+        "text": "LinkedIn"
+      },
       "pdf": {
         "source": "https://chrisrobertsweb.dev/chris-roberts-resume.pdf",
-        "icon": "/images/icon-pdf.svg",
+        "icon": "/images/icon-pdf2.svg",
         "text": "Download Resume"
       }
     },
