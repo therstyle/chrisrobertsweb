@@ -13,7 +13,10 @@
     <div class="description">
       <h3>{{ name }}</h3>
       <p v-html="description"></p>
-      <div class="project-type"><img :src="typeImage" :alt="type"></div>
+      <div class="project-details">
+        <div v-if="source" class="view-source"><a :href="source">View Repository</a></div>
+        <div class="project-type"><img :src="typeImage" :alt="type"></div>
+      </div>
     </div>
   </article>
 </template>
@@ -39,7 +42,8 @@ export default {
     description: String,
     type: String,
     typeImage: String,
-    count: Number
+    count: Number,
+    source: String
   },
   methods: {
     loadVideos() {
@@ -127,8 +131,28 @@ export default {
     }
   }
 
+  .project-details {
+    display: flex;
+    align-items: center;
+  }
+
+  .view-source {
+    margin-right: var(--space-1);
+
+    > a {
+      display: inline-block;
+      border-radius: 30px;
+      padding: var(--space-half) var(--space-1);
+      background: var(--white);
+      color: var(--med-gray);
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+  }
+
   .project-type {
     text-align: right;
+    flex: 1;
   }
 }
 

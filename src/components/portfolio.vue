@@ -13,6 +13,7 @@
         :description="portfolioItem.description"
         :type="portfolioItem.type"
         :typeImage="portfolioItem.typeImage"
+        :source="portfolioItem.source"
       ></porfolioItem>
     </div>
   </section>

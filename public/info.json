@@ -217,7 +217,8 @@
         "name": "Flowetik",
         "description": "Startup Boston marketing agency Flowetik's custom WordPress website",
         "type": "WordPress",
-        "typeImage": "/images/project-type/icon-wordpress.svg"
+        "typeImage": "/images/project-type/icon-wordpress.svg",
+        "source": "https://github.com/therstyle/Flowetik"
   
       },
       {
@@ -233,6 +234,20 @@
         "typeImage": "/images/project-type/icon-drupal.svg"
   
       },
+      {	
+        "url": "https://andrewswaine.chrisrobertsweb.dev",	
+        "image": {	
+          "image_1x": "/images/portfolio/swaine.jpg",	
+          "image_2x": "/images/portfolio/swaine_2x.jpg"	
+        },	
+        "video": "/video/portfolio/swaine.mp4",	
+        "name": "Andrew Swaine Photography",	
+        "description": "Custom WordPress photo gallery theme built with Vue.js via the WordPress Rest API",	
+        "type": "WordPress",	
+        "typeImage": "/images/project-type/icon-wordpress.svg",
+        "source": "https://github.com/therstyle/Andrew-Swaine-Photography"	
+
+      },
       {
         "url": "https://github.com/therstyle/Vue.js-Jeopardy",
         "image": {
@@ -243,7 +258,8 @@
         "name": "Vue.js Jeopardy",
         "description": "A party version of Jeopardy built with Vue.js",
         "type": "Vue.js",
-        "typeImage": "/images/project-type/icon-vuejs.svg"
+        "typeImage": "/images/project-type/icon-vuejs.svg",
+        "source": "https://github.com/therstyle/Vue.js-Jeopardy"
   
       },
       {	
@@ -256,20 +272,8 @@
         "name": "Latin Rogue Cleaning",	
         "description": "A single page, custom responsive WordPress theme, featured on <a class=\"link\" href=\"http://onepagelove.com\">One Page Love</a>",	
         "type": "WordPress",	
-        "typeImage": "/images/project-type/icon-wordpress.svg"	
-
-      },	
-      {	
-        "url": "http://kettlebellkickboxing.com/",	
-        "image": {	
-          "image_1x": "/images/portfolio/kb.jpg",	
-          "image_2x": "/images/portfolio/kb_2x.jpg"	
-        },	
-        "video": "/video/portfolio/kb.mp4",	
-        "name": "Kettlebell Kickboxing",	
-        "description": "A custom built membership website powered by WooCommerce and WordPress",	
-        "type": "WordPress",	
-        "typeImage": "/images/project-type/icon-wordpress.svg"	
+        "typeImage": "/images/project-type/icon-wordpress.svg",
+        "source": "https://github.com/therstyle/Latin-Rogue-Cleaning"	
 
       }
     ]
