@@ -14,7 +14,7 @@
       <h3>{{ name }}</h3>
       <p v-html="description"></p>
       <div class="project-details">
-        <div v-if="source" class="view-source"><a :href="source">View Repository</a></div>
+        <div v-if="source" class="view-source"><a :href="source" target="_blank">View Repository</a></div>
         <div class="project-type"><img :src="typeImage" :alt="type"></div>
       </div>
     </div>
