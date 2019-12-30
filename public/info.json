@@ -242,7 +242,7 @@
         },	
         "video": "/video/portfolio/swaine.mp4",	
         "name": "Andrew Swaine Photography",	
-        "description": "Custom WordPress photo gallery theme built with Vue.js via the WordPress Rest API",	
+        "description": "Custom WordPress photo gallery theme built with Vue.js and the WordPress Rest API",	
         "type": "WordPress",	
         "typeImage": "/images/project-type/icon-wordpress.svg",
         "source": "https://github.com/therstyle/Andrew-Swaine-Photography"	
