@@ -249,17 +249,17 @@
 
       },
       {
-        "url": "https://github.com/therstyle/Vue.js-Jeopardy",
+        "url": "https://github.com/therstyle/Jeopardy",
         "image": {
           "image_1x": "/images/portfolio/jeopardy.jpg",
           "image_2x": "/images/portfolio/jeopardy_2x.jpg"
         },
         "video": "/video/portfolio/jeopardy.mp4",
-        "name": "Vue.js Jeopardy",
-        "description": "A party version of Jeopardy built with Vue.js",
+        "name": "Jeopardy",
+        "description": "A local multiplayer version of Jeopardy built with Vue.js",
         "type": "Vue.js",
         "typeImage": "/images/project-type/icon-vuejs.svg",
-        "source": "https://github.com/therstyle/Vue.js-Jeopardy"
+        "source": "https://github.com/therstyle/Jeopardy"
   
       },
       {	
