@@ -208,14 +208,14 @@
     "headline": "Portfolio",
     "entries": [
       {
-        "url": "http://flowetik.com/",
+        "url": "https://destinations.rei.com/",
         "image": {
-          "image_1x": "/images/portfolio/flowetik.jpg",
-          "image_2x": "/images/portfolio/flowetik_2x.jpg"
+          "image_1x": "/images/portfolio/rei.jpg",
+          "image_2x": "/images/portfolio/rei_2x.jpg"
         },
-        "video": "/video/portfolio/flowetik.mp4",
-        "name": "Flowetik",
-        "description": "Startup Boston marketing agency Flowetik's custom WordPress website",
+        "video": "/video/portfolio/rei.mp4",
+        "name": "REI Destinations",
+        "description": "REI guided tours and destinations custom WordPress travel website <small><a class=\"link\" href=\"#\">Credit 829 Studios</a></small>",
         "type": "WordPress",
         "typeImage": "/images/project-type/icon-wordpress.svg",
         "source": "https://github.com/therstyle/Flowetik"
@@ -232,6 +232,20 @@
         "description": "Online portal for Stanley Healthcare's products, powered by Drupal <small><a class=\"link\" href=\"#\">Credit 829 Studios</a></small>",
         "type": "Drupal",
         "typeImage": "/images/project-type/icon-drupal.svg"
+  
+      },
+      {
+        "url": "http://flowetik.com/",
+        "image": {
+          "image_1x": "/images/portfolio/flowetik.jpg",
+          "image_2x": "/images/portfolio/flowetik_2x.jpg"
+        },
+        "video": "/video/portfolio/flowetik.mp4",
+        "name": "Flowetik",
+        "description": "Startup Boston marketing agency Flowetik's custom WordPress website",
+        "type": "WordPress",
+        "typeImage": "/images/project-type/icon-wordpress.svg",
+        "source": "https://github.com/therstyle/Flowetik"
   
       },
       {	
