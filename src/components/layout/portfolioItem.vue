@@ -71,17 +71,18 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: calc(var(--space-1) + var(--space-half));
+  overflow: visible;
 }
 
 .portfolio--content-entry {
   box-shadow: 0 0 30px rgba(0,0,0,0.1);
-  transition: 0.3s transform, 0.3s box-shadow;
+  transition: 0.3s all ease-in-out !important;
   display: flex;
   flex-direction: column;
 
   &:hover {
     transform: translateY(-0.3vw);
-    box-shadow: 0 0 30px rgba(0,0,0,0.33);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.33);
 
     header {
       filter: grayscale(0);
