@@ -71,7 +71,10 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: calc(var(--space-1) + var(--space-half));
-  overflow: visible;
+  
+  &.content {
+    overflow: visible;
+  }
 }
 
 .portfolio--content-entry {
