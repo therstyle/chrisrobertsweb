@@ -270,7 +270,7 @@
         },
         "video": "/video/portfolio/jeopardy.mp4",
         "name": "Jeopardy",
-        "description": "A local multiplayer version of Jeopardy built with Vue.js",
+        "description": "A Vue.js application that allows you to be the host of local multiplayer matches of Jeopardy with friends",
         "type": "Vue.js",
         "typeImage": "/images/project-type/icon-vuejs.svg",
         "source": "https://github.com/therstyle/Jeopardy"
