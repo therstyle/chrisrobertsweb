@@ -36,6 +36,7 @@
     <portfolio
       ref="portfolio" 
       :portfolioItems="portfolioItems"
+      :portfolioIcons="portfolioIcons"
       :viewed="sections.portfolio.viewed"
       v-on:observed="activeItem"
       v-on:intersected="viewedItem"
@@ -97,6 +98,7 @@ export default {
       designSkillsHeadline: '',
       designSkills: [],
       portfolioItems: [],
+      portfolioIcons: {},
       contactHeadline: '',
       contactPhoto: {},
       contactButtonText: '',
@@ -202,6 +204,7 @@ export default {
       this.designSkillsHeadline = info.resume.skills.design.headline;
       this.designSkills = info.resume.skills.design.skillset;
       this.portfolioItems = info.portfolio.entries;
+      this.portfolioIcons = info.portfolio.icons;
       this.contactHeadline = info.contact.headline;
       this.contactPhoto = info.contact.image;
       this.contactButtonText = info.contact.buttonText;

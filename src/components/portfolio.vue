@@ -12,7 +12,7 @@
         :name="portfolioItem.name"
         :description="portfolioItem.description"
         :type="portfolioItem.type"
-        :typeImage="portfolioItem.typeImage"
+        :icons="portfolioIcons"
         :source="portfolioItem.source"
       ></porfolioItem>
     </div>
@@ -38,6 +38,7 @@ export default {
   },
   props: {
     portfolioItems: Array,
+    portfolioIcons: Object,
     viewed: Boolean
   },
   mounted() {
