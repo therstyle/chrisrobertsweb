@@ -15,7 +15,10 @@
       <p v-html="description"></p>
       <div class="project-details">
         <div v-if="url" class="view-source"><a :href="url" target="_blank">View Project</a></div>
-        <div class="project-type"><img :src="typeImage" :alt="type"></div>
+        
+        <div class="project-type">
+          <img v-for="(projectType, index) in type" :src="`${icons[projectType]}`" :alt="projectType" :key="index">
+        </div>
       </div>
     </div>
   </article>
@@ -40,8 +43,8 @@ export default {
     video: String,
     name: String,
     description: String,
-    type: String,
-    typeImage: String,
+    type: Array,
+    icons: Object,
     count: Number,
     source: String
   },
@@ -157,6 +160,10 @@ export default {
   .project-type {
     text-align: right;
     flex: 1;
+
+    > * {
+      margin-left: var(--space-1);
+    }
   }
 }
 

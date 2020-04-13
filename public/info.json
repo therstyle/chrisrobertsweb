@@ -206,6 +206,11 @@
   },
   "portfolio": {
     "headline": "Portfolio",
+    "icons": {
+      "WordPress": "/images/project-type/icon-wordpress.svg",
+      "Drupal": "/images/project-type/icon-drupal.svg",
+      "Vue.js": "/images/project-type/icon-vuejs.svg"
+    },
     "entries": [
       {
         "url": "https://destinations.rei.com/",
@@ -216,8 +221,7 @@
         "video": "/video/portfolio/rei.mp4",
         "name": "REI Destinations",
         "description": "REI guided tours and destinations custom WordPress travel website <small><a class=\"link\" href=\"#\">Credit 829 Studios</a></small>",
-        "type": "WordPress",
-        "typeImage": "/images/project-type/icon-wordpress.svg",
+        "type": ["WordPress"],
         "source": "https://github.com/therstyle/Flowetik"
   
       },
@@ -230,7 +234,7 @@
         "video": "/video/portfolio/stanley.mp4",
         "name": "Stanley Black & Decker",
         "description": "Online portal for Stanley Healthcare's products, powered by Drupal <small><a class=\"link\" href=\"#\">Credit 829 Studios</a></small>",
-        "type": "Drupal",
+        "type": ["Drupal"],
         "typeImage": "/images/project-type/icon-drupal.svg"
   
       },
@@ -243,8 +247,7 @@
         "video": "/video/portfolio/flowetik.mp4",
         "name": "Flowetik",
         "description": "Startup Boston marketing agency Flowetik's custom WordPress website",
-        "type": "WordPress",
-        "typeImage": "/images/project-type/icon-wordpress.svg",
+        "type": ["WordPress"],
         "source": "https://github.com/therstyle/Flowetik"
   
       },
@@ -257,8 +260,7 @@
         "video": "/video/portfolio/swaine.mp4",	
         "name": "Andrew Swaine Photography",	
         "description": "Custom WordPress photo gallery theme built with Vue.js and the WordPress Rest API",	
-        "type": "WordPress",	
-        "typeImage": "/images/project-type/icon-wordpress.svg",
+        "type": ["WordPress", "Vue.js"],
         "source": "https://github.com/therstyle/Andrew-Swaine-Photography"	
 
       },
@@ -269,10 +271,9 @@
           "image_2x": "/images/portfolio/jeopardy_2x.jpg"
         },
         "video": "/video/portfolio/jeopardy.mp4",
-        "name": "Jeopardy",
-        "description": "A Vue.js application that allows you to be the host of local multiplayer matches of Jeopardy with friends",
-        "type": "Vue.js",
-        "typeImage": "/images/project-type/icon-vuejs.svg",
+        "name": "Jeopardy!",
+        "description": "A Vue.js application (powered by WP Rest API) that allows you to be the host of local multiplayer matches of Jeopardy with friends",
+        "type": ["WordPress", "Vue.js"],
         "source": "https://github.com/therstyle/Jeopardy"
   
       },
@@ -285,8 +286,7 @@
         "video": "/video/portfolio/lrc.mp4",	
         "name": "Latin Rogue Cleaning",	
         "description": "A single page, custom responsive WordPress theme, featured on <a class=\"link\" href=\"http://onepagelove.com\">One Page Love</a>",	
-        "type": "WordPress",	
-        "typeImage": "/images/project-type/icon-wordpress.svg",
+        "type": ["WordPress"],	
         "source": "https://github.com/therstyle/Latin-Rogue-Cleaning"	
 
       }
