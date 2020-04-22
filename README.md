@@ -1,6 +1,12 @@
-# cr-web
+# chrisrobertsweb.dev
 
-## Project setup
+My personal portfolio built with Vue.js
+
+<p align="center">
+  <img src="https://chrisrobertsweb.dev/github/crweb.jpg">
+</p>
+
+## Installation & Set Up
 ```
 npm install
 ```
