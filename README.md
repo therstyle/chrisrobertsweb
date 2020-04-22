@@ -1,6 +1,6 @@
 # [chrisrobertsweb.dev](https://chrisrobertsweb.dev/)
 
-My personal portfolio built with Vue.js
+My personal portfolio built with [Vue.js](https://vuejs.org/)
 
 <p align="center">
   <img src="https://chrisrobertsweb.dev/github/crweb.jpg">
