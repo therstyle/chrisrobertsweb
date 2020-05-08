@@ -43,15 +43,15 @@
       {
         "year": 2018,
         "logo": "/images/jobs/829.svg",
-        "company": "829 Studios",
+        "company": "829 Studios | Boston, MA",
         "title": "Senior Front End Developer",
         "details": [
-          "Develop and maintain custom WordPress themes for clients utilizing PHP, JavaScript, and SASS/CSS",
-          "Customize WordPress editor experience using Advanced Custom Fields (ACF) and Gutenberg blocks",
-          "Revamped internal WordPress framework to use modern build tools and ES6+ JavaScript",
-          "Use REST APIs to develop SPAs with Vue.js and React",
-          "Work closely with design team to create and maintain development standards",
-          "Mentor, assist, and review code for junior web developers"
+          "Developed custom WordPress websites for large scale and enterprise clients, consistently improving site performance and increasing overall site traffic",
+          "Built custom WP REST API endpoints to pull data into custom Vue.js, and React front end UIs",
+          "Deeply customized and extended WordPress CMS' capabilities using Advanced Custom Fields (ACF), custom post types, and taxonomies",
+          "Spearheaded development of our internal WordPress framework incorporating modern build tools (Parcel JS, Browser Sync, linting) greatly simplifying and shortening project development time resulting in increased company revenue",
+          "Collaborated with project managers to assess and document project guidelines and timelines",
+          "Mentored, assisted, and reviewed code for a team of eight developers."
         ],
         "featuredBrands": [
           {
@@ -71,13 +71,14 @@
       {
         "year": 2015,
         "logo": "/images/jobs/firefield.png",
-        "company": "Firefield",
+        "company": "Firefield | Remote",
         "title": "Front End Developer",
         "details": [
-          "Worked on front end development of web applications utilizing HTML, Ruby on Rails, SASS/CSS, Bootstrap, and React",
-          "Developed universal style guide for consistent styling of components across our applications",
-          "Worked with React Native to publish iOS & Android apps",
-          "Collaborated with back end developers to oversee UI design of web applications"
+          "Designed and developed our style guide to ensure high graphic standards and design consistency across our applications",
+          "Refactored CSS in our codebase, incorporating SASS, mixins, native CSS variables, and removing unused code",
+          "Worked on client side of web applications utilizing HTML, Ruby on Rails, CSS/SASS, Bootstrap, Vue.js, and React",
+          "Created reusable components for applications and utilized Vuex to pass data for deeply nested components",
+          "Worked as part of a distributed team, collaborating across the globe with our back end developers"
         ],
         "featuredBrands": [
           {
@@ -89,13 +90,12 @@
       {
         "year": 2013,
         "logo": "/images/jobs/brick-marketing.svg",
-        "company": "Brick Marketing",
+        "company": "Brick Marketing | Boston, MA",
         "title": "Web Designer & Developer",
         "details": [
-          "Designed and developed, custom websites for clients utilizing WordPress, custom post types, and Advanced Custom Fields (ACF)",
-          "Managed and maintained a variety of client websites in CMS' such as Drupal, Joomla, and Magento",
-          "Created branding, marketing materials, landing pages, and digital advertisements",
-          "Implemented SEO and page load speed improvements for client websites"
+          "Developed custom websites for a variety of clients (from small business to enterprise) utilizing WordPress, custom post types, and Advanced Custom Fields (ACF)",
+          "Collaborated with the marketing team to implement SEO, develop custom landing pages, and forms with consistently high conversion rates",
+          "Improved client website performance by compressing images, minifying code, caching content, migrating to CDNs, and optimizing databases"
         ],
         "stats": [
           {
@@ -111,13 +111,12 @@
       {
         "year": 2007,
         "logo": "/images/jobs/onpoint.png",
-        "company": "Onpoint Media",
+        "company": "Onpoint Media | Beverly, MA",
         "title": "Web Designer & Developer",
         "details": [
-          "Developed and maintained websites for a variety of clients using WordPress, HTML, CSS, PHP, and JavaScript / jQuery",
-          "Utilized Adobe Photoshop & Illustrator to design websites, HTML emails, and digital advertisements",
-          "Managed web design process from concept to code",
-          "Provided direction for team members and interns"
+          "Developed websites, landing pages, and HTML emails for clients using WordPress, HTML, CSS, PHP, and JavaScript, and jQuery",
+          "Took ownership of web design process from wireframes to code",
+          "Mentored and reviewed code for our intern developers"
         ],
         "stats": [
           {
@@ -173,7 +172,7 @@
           {
             "logo": "/images/icon-react.svg",
             "name": "React",
-            "startYear": 2017
+            "startYear": 2018
           }
         ]
       },

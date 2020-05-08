@@ -245,7 +245,6 @@ body {
 }
 
 #app {
-  //opacity: 0.1; //Debug
   display: flex;
   padding-left: var(--sidebar-width);
   position: relative;

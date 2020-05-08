@@ -112,13 +112,6 @@ export default {
     border-bottom: 1px solid var(--light-gray);
     position: relative;
 
-    // &.viewed {
-    //   &:after {
-    //     transform: rotate(180deg) translateY(0);
-    //     opacity: 1;
-    //   }
-    // }
-
     &:before {
       content: '';
       position: absolute;
@@ -144,8 +137,6 @@ export default {
       position: absolute;
       left: -7vw;
       top: 2.1vw;
-      //opacity: 0;
-      //transition: opacity 0.6s, transform 0.6s;
       display: inline-block;
     }
 
@@ -363,6 +354,14 @@ export default {
       height: 18px;
       border: 4px solid var(--red);
       background: var(--body-bg);
+    }
+  }
+}
+
+@media only screen and (max-width: $md-phone-breakpoint) {
+  .timeline--entry {
+    h3 {
+      font-size: 1.5rem;
     }
   }
 }
