@@ -238,16 +238,16 @@
   
       },
       {
-        "url": "http://flowetik.com/",
+        "url": "https://tv-guide.chrisrobertsweb.dev/",
         "image": {
-          "image_1x": "/images/portfolio/flowetik.jpg",
-          "image_2x": "/images/portfolio/flowetik_2x.jpg"
+          "image_1x": "/images/portfolio/tv-guide.jpg",
+          "image_2x": "/images/portfolio/tv-guide_2x.jpg"
         },
-        "video": "/video/portfolio/flowetik.mp4",
-        "name": "Flowetik",
-        "description": "Startup Boston marketing agency Flowetik's custom WordPress website",
-        "type": ["WordPress"],
-        "source": "https://github.com/therstyle/Flowetik"
+        "video": "/video/portfolio/tv-guide.mp4",
+        "name": "TV Guide",
+        "description": "TV Guide powered by Vue.js and open source Rest API",
+        "type": ["Vue.js"],
+        "source": "https://github.com/therstyle/vue-tv-guide"
   
       },
       {	
